@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katalog Produk Motor Yamaha Terlengkap - MAXI, Classy, Sport, Moped">
+    <title>Produk Kami - Yamaha Motor Indonesia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================================
+           GLOBAL STYLE (DIAMBIL DARI INDEX.HTML)
+           ========================================= */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link::after,
+        .navbar .dropdown-toggle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border: none !important;
+            margin: 0 !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+            padding: 10px 0;
+            min-width: 200px;
+        }
+
+        .dropdown-item {
+            padding: 12px 25px;
+            font-weight: 500;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+        }
+
+        /* =========================================
+           PAGE SPECIFIC STYLES (PRODUK)
+           ========================================= */
+
+        /* Header Banner */
+        .page-header {
+            background: linear-gradient(135deg, var(--yamaha-blue-dark), var(--yamaha-blue-main));
+            padding: 60px 0 40px;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .page-header h1 {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* Filter Controls */
+        .filter-container {
+            margin-bottom: 40px;
+        }
+
+        .filter-btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn-filter {
+            border: 2px solid #e0e0e0;
+            background: white;
+            color: #666;
+            border-radius: 50px;
+            padding: 10px 25px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-filter:hover {
+            border-color: var(--yamaha-blue-main);
+            color: var(--yamaha-blue-main);
+            transform: translateY(-2px);
+        }
+
+        .btn-filter.active {
+            background: var(--yamaha-blue-main);
+            border-color: var(--yamaha-blue-main);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 87, 184, 0.3);
+        }
+
+        .search-wrapper {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            border-radius: 50px;
+            padding: 12px 25px;
+            border: 2px solid #e0e0e0;
+            padding-right: 50px;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: var(--yamaha-blue-main);
+            box-shadow: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        /* Product Card Grid */
+        .product-card-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.15);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--yamaha-blue-main);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pc-img-box {
+            background: radial-gradient(circle, #f8f9fa 0%, #ececec 100%);
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .pc-img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+        }
+
+        .product-card:hover .pc-img-box img {
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        .pc-content {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pc-category {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-grey);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .pc-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--yamaha-black);
+            margin-bottom: 10px;
+        }
+
+        .pc-price {
+            color: var(--yamaha-blue-main);
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Tombol Visual */
+        .pc-btn {
+            background: transparent;
+            border: 2px solid var(--yamaha-black);
+            color: var(--yamaha-black);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .product-card:hover .pc-btn {
+            background: var(--yamaha-black);
+            color: white;
+        }
+
+        /* Animation for Filter */
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+            margin-top: auto;
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+            transform: rotate(360deg);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .btn-filter {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+
+            /* Memperbesar sedikit tinggi gambar karena kartu sekarang full width */
+            .pc-img-box {
+                height: 180px;
+            }
+
+            .pc-title {
+                font-size: 18px;
+            }
+
+            .pc-price {
+                font-size: 15px;
+            }
+
+            .pc-content {
+                padding: 20px;
+            }
+
+            .pc-btn {
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;">Authorized
+                        Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lokasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hubungi Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kontak.html">Kontak Kami</a></li>
+                            <li><a class="dropdown-item" href="tentang.html">Tentang Kami</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container position-relative" style="z-index: 2;">
+            <h1>Semua Produk Yamaha</h1>
+            <p class="mb-0 opacity-75">Temukan Motor Impian Yamaha Sesuai Gaya Berkendaramu</p>
+        </div>
+    </header>
+
+    <section class="container pb-5">
+
+        <div class="filter-container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6">
+                    <div class="search-wrapper">
+                        <input type="text" class="form-control search-input" id="searchInput"
+                            placeholder="Cari nama motor (Contoh: NMAX)...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-btn-group" id="categoryFilters">
+                <button class="btn btn-filter active" data-filter="all">Semua</button>
+                <button class="btn btn-filter" data-filter="maxi">MAXI Yamaha</button>
+                <button class="btn btn-filter" data-filter="classy">Classy</button>
+                <button class="btn btn-filter" data-filter="sport">Sport</button>
+                <button class="btn btn-filter" data-filter="moped">Moped / Bebek</button>
+            </div>
+
+            <hr class="text-muted opacity-25 my-4">
+        </div>
+
+        <div class="row" id="productGrid">
+        </div>
+
+        <div id="emptyState" class="text-center py-5 d-none">
+            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+            <h4 class="text-muted">Motor tidak ditemukan</h4>
+            <p class="text-muted">Coba kata kunci lain atau pilih kategori berbeda.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">MAXI Yamaha</a></li>
+                        <li><a href="#">Classy Yamaha</a></li>
+                        <li><a href="#">Sport Series</a></li>
+                        <li><a href="#">Moped</a></li>
+                        <li><a href="#">Yamaha EV</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Layanan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Booking Service</a></li>
+                        <li><a href="#">Suku Cadang Asli</a></li>
+                        <li><a href="#">Yamalube</a></li>
+                        <li><a href="#">Simulasi Kredit</a></li>
+                        <li><a href="#">Trade In</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Data Produk
+        const products = [
+            {
+                id: 1,
+                name: 'NMAX "TURBO"',
+                category: 'maxi',
+                price: 'Rp 32.850.000',
+                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-nmax.png',
+                link: '#'
+            },
+            {
+                id: 2,
+                name: 'Aerox 155 Connected',
+                category: 'maxi',
+                price: 'Rp 28.500.000',
+                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-aerox.png',
+                link: '#'
+            },
+            {
+                id: 3,
+                name: 'XMAX 250 Tech MAX',
+                category: 'maxi',
+                price: 'Rp 66.000.000',
+                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305050853509156V67794.png',
+                link: '#'
+            },
+            {
+                id: 4,
+                name: 'Grand Filano Hybrid',
+                category: 'classy',
+                price: 'Rp 27.500.000',
+                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png',
+                link: '#'
+            },
+            {
+                id: 5,
+                name: 'Fazzio Hybrid',
+                category: 'classy',
+                price: 'Rp 23.250.000',
+                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-fazzio.png',
+                link: '#'
+            },
+            {
+                id: 6,
+                name: 'Yamaha R15 Connected',
+                category: 'sport',
+                price: 'Rp 39.875.000',
+                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202112011400277344Y96472.png',
+                link: '#'
+            },
+            {
+                id: 7,
+                name: 'Yamaha XSR 155',
+                category: 'sport',
+                price: 'Rp 38.125.000',
+                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305051052317676O48589.png',
+                link: '#'
+            },
+            {
+                id: 8,
+                name: 'Vega Force',
+                category: 'moped',
+                price: 'Rp 18.430.000',
+                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202306061122119957J66427.png',
+                link: '#'
+            },
+            {
+                id: 9,
+                name: 'Jupiter Z1',
+                category: 'moped',
+                price: 'Rp 20.090.000',
+                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202410070940384102W22588.png',
+                link: '#'
+            }
+        ];
+
+        const productGrid = document.getElementById('productGrid');
+        const emptyState = document.getElementById('emptyState');
+        const filterButtons = document.querySelectorAll('.btn-filter');
+        const searchInput = document.getElementById('searchInput');
+
+        // Function untuk Render Produk
+        function renderProducts(filterCategory = 'all', searchQuery = '') {
+            productGrid.innerHTML = '';
+
+            const filteredProducts = products.filter(product => {
+                const matchCategory = filterCategory === 'all' || product.category === filterCategory;
+                const matchSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchCategory && matchSearch;
+            });
+
+            if (filteredProducts.length === 0) {
+                emptyState.classList.remove('d-none');
+            } else {
+                emptyState.classList.add('d-none');
+
+                filteredProducts.forEach((product, index) => {
+                    const col = document.createElement('div');
+
+                    // PERUBAHAN UTAMA DISINI:
+                    // col-12 (Mobile: 1 kolom penuh)
+                    // col-md-4 (Tablet: 3 kolom)
+                    // col-lg-3 (Desktop: 4 kolom)
+                    col.className = 'col-12 col-md-4 col-lg-3 mb-4 fade-in-up';
+                    col.style.animationDelay = `${index * 0.05}s`;
+
+                    col.innerHTML = `
+                        <div class="product-card">
+                            <div class="pc-img-box">
+                                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/300x200?text=Yamaha'">
+                            </div>
+                            <div class="pc-content">
+                                <div>
+                                    <div class="pc-category">${product.category.toUpperCase()} YAMAHA</div>
+                                    <h3 class="pc-title">${product.name}</h3>
+                                </div>
+                                <div>
+                                    <span class="pc-price">Mulai ${product.price}</span>
+                                    <a href="${product.link}" class="pc-btn stretched-link">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    productGrid.appendChild(col);
+                });
+            }
+        }
+
+        // Event Listener untuk Filter Kategori
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderProducts(btn.getAttribute('data-filter'), searchInput.value);
+            });
+        });
+
+        // Event Listener untuk Search
+        searchInput.addEventListener('input', (e) => {
+            const activeCategory = document.querySelector('.btn-filter.active').getAttribute('data-filter');
+            renderProducts(activeCategory, e.target.value);
+        });
+
+        // Initial Render
+        renderProducts();
+
+    </script>
+</body>
+
+</html>

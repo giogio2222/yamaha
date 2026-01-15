@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dealer Resmi Motor Yamaha - Temukan Motor Impianmu Disini">
+    <title>Yamaha Motor Indonesia - Semakin Di Depan</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Yamaha Racing Palette */
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* --- Navbar Modern --- */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        /* Style Default Nav Link (Menu Atas) */
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link::after,
+        .navbar .dropdown-toggle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border: none !important;
+            margin: 0 !important;
+            vertical-align: baseline !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after,
+        .navbar .nav-item.dropdown:hover .dropdown-toggle::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link.show {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* --- MODERN DROPDOWN --- */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+            padding: 10px 0;
+            margin-top: 0;
+            background-color: #fff;
+            min-width: 200px;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                animation: fadeInFast 0.2s ease-in-out forwards;
+            }
+
+            .nav-item.dropdown::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+            }
+        }
+
+        @keyframes fadeInFast {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item {
+            padding: 12px 25px;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+            padding-left: 30px;
+            font-weight: 700;
+        }
+
+        /* --- Hero Slider --- */
+        .hero-wrapper {
+            filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
+            margin-bottom: -50px;
+        }
+
+        .carousel-item {
+            min-height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #heroCarousel .carousel-item {
+            height: 75vh;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: linear-gradient(to right, rgba(0, 53, 148, 0.8), rgba(0, 87, 184, 0.4), transparent);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: white;
+            padding-left: 5%;
+        }
+
+        .hero-text h1 {
+            font-weight: 800;
+            font-size: 4rem;
+            font-style: italic;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .btn-hero {
+            background: white;
+            color: var(--yamaha-blue-dark);
+            font-weight: 800;
+            padding: 12px 40px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .btn-hero:hover {
+            background: var(--yamaha-red);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* --- Search Widget --- */
+        .search-widget-container {
+            margin-top: 0;
+            position: relative;
+            z-index: 10;
+            transform: translateY(-80px);
+        }
+
+        .search-widget {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 87, 184, 0.15);
+            border-bottom: 5px solid var(--yamaha-blue-main);
+        }
+
+        .btn-search {
+            background: linear-gradient(135deg, var(--yamaha-blue-main), var(--yamaha-blue-dark));
+            color: white;
+            width: 100%;
+            padding: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 12px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 87, 184, 0.3);
+        }
+
+        .btn-search:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 87, 184, 0.5);
+        }
+
+        .form-select-lg {
+            font-size: 15px;
+            border-radius: 12px;
+            border: 2px solid #eee;
+            background-color: #f9f9f9;
+        }
+
+        .form-select-lg:focus {
+            border-color: var(--yamaha-blue-main);
+            box-shadow: 0 0 0 0.25rem rgba(0, 87, 184, 0.15);
+        }
+
+        /* --- General Section --- */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-weight: 800;
+            color: var(--yamaha-black);
+            text-transform: uppercase;
+            font-size: 2.5rem;
+        }
+
+        .section-title span {
+            color: var(--yamaha-blue-main);
+        }
+
+        .section-title .line {
+            width: 80px;
+            height: 6px;
+            background: linear-gradient(to right, var(--yamaha-blue-dark), var(--yamaha-blue-main));
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        /* ========================================================
+           FIXED CATEGORY TABS (Nav Pills for Collection)
+           ======================================================== */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .category-tabs .nav-link {
+            border-radius: 50px !important;
+            padding: 12px 35px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: 2px solid #eee;
+            background-color: #fff;
+            color: #666 !important;
+            transition: all 0.3s ease;
+            margin: 0;
+        }
+
+        .category-tabs .nav-link:hover {
+            border-color: var(--yamaha-blue-main);
+            color: var(--yamaha-blue-main) !important;
+            background-color: #f0f8ff;
+        }
+
+        .category-tabs .nav-link.active {
+            background-color: var(--yamaha-blue-main) !important;
+            color: #fff !important;
+            border-color: var(--yamaha-blue-main);
+            box-shadow: 0 8px 20px rgba(0, 87, 184, 0.25);
+        }
+
+        /* --- Product Cards --- */
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--yamaha-blue-main);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+            transform-origin: left;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 87, 184, 0.15);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-img-wrapper {
+            background: radial-gradient(circle, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            text-align: center;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s;
+            filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1));
+        }
+
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.1) rotate(-2deg);
+        }
+
+        .card-body {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--yamaha-black);
+        }
+
+        .price {
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .btn-detail {
+            border: 2px solid var(--yamaha-blue-main);
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .btn-detail:hover {
+            background: var(--yamaha-blue-main);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 87, 184, 0.3);
+        }
+
+        /* ========================================================
+           MAP SECTION STYLE (NEW)
+           ======================================================== */
+        .map-section {
+            background-color: #f8faff;
+            padding-bottom: 60px;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            /* Tinggi Map di Desktop */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border: 5px solid #fff;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .map-container {
+                height: 300px;
+                /* Tinggi Map di Mobile */
+            }
+        }
+
+        /* --- News Section (Honda Style) --- */
+        .news-slider-section {
+            padding: 80px 0;
+            background: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section-header-news {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header-news h2 {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            color: var(--yamaha-black);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header-news h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: var(--yamaha-black);
+            margin: 15px auto 0;
+            border-radius: 5px;
+        }
+
+        .news-slide-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .news-slide-img {
+            flex: 0 0 60%;
+            max-width: 60%;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-slide-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .news-slide-item:hover .news-slide-img img {
+            transform: scale(1.03);
+        }
+
+        .news-slide-content {
+            flex: 0 0 40%;
+            max-width: 40%;
+            padding-left: 50px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .news-slide-date {
+            font-size: 0.95rem;
+            color: var(--text-grey);
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-slide-title {
+            font-weight: 800;
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: var(--yamaha-black);
+            text-transform: uppercase;
+        }
+
+        .news-slide-desc {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn-news-outline {
+            border: 2px solid var(--yamaha-black);
+            color: var(--yamaha-black);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+        }
+
+        .btn-news-outline:hover {
+            background: var(--yamaha-black);
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        .news-control-prev,
+        .news-control-next {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            color: #333;
+            position: absolute;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .news-control-prev:hover,
+        .news-control-next:hover {
+            background-color: var(--yamaha-blue-main);
+            color: white;
+        }
+
+        .news-control-prev {
+            left: 0;
+        }
+
+        .news-control-next {
+            right: 0;
+        }
+
+        .news-control-icon {
+            font-size: 1.2rem;
+        }
+
+        .carousel-indicators-news {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .carousel-indicators-news button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            background-color: #ddd;
+            margin: 0 6px;
+            transition: all 0.3s;
+        }
+
+        .carousel-indicators-news button.active {
+            background-color: var(--yamaha-red);
+            transform: scale(1.2);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+            transform: rotate(360deg);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* --- Responsive Mobile --- */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+                margin: 0;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            #heroCarousel .carousel-item {
+                height: 60vh;
+                clip-path: none;
+            }
+
+            .search-widget-container {
+                margin-top: 0;
+                transform: translateY(0);
+                padding: 20px;
+            }
+
+            /* News Responsive */
+            .news-slide-item {
+                padding: 0;
+                flex-direction: column;
+            }
+
+            .news-slide-img,
+            .news-slide-content {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .news-slide-img img {
+                height: 250px;
+            }
+
+            .news-slide-content {
+                padding-top: 25px;
+                text-align: left;
+            }
+
+            .news-control-prev,
+            .news-control-next {
+                display: none;
+            }
+
+            .section-header-news h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .category-tabs {
+                gap: 10px;
+            }
+
+            .category-tabs .nav-link {
+                padding: 8px 16px;
+                font-size: 12px;
+                flex: 1 1 auto;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;">Authorized
+                        Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lokasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hubungi Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kontak.html">Kontak Kami</a></li>
+                            <li><a class="dropdown-item" href="tentang.html">Tentang Kami</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-wrapper">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"
+                    style="background-image: url('https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=80&w=1920&auto=format&fit=crop');">
+                    <div class="carousel-overlay">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 hero-text">
+                                    <h1>NMAX "TURBO"</h1>
+                                    <p>Teknologi YECVT terbaru untuk performa akselerasi maksimal.</p>
+                                    <a href="#" class="btn-hero"><i class="fas fa-bolt me-2"></i> Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1920&auto=format&fit=crop');">
+                    <div class="carousel-overlay">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 hero-text">
+                                    <h1>R-SERIES DNA</h1>
+                                    <p>Rasakan sensasi balap sejati di jalanan kota Anda.</p>
+                                    <a href="#" class="btn-hero"><i class="fas fa-flag-checkered me-2"></i> Cek
+                                        Spesifikasi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container search-widget-container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="search-widget">
+                    <h4><i class="fas fa-search me-2 text-primary"></i> Cari Motor Impian</h4>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <select class="form-select form-select-lg" aria-label="Kategori">
+                                    <option selected>Pilih Kategori</option>
+                                    <option value="matic">MAXI Yamaha</option>
+                                    <option value="sport">Sport</option>
+                                    <option value="moped">Moped / Bebek</option>
+                                    <option value="classy">Classy Yamaha</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <select class="form-select form-select-lg" aria-label="Model">
+                                    <option selected>Pilih Model</option>
+                                    <option value="nmax">NMAX Turbo</option>
+                                    <option value="aerox">Aerox 155 Connected</option>
+                                    <option value="filano">Grand Filano Hybrid</option>
+                                    <option value="fazzio">Fazzio Hybrid</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-search">
+                                    CARI <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container pt-4 pb-5">
+        <div class="section-title">
+            <h2>Koleksi <span>Terbaru</span></h2>
+            <div class="line"></div>
+            <p class="text-muted">Inovasi teknologi Blue Core untuk pengalaman berkendara terbaik</p>
+        </div>
+
+        <ul class="nav nav-pills category-tabs mb-5" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+                    type="button">SEMUA</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="pills-maxi-tab" data-bs-toggle="pill" data-bs-target="#pills-maxi"
+                    type="button">MAXI SERIES</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="pills-classy-tab" data-bs-toggle="pill" data-bs-target="#pills-classy"
+                    type="button">CLASSY</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-all">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-nmax.png"
+                                    alt="NMAX Turbo" onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NMAX "TURBO"</h5>
+                                <span class="price">Mulai Rp 32.850.000</span>
+                                <a href="#" class="btn-detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-aerox.png"
+                                    alt="Aerox" onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Aerox 155</h5>
+                                <span class="price">Mulai Rp 28.500.000</span>
+                                <a href="#" class="btn-detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png"
+                                    alt="Grand Filano"
+                                    onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Grand Filano</h5>
+                                <span class="price">Mulai Rp 27.500.000</span>
+                                <a href="#" class="btn-detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-fazzio.png"
+                                    alt="Fazzio" onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Fazzio Hybrid</h5>
+                                <span class="price">Mulai Rp 23.250.000</span>
+                                <a href="#" class="btn-detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-maxi">
+                <div class="alert alert-primary text-center">Menampilkan koleksi MAXI Series...</div>
+            </div>
+            <div class="tab-pane fade" id="pills-classy">
+                <div class="alert alert-info text-center">Menampilkan koleksi Classy Yamaha...</div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold" style="border-width: 2px;">LIHAT
+                SEMUA PRODUK <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>LOKASI <span>DEALER</span></h2>
+                <div class="line"></div>
+                <p class="text-muted">Kunjungi dealer resmi kami terdekat di kota Anda</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666427303107!2d106.82024977498993!3d-6.175392393811985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b15d%3A0x6da469cb2e09c0b6!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1705345021234!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-slider-section">
+        <div class="container">
+            <div class="section-header-news">
+                <h2>BERITA TERBARU</h2>
+            </div>
+
+            <div id="newsCarouselSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="news-slide-item">
+                            <div class="news-slide-img">
+                                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=1000&auto=format&fit=crop"
+                                    alt="News 1">
+                            </div>
+                            <div class="news-slide-content">
+                                <h3 class="news-slide-title">YAMAHA ROLLING CITY: LAYANAN SIAGA YANG MAKIN DEKAT</h3>
+                                <span class="news-slide-date">Surabaya, 16 Januari 2026</span>
+                                <p class="news-slide-desc">
+                                    Memasuki musim hujan, Dealer Yamaha Jawa Timur menggelar kegiatan City Rolling
+                                    sebagai upaya memperkenalkan layanan darurat Yamaha Customer Assistance Road
+                                    Emergency. Kami memastikan teknisi tersertifikasi siap memberikan layanan terbaik
+                                    kapanpun Anda butuhkan di jalan raya.
+                                </p>
+                                <a href="#" class="btn-news-outline">
+                                    BERITA SELENGKAPNYA <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="news-slide-item">
+                            <div class="news-slide-img">
+                                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1000&auto=format&fit=crop"
+                                    alt="News 2">
+                            </div>
+                            <div class="news-slide-content">
+                                <h3 class="news-slide-title">PROMO AWAL TAHUN: SPESIAL POTONGAN ANGSURAN</h3>
+                                <span class="news-slide-date">Jakarta, 10 Januari 2026</span>
+                                <p class="news-slide-desc">
+                                    Dapatkan kesempatan emas memiliki motor impian Anda di awal tahun ini. Nikmati
+                                    potongan angsuran hingga 3 bulan untuk setiap pembelian unit NMAX Turbo dan Aerox
+                                    Connected secara kredit. Promo berlaku di seluruh dealer resmi bertanda khusus.
+                                </p>
+                                <a href="#" class="btn-news-outline">
+                                    BERITA SELENGKAPNYA <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="news-slide-item">
+                            <div class="news-slide-img">
+                                <img src="https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=80&w=1000&auto=format&fit=crop"
+                                    alt="News 3">
+                            </div>
+                            <div class="news-slide-content">
+                                <h3 class="news-slide-title">TIPS MERAWAT CVT AGAR PERFORMA TETAP PRIMA</h3>
+                                <span class="news-slide-date">Bandung, 05 Januari 2026</span>
+                                <p class="news-slide-desc">
+                                    Pengguna motor matic wajib tahu! Simak tips ringan dari kepala mekanik kami tentang
+                                    bagaimana menjaga kebersihan area CVT agar tarikan motor tetap responsif dan bebas
+                                    getar. Perawatan berkala adalah kunci keawetan komponen motor Anda.
+                                </p>
+                                <a href="#" class="btn-news-outline">
+                                    BERITA SELENGKAPNYA <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="news-control-prev" type="button" data-bs-target="#newsCarouselSlider"
+                    data-bs-slide="prev">
+                    <i class="fas fa-arrow-left news-control-icon"></i>
+                </button>
+                <button class="news-control-next" type="button" data-bs-target="#newsCarouselSlider"
+                    data-bs-slide="next">
+                    <i class="fas fa-arrow-right news-control-icon"></i>
+                </button>
+
+                <div class="carousel-indicators-news">
+                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">MAXI Yamaha</a></li>
+                        <li><a href="#">Classy Yamaha</a></li>
+                        <li><a href="#">Sport Series</a></li>
+                        <li><a href="#">Moped</a></li>
+                        <li><a href="#">Yamaha EV</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Layanan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Booking Service</a></li>
+                        <li><a href="#">Suku Cadang Asli</a></li>
+                        <li><a href="#">Yamalube</a></li>
+                        <li><a href="#">Simulasi Kredit</a></li>
+                        <li><a href="#">Trade In</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.classList.contains('dropdown-toggle') || this.classList.contains('carousel-control-prev') || this.classList.contains('carousel-control-next')) return;
+
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#' && document.querySelector(targetId)) {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

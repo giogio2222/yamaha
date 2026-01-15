@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pertanyaan Umum (FAQ) seputar Layanan Dealer Resmi Yamaha">
+    <title>FAQ - Yamaha Motor Indonesia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- BASE STYLE DARI INDEX.HTML --- */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link::after,
+        .navbar .dropdown-toggle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border: none !important;
+            margin: 0 !important;
+            vertical-align: baseline !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after,
+        .navbar .nav-item.dropdown:hover .dropdown-toggle::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link.show {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+            padding: 10px 0;
+            margin-top: 0;
+            background-color: #fff;
+            min-width: 200px;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                animation: fadeInFast 0.2s ease-in-out forwards;
+            }
+
+            .nav-item.dropdown::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+            }
+        }
+
+        @keyframes fadeInFast {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item {
+            padding: 12px 25px;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+            padding-left: 30px;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+            transform: rotate(360deg);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Mobile Navbar Fix */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+                margin: 0;
+            }
+        }
+
+        /* --- STYLES KHUSUS FAQ (SINGLE LIST) --- */
+
+        .faq-header {
+            background: linear-gradient(135deg, var(--yamaha-blue-main), var(--yamaha-blue-dark));
+            padding: 80px 0 60px;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .faq-header h1 {
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Search Box */
+        .faq-search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-search-input {
+            width: 100%;
+            padding: 15px 25px 15px 50px;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+        }
+
+        .faq-search-input:focus {
+            outline: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .faq-search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--yamaha-blue-main);
+            font-size: 1.1rem;
+        }
+
+        /* Accordion Styling (Clean List) */
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 12px !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            background: white;
+            border-left: 4px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .accordion-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-left-color: var(--yamaha-blue-main);
+        }
+
+        .accordion-button {
+            font-weight: 700;
+            color: var(--yamaha-black);
+            padding: 22px 25px;
+            background: white;
+            box-shadow: none !important;
+            font-size: 1.05rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--yamaha-blue-main);
+            background-color: rgba(0, 87, 184, 0.05);
+        }
+
+        /* Chevron Icon Color */
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230057B8'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transform: scale(0.8);
+        }
+
+        .accordion-body {
+            color: #555;
+            line-height: 1.7;
+            padding: 20px 25px 30px;
+            background-color: #fff;
+        }
+
+        .accordion-body ul,
+        .accordion-body ol {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        /* CTA WhatsApp Section */
+        .cta-wa-section {
+            background: linear-gradient(to right, #f9f9f9, #ffffff);
+            border-top: 1px solid #eee;
+            padding: 80px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--yamaha-red);
+            display: inline-block;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .btn-wa-large {
+            background-color: #25D366;
+            color: white;
+            font-weight: 800;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 25px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            transition: all 0.3s;
+        }
+
+        .btn-wa-large:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;">Authorized
+                        Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lokasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hubungi Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kontak.html">Kontak Kami</a></li>
+                            <li><a class="dropdown-item" href="tentang.html">Tentang Kami</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="faq-header">
+        <div class="container">
+            <h1 data-aos="fade-up">PERTANYAAN UMUM (FAQ)</h1>
+            <p class="mb-4 text-white-50">Cari jawaban cepat seputar produk, servis, dan layanan kami.</p>
+
+            <div class="faq-search-box">
+                <i class="fas fa-search faq-search-icon"></i>
+                <input type="text" class="faq-search-input" id="searchInput"
+                    placeholder="Cari pertanyaan Anda disini (cth: kredit, servis, garansi)...">
+            </div>
+        </div>
+    </header>
+
+    <section class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="accordion" id="accordionFAQ">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                Dimana lokasi dealer resmi Yamaha ini?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Dealer kami berlokasi di <strong>Jl. Raya Otomotif No. 99, Jakarta Selatan</strong>.
+                                Lokasi kami sangat strategis di pinggir jalan utama. Anda bisa melihat peta detail dan
+                                petunjuk arah di halaman <a href="kontak.html">Kontak Kami</a>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                Kapan jam operasional dealer dan bengkel?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Kami buka setiap hari untuk melayani Anda:
+                                <ul class="mt-2">
+                                    <li><strong>Senin - Jumat:</strong> 08.00 - 17.00 WIB</li>
+                                    <li><strong>Sabtu - Minggu:</strong> 08.00 - 15.00 WIB</li>
+                                </ul>
+                                <i>Catatan: Bengkel penerimaan terakhir 1 jam sebelum tutup.</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                Apa saja syarat dokumen untuk pengajuan kredit motor?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Syarat pengajuan kredit sangat mudah. Anda cukup menyiapkan:
+                                <ol class="mt-2">
+                                    <li>Fotokopi e-KTP (Suami & Istri jika sudah menikah)</li>
+                                    <li>Fotokopi Kartu Keluarga (KK)</li>
+                                    <li>Slip Gaji / Bukti Penghasilan / Rekening Tabungan</li>
+                                    <li>Rekening Listrik / PBB Rumah (Salah satu)</li>
+                                </ol>
+                                Tim sales kami siap membantu proses penjemputan data ke rumah Anda.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                Apakah bisa membeli motor menggunakan KTP daerah (luar kota)?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                <strong>Bisa.</strong> Kami melayani pembelian dengan KTP daerah asalkan Anda memiliki
+                                domisili (tempat tinggal) yang jelas di area jangkauan dealer kami. Mohon lampirkan
+                                Surat Keterangan Domisili dari RT/RW setempat jika diperlukan oleh pihak leasing.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                Berapa lama proses indent untuk NMAX Turbo atau Fazzio?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Estimasi indent bervariasi tergantung tipe dan warna. Untuk <strong>NMAX
+                                    "TURBO"</strong> saat ini estimasi 1-2 minggu. Untuk Fazzio dan unit lainnya
+                                sebagian besar <i>Ready Stock</i>. Silakan hubungi admin via WhatsApp untuk cek stok
+                                <i>real-time</i> hari ini.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6">
+                                Apakah dealer menerima Tukar Tambah (Trade-In)?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Ya, kami menerima program <strong>Tukar Tambah</strong>. Kami menerima motor lama Anda
+                                (semua merk dan tipe) dengan harga taksiran yang kompetitif. Nilai motor lama Anda bisa
+                                langsung dijadikan sebagai DP (Uang Muka) untuk motor Yamaha baru.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq7">
+                                Berapa lama masa garansi motor Yamaha?
+                            </button>
+                        </h2>
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Yamaha memberikan jaminan kualitas terbaik dengan garansi:
+                                <ul class="mt-2">
+                                    <li><strong>Garansi Rangka:</strong> 5 Tahun (Untuk motor Matic Yamaha terbaru)</li>
+                                    <li><strong>Garansi Forged Piston & DiASil Cylinder:</strong> 5 Tahun</li>
+                                    <li><strong>Garansi Mesin:</strong> 3 Tahun</li>
+                                    <li><strong>Garansi Kelistrikan:</strong> 2 Tahun</li>
+                                </ul>
+                                <i>*Syarat & ketentuan berlaku, wajib servis rutin di bengkel resmi.</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq8">
+                                Bagaimana cara Booking Service agar tidak antri?
+                            </button>
+                        </h2>
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Anda dapat melakukan Booking Service minimal H-1 melalui:
+                                1. Aplikasi <strong>My Yamaha Motor</strong> (Download di PlayStore/AppStore).
+                                2. Chat WhatsApp admin kami.
+                                Dengan booking, Anda mendapatkan jalur prioritas (pit khusus) dan estimasi waktu
+                                pengerjaan yang lebih jelas.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq9">
+                                Apakah suku cadang yang dijual dijamin asli?
+                            </button>
+                        </h2>
+                        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Tentu saja. Sebagai Dealer Resmi, kami <strong>hanya menjual Yamaha Genuine Parts
+                                    (YGP)</strong> dan oli Yamalube 100% Asli. Penggunaan suku cadang asli sangat
+                                disarankan untuk menjaga performa mesin dan agar garansi motor tidak hangus.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq10">
+                                Motor saya mogok di jalan, apakah ada layanan jemput?
+                            </button>
+                        </h2>
+                        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Kami menyediakan layanan <strong>SKY (Service Kunjung Yamaha)</strong> untuk area
+                                sekitar dealer. Jika motor Anda mogok atau tidak sempat ke bengkel, mekanik kami bisa
+                                datang ke rumah atau lokasi Anda. Silakan hubungi nomor darurat kami untuk konfirmasi
+                                ketersediaan mekanik.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-wa-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2 style="font-weight: 800; color: var(--yamaha-black);">MASIH PUNYA PERTANYAAN LAIN?</h2>
+                <div style="width: 60px; height: 4px; background: var(--yamaha-blue-main); margin: 15px auto;"></div>
+                <p class="text-muted mb-4">
+                    Jika jawaban yang Anda cari tidak tersedia di atas, jangan ragu untuk menghubungi tim kami.<br>
+                    Kami siap membantu Anda dengan respon cepat melalui WhatsApp.
+                </p>
+
+                <a href="#" onclick="openWhatsApp()" class="btn-wa-large">
+                    <i class="fab fa-whatsapp fa-lg me-2"></i> CHAT WHATSAPP SEKARANG
+                </a>
+                <p class="mt-3 text-muted small">Online pada jam kerja (08.00 - 17.00 WIB)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">MAXI Yamaha</a></li>
+                        <li><a href="#">Classy Yamaha</a></li>
+                        <li><a href="#">Sport Series</a></li>
+                        <li><a href="#">Moped</a></li>
+                        <li><a href="#">Yamaha EV</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Layanan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Booking Service</a></li>
+                        <li><a href="#">Suku Cadang Asli</a></li>
+                        <li><a href="#">Yamalube</a></li>
+                        <li><a href="#">Simulasi Kredit</a></li>
+                        <li><a href="#">Trade In</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // 1. Script Tombol WhatsApp
+        function openWhatsApp() {
+            const phone = "6282257391460"; // Nomor tujuan
+            const message = "Halo Admin Yamaha, saya ingin bertanya lebih lanjut setelah melihat halaman FAQ.";
+
+            // Deteksi Mobile vs Desktop
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const baseUrl = isMobile ? "https://api.whatsapp.com/send" : "https://web.whatsapp.com/send";
+
+            const url = `${baseUrl}?phone=${phone}&text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // 2. Script Search Filter
+        document.getElementById('searchInput').addEventListener('keyup', function () {
+            let filter = this.value.toLowerCase();
+            let accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(function (item) {
+                let buttonText = item.querySelector('.accordion-button').textContent.toLowerCase();
+                let bodyText = item.querySelector('.accordion-body').textContent.toLowerCase();
+
+                // Jika cocok di judul (button) ATAU isi (body)
+                if (buttonText.includes(filter) || bodyText.includes(filter)) {
+                    item.style.display = ""; // Tampilkan
+
+                    // Fitur User Experience: Jika user mengetik lebih dari 3 huruf, otomatis buka accordion yang cocok
+                    if (filter.length > 3) {
+                        const collapseElement = item.querySelector('.collapse');
+                        // Hanya buka jika belum terbuka
+                        if (!collapseElement.classList.contains('show')) {
+                            new bootstrap.Collapse(collapseElement, { toggle: true });
+                        }
+                    }
+                } else {
+                    item.style.display = "none"; // Sembunyikan
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tentang Kami - Dealer Resmi Yamaha Terpercaya">
+    <title>Tentang Kami - Yamaha Motor Indonesia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <style>
+        /* --- COPY STYLE DARI INDEX.HTML (Base Style) --- */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* Navbar Style (Sama Persis) */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link::after,
+        .navbar .dropdown-toggle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border: none !important;
+            margin: 0 !important;
+            vertical-align: baseline !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after,
+        .navbar .nav-item.dropdown:hover .dropdown-toggle::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link.show {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+            padding: 10px 0;
+            margin-top: 0;
+            background-color: #fff;
+            min-width: 200px;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                animation: fadeInFast 0.2s ease-in-out forwards;
+            }
+
+            .nav-item.dropdown::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+            }
+        }
+
+        @keyframes fadeInFast {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item {
+            padding: 12px 25px;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+            padding-left: 30px;
+            font-weight: 700;
+        }
+
+        /* Footer Style (Sama Persis) */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+            transform: rotate(360deg);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Mobile Navbar Fix */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+                margin: 0;
+            }
+        }
+
+        /* --- STYLES KHUSUS HALAMAN ABOUT --- */
+
+        /* 1. Page Banner Hero */
+        .about-hero {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0, 53, 148, 0.9), rgba(0, 87, 184, 0.7));
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb-custom {
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+
+        .breadcrumb-custom a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumb-custom span {
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+
+        .breadcrumb-custom .active {
+            color: var(--yamaha-red);
+            font-weight: 700;
+        }
+
+        /* 2. Section Styles General */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .bg-white-section {
+            background-color: #ffffff;
+        }
+
+        .section-header-about {
+            margin-bottom: 50px;
+        }
+
+        .section-header-about h6 {
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-header-about h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--yamaha-black);
+        }
+
+        .line-accent {
+            width: 60px;
+            height: 5px;
+            background: var(--yamaha-red);
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* 3. Overview Section (Text + Image) */
+        .overview-img-wrapper {
+            position: relative;
+            padding: 20px;
+        }
+
+        .overview-img {
+            border-radius: 20px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+        }
+
+        .overview-shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 70%;
+            background: var(--yamaha-blue-main);
+            border-radius: 20px;
+            z-index: 1;
+            transform: translate(20px, 20px);
+            opacity: 0.1;
+        }
+
+        /* 4. Vision Mission Cards */
+        .vm-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            height: 100%;
+            transition: all 0.3s;
+            border-bottom: 5px solid transparent;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .vm-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--yamaha-red);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .vm-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(0, 87, 184, 0.1);
+            color: var(--yamaha-blue-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .vm-card h3 {
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--yamaha-black);
+        }
+
+        .vm-card p {
+            color: var(--text-grey);
+            line-height: 1.8;
+        }
+
+        .vm-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            color: var(--text-grey);
+        }
+
+        .vm-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--yamaha-blue-main);
+        }
+
+        /* 5. Core Values (Grid) */
+        .value-box {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            background: #fff;
+            transition: all 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .value-box:hover {
+            background: var(--yamaha-blue-main);
+            color: white;
+            border-color: var(--yamaha-blue-main);
+            transform: scale(1.05);
+        }
+
+        .value-box i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--yamaha-blue-main);
+            transition: color 0.3s;
+        }
+
+        .value-box:hover i {
+            color: white;
+        }
+
+        .value-box h5 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .value-box p {
+            font-size: 0.9rem;
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* 6. Call to Action */
+        .cta-section {
+            background: linear-gradient(45deg, var(--yamaha-black), #2a2a2a);
+            padding: 60px 0;
+            color: white;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            background: linear-gradient(to left, rgba(0, 87, 184, 0.2), transparent);
+            transform: skewX(-20deg);
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header-about h2 {
+                font-size: 2rem;
+            }
+
+            .overview-img-wrapper {
+                padding: 0;
+                margin-top: 30px;
+            }
+
+            .overview-shape {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;">Authorized
+                        Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lokasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hubungi Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kontak.html">Kontak Kami</a></li>
+                            <li><a class="dropdown-item" href="tentang.html">Tentang Kami</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-hero animate__animated animate__fadeIn">
+        <div class="about-hero-content container">
+            <h1 class="animate__animated animate__fadeInUp">Tentang Kami</h1>
+        </div>
+    </header>
+
+    <section class="section-padding bg-white-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="section-header-about">
+                        <h6>SIAPA KAMI</h6>
+                        <h2>MENGHADIRKAN KEPUASAN BERKENDARA SEJAK 2010</h2>
+                        <div class="line-accent"></div>
+                    </div>
+                    <p class="lead text-muted mb-4">
+                        Kami adalah Dealer Resmi Yamaha 3S (Sales, Service, Sparepart) yang berkomitmen untuk memberikan
+                        pengalaman terbaik bagi pecinta otomotif di Indonesia.
+                    </p>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 25px;">
+                        Berdiri dengan semangat "Semakin Di Depan", kami tidak hanya menjual sepeda motor, tetapi juga
+                        memberikan solusi mobilitas yang handal. Didukung oleh mekanik tersertifikasi Yamaha dan
+                        fasilitas bengkel modern, kami menjamin setiap unit motor Anda mendapatkan perawatan terbaik
+                        sesuai standar pabrikan Jepang.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2 fw-bold"
+                        style="background-color: var(--yamaha-blue-main); border: none;">
+                        HUBUNGI KAMI <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="overview-img-wrapper animate__animated animate__fadeInRight">
+                        <img src="https://images.unsplash.com/photo-1560963689-0933ca3212c6?q=80&w=1000&auto=format&fit=crop"
+                            alt="Showroom Yamaha" class="overview-img">
+                        <div class="overview-shape"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: #f2f6fc;">
+        <div class="container">
+            <div class="text-center section-header-about mb-5">
+                <h6>TUJUAN KAMI</h6>
+                <h2>VISI & MISI PERUSAHAAN</h2>
+                <div class="line-accent mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="vm-card">
+                        <div class="vm-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>VISI KAMI</h3>
+                        <p>
+                            Menjadi jaringan dealer Yamaha terkemuka dan terpercaya yang memberikan pengalaman
+                            kepemilikan sepeda motor terbaik, serta berkontribusi dalam memajukan mobilitas masyarakat
+                            Indonesia dengan teknologi terkini.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="vm-card">
+                        <div class="vm-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>MISI KAMI</h3>
+                        <ul class="list-unstyled vm-list">
+                            <li>Memberikan pelayanan penjualan yang transparan, jujur, dan bersahabat.</li>
+                            <li>Menyediakan layanan purna jual (servis) dengan standar kualitas tertinggi Yamaha.</li>
+                            <li>Menjamin ketersediaan suku cadang asli (Genuine Parts) yang lengkap.</li>
+                            <li>Mengembangkan sumber daya manusia yang profesional dan berorientasi pada kepuasan
+                                pelanggan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white-section">
+        <div class="container">
+            <div class="section-header-about text-center mb-5">
+                <h6>FILOSOFI KERJA</h6>
+                <h2>NILAI-NILAI KAMI</h2>
+            </div>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="value-box">
+                        <i class="fas fa-handshake"></i>
+                        <h5>INTEGRITAS</h5>
+                        <p>Mengutamakan kejujuran dan kepercayaan dalam setiap transaksi.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="value-box">
+                        <i class="fas fa-users-cog"></i>
+                        <h5>PROFESIONALISME</h5>
+                        <p>Tim ahli yang bekerja sesuai standar operasional prosedur (SOP) resmi.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="value-box">
+                        <i class="fas fa-heart"></i>
+                        <h5>KEPEDULIAN</h5>
+                        <p>Mendengarkan kebutuhan pelanggan dan memberikan solusi terbaik.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="value-box">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h5>INOVASI</h5>
+                        <p>Selalu beradaptasi dengan teknologi dan cara baru yang lebih efisien.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="value-box">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h5>KUALITAS</h5>
+                        <p>Hanya memberikan produk dan layanan servis dengan kualitas nomor satu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container text-center position-relative" style="z-index: 2;">
+            <h2 class="mb-3" style="font-weight: 800; font-family: 'Exo 2', sans-serif;">SIAP MEMILIKI MOTOR IMPIAN?
+            </h2>
+            <p class="mb-4" style="opacity: 0.8;">Kunjungi showroom kami atau konsultasikan kebutuhan Anda secara online
+                sekarang juga.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="produk.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">LIHAT PRODUK</a>
+                <a href="contact.html" class="btn btn-danger rounded-pill px-4 py-2 fw-bold"
+                    style="background-color: var(--yamaha-red); border: none;">
+                    <i class="fab fa-whatsapp me-2"></i> HUBUNGI SALES
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">MAXI Yamaha</a></li>
+                        <li><a href="#">Classy Yamaha</a></li>
+                        <li><a href="#">Sport Series</a></li>
+                        <li><a href="#">Moped</a></li>
+                        <li><a href="#">Yamaha EV</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Layanan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Booking Service</a></li>
+                        <li><a href="#">Suku Cadang Asli</a></li>
+                        <li><a href="#">Yamalube</a></li>
+                        <li><a href="#">Simulasi Kredit</a></li>
+                        <li><a href="#">Trade In</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Menambahkan animasi fade-in saat elemen masuk viewport
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.vm-card, .value-box, .overview-img-wrapper').forEach(el => {
+                el.style.opacity = "0"; // Awal hidden
+                el.classList.add('animate__fast'); // Speed up animation
+
+                // Hack kecil agar animasi jalan setelah class ditambahkan
+                el.addEventListener('animationstart', () => {
+                    el.style.opacity = "1";
+                });
+
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
