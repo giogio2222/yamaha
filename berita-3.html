@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Promo Yamaha Awal Tahun 2026. Dapatkan diskon angsuran hingga 3 bulan untuk pembelian Aerox 155 Connected. Hemat jutaan rupiah!">
+    <title>Promo Awal Tahun: Diskon Angsuran hingga 3 Bulan! - Yamaha Motor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. GLOBAL VARIABLES --- */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+            --font-heading: 'Exo 2', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Support Jepang */
+        body.lang-jp {
+            font-family: 'Noto Sans JP', sans-serif !important;
+        }
+
+        body.lang-jp h1,
+        body.lang-jp h2,
+        body.lang-jp h3,
+        body.lang-jp h4 {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            font-weight: 700;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: var(--font-heading);
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+        }
+
+        /* --- 2. NAVBAR MODERN (SAMA PERSIS DENGAN BERITA-1) --- */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-link::after,
+        .navbar .dropdown-toggle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border: none !important;
+            margin: 0 !important;
+            vertical-align: baseline !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after,
+        .navbar .nav-item.dropdown:hover .dropdown-toggle::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link.show {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* MODERN DROPDOWN */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+            padding: 10px 0;
+            margin-top: 0;
+            background-color: #fff;
+            min-width: 200px;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                animation: fadeInFast 0.2s ease-in-out forwards;
+            }
+
+            .nav-item.dropdown::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+            }
+        }
+
+        @keyframes fadeInFast {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item {
+            padding: 12px 25px;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+            padding-left: 30px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+                margin: 0;
+            }
+        }
+
+        /* --- 3. ARTICLE HERO --- */
+        .blog-hero {
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            /* Image Updated for Promo Context */
+            background: url('https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 80px;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 53, 148, 0.6), rgba(0, 53, 148, 0.9));
+        }
+
+        .blog-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            backdrop-filter: blur(5px);
+        }
+
+        .author-meta img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--yamaha-red);
+        }
+
+        /* --- 4. CONTENT WRAPPER --- */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            margin-top: -80px;
+            background: white;
+            border-radius: 50px 50px 0 0;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-layout {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* --- 5. ARTICLE STYLING --- */
+        .article-content p {
+            margin-bottom: 1.8rem;
+            font-size: 1.1rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-left: 15px;
+            border-left: 5px solid var(--yamaha-red);
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--yamaha-blue-main);
+        }
+
+        figure {
+            margin: 0 0 3rem;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* TOC */
+        .auto-toc-container {
+            background: var(--bg-light);
+            border: 1px solid rgba(0, 87, 184, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 2rem 0;
+        }
+
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--yamaha-blue-dark);
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+            color: var(--yamaha-blue-main);
+        }
+
+        .toc-list li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .toc-list li a:hover {
+            color: var(--yamaha-red);
+            text-decoration: underline;
+        }
+
+        /* Baca Juga */
+        .baca-juga {
+            background: #eef4ff;
+            border-left: 4px solid var(--yamaha-blue-main);
+            padding: 15px 20px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .baca-juga a {
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* Blockquote */
+        blockquote {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-style: italic;
+            text-align: center;
+            color: var(--yamaha-blue-dark);
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            position: relative;
+            border: 1px dashed var(--yamaha-blue-main);
+        }
+
+        blockquote::before {
+            content: '\201C';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: rgba(0, 87, 184, 0.2);
+        }
+
+        /* Highlight List */
+        .highlight-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .highlight-list li::before {
+            content: '✓';
+            color: var(--yamaha-red);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        details summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--yamaha-blue-main);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        details summary::after {
+            content: '+';
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details p {
+            padding: 15px 20px;
+            background: var(--bg-light);
+            margin: 0;
+            color: #555;
+            border-top: 1px solid #eee;
+        }
+
+        /* Conclusion Box */
+        .conclusion-box {
+            background: linear-gradient(135deg, var(--yamaha-blue-dark), var(--yamaha-blue-main));
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 3rem;
+            text-align: center;
+            color: white;
+        }
+
+        .conclusion-box h2 {
+            color: white !important;
+            border: none;
+            padding: 0;
+        }
+
+        .conclusion-box p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* Author & Share */
+        .post-footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social-share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            color: var(--yamaha-blue-main);
+            border: 1px solid #eee;
+            margin-left: 8px;
+            transition: 0.3s;
+        }
+
+        .social-share-btn:hover {
+            background: var(--yamaha-blue-main);
+            color: white;
+        }
+
+        /* Related Posts Card */
+        .news-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .news-img-wrapper {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .news-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .btn-read-more {
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+
+        /* --- 6. FOOTER (SAMA PERSIS DENGAN BERITA-1) --- */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+            transform: rotate(360deg);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                border-radius: 30px 30px 0 0;
+                margin-top: -50px;
+            }
+
+            .post-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ========================================================
+   FLOATING BUTTONS (WA & BACK TO TOP)
+   ======================================================== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Jarak antar tombol */
+        }
+
+        /* Tombol Umum */
+        .btn-float {
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: none;
+        }
+
+        .btn-float:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Tombol WhatsApp */
+        .btn-whatsapp {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            font-size: 32px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animasi Pulse untuk WA agar menarik perhatian */
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Tombol Back to Top */
+        .btn-back-to-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--yamaha-blue-dark);
+            /* Mengikuti tema website */
+            font-size: 20px;
+            opacity: 0;
+            /* Tersembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class untuk memunculkan tombol Back to Top */
+        .btn-back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsif Mobile (Layar Kecil) */
+        @media (max-width: 768px) {
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .btn-back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html" data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="berita.html" data-i18n="nav_news">Berita</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_contact">
+                            Hubungi Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a>
+                            </li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="blog-hero">
+        <div class="blog-hero-content">
+            <h1 data-i18n="art_title">Promo Awal Tahun: Diskon Angsuran hingga 3 Bulan!</h1>
+            <div class="author-meta">
+                <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=100&auto=format&fit=crop"
+                    alt="Author">
+                <div class="text-start">
+                    <strong data-i18n="art_author">Admin Sales</strong><br>
+                    <span style="opacity: 0.8;" data-i18n="art_date">12 Jan 2026 • 5 Menit Baca</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="blog-layout">
+
+            <article class="article-content">
+                <figure>
+                    <img src="image_916c01.png" alt="Promo Aerox Awal Tahun" width="800" height="600" loading="lazy">
+                    <figcaption data-i18n="art_caption_main">Jangan lewatkan kesempatan emas memiliki Aerox 155
+                        Connected dengan harga spesial awal tahun.</figcaption>
+                </figure>
+
+                <div class="auto-toc-container">
+                    <div class="toc-header" onclick="toggleToc()">
+                        <h4 data-i18n="toc_header">Daftar Isi</h4>
+                        <i class="fas fa-chevron-up" id="tocIcon"></i>
+                    </div>
+                    <ul class="toc-list" id="auto-toc-list"></ul>
+                </div>
+
+                <p data-i18n="p1">
+                    Tahun baru 2026 telah tiba! Semangat baru tentu harus diimbangi dengan mobilitas yang lebih prima.
+                    Memahami kebutuhan konsumen akan kendaraan yang tidak hanya handal tetapi juga bergaya, Dealer Resmi
+                    Yamaha kembali menghadirkan kejutan istimewa di awal tahun ini. Kami dengan bangga mengumumkan
+                    program <strong>"New Year, New Ride"</strong> yang didedikasikan khusus bagi pecinta motor sport
+                    matic.
+                </p>
+                <p data-i18n="p2">
+                    Jika Anda sudah lama mengincar Yamaha Aerox 155 Connected, inilah saat yang paling tepat untuk
+                    meminangnya. Mengapa? Karena kami menawarkan promo potongan angsuran yang sangat signifikan, yang
+                    bisa membuat Anda hemat hingga jutaan rupiah. Tidak perlu menunggu bonus tahunan cair atau menabung
+                    lebih lama lagi, impian memiliki motor baru bisa terwujud sekarang juga dengan skema pembiayaan yang
+                    sangat ringan.
+                </p>
+
+                <h2 id="sec-1" data-i18n="h2_1">1. Detail Promo: Hemat Angsuran 3 Bulan</h2>
+                <p data-i18n="p3">
+                    Program unggulan kami di bulan Januari 2026 ini adalah "Diskon Potongan Tenor". Mekanismenya sangat
+                    sederhana namun sangat menguntungkan bagi konsumen yang melakukan pembelian secara kredit. Biasanya,
+                    untuk tenor panjang (misalnya 35 bulan), Anda diwajibkan membayar penuh selama periode tersebut.
+                    Namun, dengan promo ini, Anda cukup membayar untuk 32 bulan saja!
+                </p>
+                <p data-i18n="p4">
+                    Bayangkan jika angsuran bulanan Anda adalah Rp 1.500.000. Dengan potongan 3 bulan (3 x Rp
+                    1.500.000), Anda sudah menghemat total <strong>Rp 4.500.000</strong>. Uang sebanyak itu bisa Anda
+                    gunakan untuk keperluan lain, seperti modifikasi tipis-tipis, membeli helm premium, atau bahkan
+                    untuk biaya touring perdana Anda. Promo ini berlaku khusus untuk unit Yamaha Aerox 155 Connected
+                    (All Variant) dengan tenor minimal 35 bulan melalui leasing partner kami seperti BAF, Adira Finance,
+                    dan WOM Finance.
+                </p>
+
+                <div class="baca-juga">
+                    <i class="fas fa-percentage text-success fs-4"></i>
+                    <div>
+                        <strong data-i18n="read_also">Baca Juga:</strong>
+                        <a href="berita-1.html" data-i18n="link_read_1">Intip Spesifikasi Gahar NMAX "Turbo" Terbaru</a>
+                    </div>
+                </div>
+
+                <h2 id="sec-2" data-i18n="h2_2">2. Mengapa Harus Aerox 155 Connected?</h2>
+                <p data-i18n="p5">
+                    Promo ini kami fokuskan pada Aerox 155 Connected bukan tanpa alasan. Motor ini adalah definisi
+                    sejati
+                    dari <em>Personal Sports Scooter</em>. Bagi generasi muda yang aktif dan ingin tampil beda, Aerox
+                    adalah pilihan yang tidak bisa ditawar. Berikut adalah alasan mengapa motor ini layak ada di garasi
+                    Anda:
+                </p>
+                <ul class="highlight-list">
+                    <li data-i18n="feat_1"><strong>Power to Weight Ratio Terbaik:</strong> Dibekali mesin Blue Core
+                        155cc berpendingin cairan (Liquid Cooled), Aerox memiliki performa tarikan paling responsif di
+                        kelasnya. Teknologi VVA (Variable Valve Actuation) menjaga tenaga tetap ngisi di setiap putaran
+                        mesin.</li>
+                    <li data-i18n="feat_2"><strong>Y-Connect:</strong> Fitur canggih yang menghubungkan motor dengan
+                        smartphone Anda. Cek kondisi oli, aki, lokasi parkir terakhir, hingga notifikasi pesan/telepon
+                        langsung di dashboard digital.</li>
+                    <li data-i18n="feat_3"><strong>Desain Aerodinamis:</strong> Tampilan bodi yang tajam dengan motif
+                        "X" di bagian samping memberikan kesan sporty yang kuat. Lampu LED depan dan belakang
+                        menambah kesan modern dan futuristik.</li>
+                </ul>
+
+                <blockquote>
+                    <span data-i18n="quote">"Aerox 155 bukan sekadar alat transportasi, tapi identitas. Dengan promo
+                        ini, gaya hidup sporty kini lebih terjangkau."</span>
+                </blockquote>
+
+                <h2 id="sec-3" data-i18n="h2_3">3. Simulasi Kredit Ringan</h2>
+                <p data-i18n="p6">
+                    Agar Anda memiliki gambaran lebih jelas, berikut adalah estimasi simulasi kredit untuk Aerox 155
+                    Connected versi Standard (Harga OTR dapat berbeda tergantung wilayah):
+                </p>
+
+                <div class="table-responsive my-4">
+                    <table class="table table-bordered table-striped text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th data-i18n="th_dp">Uang Muka (DP)</th>
+                                <th data-i18n="th_normal">Angsuran Normal (35x)</th>
+                                <th data-i18n="th_promo">Promo (Bayar 32x)</th>
+                                <th data-i18n="th_save">Total Hemat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rp 3.000.000</td>
+                                <td>Rp 1.450.000</td>
+                                <td><strong>Rp 1.450.000</strong></td>
+                                <td>Rp 4.350.000</td>
+                            </tr>
+                            <tr>
+                                <td>Rp 5.000.000</td>
+                                <td>Rp 1.320.000</td>
+                                <td><strong>Rp 1.320.000</strong></td>
+                                <td>Rp 3.960.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small class="text-muted fst-italic" data-i18n="table_note">*Simulasi di atas hanya estimasi.
+                        Hubungi sales kami untuk perhitungan real-time.</small>
+                </div>
+
+                <h2 id="sec-4" data-i18n="h2_4">4. Syarat dan Cara Pengajuan</h2>
+                <p data-i18n="p7">
+                    Kami tidak ingin mempersulit Anda. Proses pengajuan kredit di Dealer Resmi Yamaha sangat cepat dan
+                    mudah. Cukup siapkan dokumen berikut:
+                </p>
+                <ul class="highlight-list">
+                    <li data-i18n="req_1">Fotokopi KTP Suami & Istri (jika sudah menikah) atau KTP Pemohon & Penjamin
+                        (jika belum).</li>
+                    <li data-i18n="req_2">Fotokopi Kartu Keluarga (KK).</li>
+                    <li data-i18n="req_3">Dokumen pendukung penghasilan (Slip Gaji / Rekening Koran / Bukti Usaha).</li>
+                    <li data-i18n="req_4">Rekening Listrik atau PBB rumah (opsional untuk mempercepat proses).</li>
+                </ul>
+                <p data-i18n="p8">
+                    Data Anda akan dijemput langsung ke rumah oleh tim surveyor kami. Proses persetujuan (approval)
+                    biasanya hanya memakan waktu 1x24 jam kerja. Setelah disetujui, unit motor akan langsung dikirim ke
+                    depan pintu rumah Anda tanpa biaya tambahan!
+                </p>
+
+                <div class="baca-juga">
+                    <i class="fas fa-tools text-secondary fs-4"></i>
+                    <div>
+                        <strong data-i18n="read_also">Baca Juga:</strong>
+                        <a href="berita-2.html" data-i18n="link_read_2">Tips Merawat Motor Matic Agar Awet di Musim
+                            Hujan</a>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h2 style="border:none; padding:0; color:var(--yamaha-blue-dark);" data-i18n="faq_header">Pertanyaan
+                        Sering Diajukan (FAQ)</h2>
+
+                    <details class="faq-item">
+                        <summary data-i18n="faq_1_q">Sampai kapan promo ini berlaku?</summary>
+                        <p data-i18n="faq_1_a">Promo "New Year, New Ride" berlaku mulai tanggal 1 Januari hingga 31
+                            Januari 2026. Segera ajukan sebelum kuota promo habis.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq_2_q">Apakah promo berlaku untuk pembelian cash?</summary>
+                        <p data-i18n="faq_2_a">Promo potongan tenor khusus untuk pembelian kredit. Namun, untuk
+                            pembelian cash, kami menyediakan hadiah langsung berupa Helm Eksklusif dan Jaket Yamaha.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq_3_q">Apakah KTP luar kota bisa mengajukan?</summary>
+                        <p data-i18n="faq_3_a">Bisa, asalkan Anda berdomisili dan bekerja di wilayah jangkauan dealer
+                            kami. Tim kami akan membantu proses verifikasi domisili.</p>
+                    </details>
+                </div>
+
+                <div class="conclusion-box">
+                    <h2 data-i18n="concl_title">Kesimpulan</h2>
+                    <p data-i18n="concl_text">
+                        Kesempatan tidak datang dua kali. Promo diskon angsuran hingga 3 bulan ini adalah solusi cerdas
+                        bagi Anda yang ingin upgrade kendaraan di tahun 2026 tanpa memberatkan arus kas bulanan. Dengan
+                        Aerox 155 Connected, mobilitas Anda akan semakin cepat, gaya semakin maksimal, dan dompet tetap
+                        aman. Segera hubungi sales executive kami melalui tombol WhatsApp di bawah ini!
+                    </p>
+                </div>
+
+                <div class="post-footer">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=100&auto=format&fit=crop"
+                            alt="Admin" style="width:70px; height:70px; border-radius:50%;">
+                        <div>
+                            <h5 class="fw-bold mb-1" style="color: var(--yamaha-blue-dark);" data-i18n="art_author">
+                                Admin Sales</h5>
+                            <small class="text-muted" data-i18n="author_role">Marketing Division</small>
+                        </div>
+                    </div>
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <p class="small text-muted mb-2" data-i18n="share_text">Bagikan promo ini:</p>
+                        <button class="social-share-btn" onclick="shareSocial('wa')"><i
+                                class="fab fa-whatsapp"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('fb')"><i
+                                class="fab fa-facebook-f"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('tw')"><i
+                                class="fab fa-twitter"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('li')"><i
+                                class="fab fa-linkedin-in"></i></button>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+
+    <section class="container py-5">
+        <h3 class="fw-bold mb-4 text-center" style="color: var(--yamaha-blue-dark);" data-i18n="related_header">Artikel
+            Terkait</h3>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop"
+                            alt="NMAX Turbo">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_1_title">Peluncuran NMAX "TURBO" Guncang Pasar</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_1_desc">Teknologi YECVT terbaru memberikan
+                            sensasi berkendara yang berbeda.</p>
+                        <a href="berita-1.html" class="btn-read-more"><span data-i18n="btn_read_more">BACA
+                                SELENGKAPNYA</span> <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop"
+                            alt="Tips Hujan">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_2_title">Tips Merawat Motor di Musim Hujan</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_2_desc">Jangan biarkan motor kesayangan Anda
+                            rusak karena air hujan.</p>
+                        <a href="berita-2.html" class="btn-read-more"><span data-i18n="btn_read_more">BACA
+                                SELENGKAPNYA</span> <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png"
+                            alt="Hybrid Tech">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_3_title">Mengenal Fitur Hybrid Grand Filano</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_3_desc">Teknologi ramah lingkungan yang irit
+                            bahan bakar.</p>
+                        <a href="#" class="btn-read-more"><span data-i18n="btn_read_more">BACA SELENGKAPNYA</span> <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_help">Bantuan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- 1. TOC GENERATOR ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocList = document.getElementById('auto-toc-list');
+            const headers = document.querySelectorAll('.article-content h2, .article-content h3');
+
+            if (headers.length > 0) {
+                headers.forEach((header, index) => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+
+                    if (!header.id) header.id = 'section-' + index;
+                    a.href = '#' + header.id;
+                    a.textContent = header.textContent;
+
+                    a.setAttribute('data-target-id', header.id);
+
+                    if (header.tagName === 'H3') {
+                        li.style.marginLeft = '20px';
+                        li.style.listStyleType = 'circle';
+                    }
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+            }
+        });
+
+        // --- 2. TOGGLE TOC ---
+        function toggleToc() {
+            const list = document.getElementById('auto-toc-list');
+            const icon = document.getElementById('tocIcon');
+            if (list.style.display === 'none') {
+                list.style.display = 'block';
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                list.style.display = 'none';
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        // --- 3. SHARE SOCIAL ---
+        function shareSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(document.title);
+            let shareUrl = '';
+            if (platform === 'wa') shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+            else if (platform === 'fb') shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            else if (platform === 'tw') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            else if (platform === 'li') shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // --- 4. TRANSLATION LOGIC ---
+        const translations = {
+            // Navbar & Footer (COMMON)
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_help": { id: "Bantuan", en: "Support", jp: "サポート" },
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "btn_read_more": { id: "BACA SELENGKAPNYA", en: "READ MORE", jp: "続きを読む" },
+
+            // Article Meta
+            "art_title": { id: "Promo Awal Tahun: Diskon Angsuran hingga 3 Bulan!", en: "Early Year Promo: Installment Discount up to 3 Months!", jp: "年初のプロモーション：最大3か月の分割払い割引！" },
+            "art_author": { id: "Admin Sales", en: "Sales Admin", jp: "販売管理者" },
+            "art_date": { id: "12 Jan 2026 • 5 Menit Baca", en: "Jan 12, 2026 • 5 Min Read", jp: "2026年1月12日 • 5分読む" },
+            "art_caption_main": { id: "Jangan lewatkan kesempatan emas memiliki Aerox 155 Connected dengan harga spesial awal tahun.", en: "Don't miss the golden opportunity to own Aerox 155 Connected at a special early year price.", jp: "新年の特別価格でAerox 155 Connectedを所有する絶好の機会をお見逃しなく。" },
+
+            // TOC & UI Elements
+            "toc_header": { id: "Daftar Isi", en: "Table of Contents", jp: "目次" },
+            "read_also": { id: "Baca Juga:", en: "Read Also:", jp: "また読む:" },
+            "link_read_1": { id: "Intip Spesifikasi Gahar NMAX \"Turbo\" Terbaru", en: "Peek at the Fierce Specs of the Latest NMAX \"Turbo\"", jp: "最新のNMAX「ターボ」の猛烈なスペックを覗く" },
+            "link_read_2": { id: "Tips Merawat Motor Matic Agar Awet di Musim Hujan", en: "Tips to Maintain Automatic Motorcycle in Rainy Season", jp: "雨季にオートバイを長持ちさせるためのヒント" },
+            "author_role": { id: "Marketing Division", en: "Marketing Division", jp: "マーケティング部門" },
+            "share_text": { id: "Bagikan promo ini:", en: "Share this promo:", jp: "このプロモーションを共有:" },
+            "related_header": { id: "Artikel Terkait", en: "Related Articles", jp: "関連記事" },
+            "faq_header": { id: "Pertanyaan Sering Diajukan (FAQ)", en: "Frequently Asked Questions (FAQ)", jp: "よくある質問 (FAQ)" },
+            "concl_title": { id: "Kesimpulan", en: "Conclusion", jp: "結論" },
+
+            // Table Headers
+            "th_dp": { id: "Uang Muka (DP)", en: "Down Payment (DP)", jp: "頭金 (DP)" },
+            "th_normal": { id: "Angsuran Normal (35x)", en: "Normal Installment (35x)", jp: "通常分割払い (35x)" },
+            "th_promo": { id: "Promo (Bayar 32x)", en: "Promo (Pay 32x)", jp: "プロモ (32回払い)" },
+            "th_save": { id: "Total Hemat", en: "Total Savings", jp: "総節約" },
+            "table_note": { id: "*Simulasi di atas hanya estimasi. Hubungi sales kami untuk perhitungan real-time.", en: "*The simulation above is only an estimate. Contact our sales for real-time calculation.", jp: "※上記のシミュレーションはあくまで目安です。リアルタイムの計算については、営業担当者にお問い合わせください。" },
+
+            // Article Content Headers (H2)
+            "h2_1": { id: "1. Detail Promo: Hemat Angsuran 3 Bulan", en: "1. Promo Detail: Save 3 Months Installment", jp: "1. プロモーションの詳細：3か月の分割払いを節約" },
+            "h2_2": { id: "2. Mengapa Harus Aerox 155 Connected?", en: "2. Why Must Aerox 155 Connected?", jp: "2. なぜAerox 155 Connectedなのか？" },
+            "h2_3": { id: "3. Simulasi Kredit Ringan", en: "3. Light Credit Simulation", jp: "3. ライトクレジットシミュレーション" },
+            "h2_4": { id: "4. Syarat dan Cara Pengajuan", en: "4. Requirements and How to Apply", jp: "4. 要件と申請方法" },
+
+            // Article Paragraphs
+            "p1": {
+                id: "Tahun baru 2026 telah tiba! Semangat baru tentu harus diimbangi dengan mobilitas yang lebih prima. Memahami kebutuhan konsumen akan kendaraan yang tidak hanya handal tetapi juga bergaya, Dealer Resmi Yamaha kembali menghadirkan kejutan istimewa di awal tahun ini. Kami dengan bangga mengumumkan program \"New Year, New Ride\" yang didedikasikan khusus bagi pecinta motor sport matic.",
+                en: "New Year 2026 has arrived! New spirit must certainly be balanced with better mobility. Understanding consumer needs for vehicles that are not only reliable but also stylish, the Authorized Yamaha Dealer brings back a special surprise early this year. We proudly announce the \"New Year, New Ride\" program dedicated specifically to sport matic motorcycle lovers.",
+                jp: "2026年の新年が到来しました！新しい精神は確かに、より良いモビリティとバランスを取る必要があります。信頼性だけでなくスタイリッシュな車両に対する消費者のニーズを理解し、ヤマハ正規ディーラーは今年の初めに特別なサプライズを持ち帰ります。スポーツマチックモーターサイクル愛好家専用の「New Year, New Ride」プログラムを発表できることを誇りに思います。"
+            },
+            "p2": {
+                id: "Jika Anda sudah lama mengincar Yamaha Aerox 155 Connected, inilah saat yang paling tepat untuk meminangnya. Mengapa? Karena kami menawarkan promo potongan angsuran yang sangat signifikan, yang bisa membuat Anda hemat hingga jutaan rupiah. Tidak perlu menunggu bonus tahunan cair atau menabung lebih lama lagi, impian memiliki motor baru bisa terwujud sekarang juga dengan skema pembiayaan yang sangat ringan.",
+                en: "If you have been eyeing the Yamaha Aerox 155 Connected for a long time, this is the perfect time to propose to it. Why? Because we offer a very significant installment discount promo, which can save you millions of rupiah. No need to wait for the annual bonus to disburse or save any longer, the dream of owning a new motorcycle can come true right now with a very light financing scheme.",
+                jp: "ヤマハAerox 155 Connectedを長い間注目していたなら、今がそれを手に入れる絶好の機会です。なぜでしょうか？非常に大幅な分割払い割引プロモーションを提供しており、数百万ルピアを節約できるからです。年間ボーナスの支払いを待ったり、これ以上節約したりする必要はありません。新しいオートバイを所有するという夢は、非常に軽い資金調達スキームで今すぐ実現できます。"
+            },
+            "p3": {
+                id: "Program unggulan kami di bulan Januari 2026 ini adalah \"Diskon Potongan Tenor\". Mekanismenya sangat sederhana namun sangat menguntungkan bagi konsumen yang melakukan pembelian secara kredit. Biasanya, untuk tenor panjang (misalnya 35 bulan), Anda diwajibkan membayar penuh selama periode tersebut. Namun, dengan promo ini, Anda cukup membayar untuk 32 bulan saja!",
+                en: "Our flagship program in January 2026 is \"Tenor Discount\". The mechanism is very simple yet very profitable for consumers who purchase on credit. Usually, for long tenors (e.g., 35 months), you are required to pay in full during that period. However, with this promo, you only pay for 32 months!",
+                jp: "2026年1月の主力プログラムは「テナー割引」です。メカニズムは非常にシンプルですが、クレジットで購入する消費者にとっては非常に有益です。通常、長い期間（たとえば35か月）の場合、その期間中に全額を支払う必要があります。ただし、このプロモーションでは、32か月分を支払うだけで済みます！"
+            },
+            "p4": {
+                id: "Bayangkan jika angsuran bulanan Anda adalah Rp 1.500.000. Dengan potongan 3 bulan (3 x Rp 1.500.000), Anda sudah menghemat total Rp 4.500.000. Uang sebanyak itu bisa Anda gunakan untuk keperluan lain, seperti modifikasi tipis-tipis, membeli helm premium, atau bahkan untuk biaya touring perdana Anda. Promo ini berlaku khusus untuk unit Yamaha Aerox 155 Connected (All Variant) dengan tenor minimal 35 bulan melalui leasing partner kami seperti BAF, Adira Finance, dan WOM Finance.",
+                en: "Imagine if your monthly installment is IDR 1,500,000. With a 3-month deduction (3 x IDR 1,500,000), you have saved a total of IDR 4,500,000. That much money can be used for other needs, such as light modifications, buying a premium helmet, or even for your first touring costs. This promo applies specifically to Yamaha Aerox 155 Connected units (All Variants) with a minimum tenor of 35 months through our leasing partners such as BAF, Adira Finance, and WOM Finance.",
+                jp: "毎月の分割払いが1,500,000ルピアだと想像してみてください。3か月の控除（3 x 1,500,000ルピア）で、合計4,500,000ルピアを節約できました。その金額は、軽い改造、プレミアムヘルメットの購入、さらには最初のツーリング費用など、他のニーズに使用できます。このプロモーションは、BAF、Adira Finance、WOM Financeなどのリースパートナーを通じて、最低35か月の期間を持つYamaha Aerox 155 Connectedユニット（全バリエーション）に特に適用されます。"
+            },
+            "p5": {
+                id: "Promo ini kami fokuskan pada Aerox 155 Connected bukan tanpa alasan. Motor ini adalah definisi sejati dari Personal Sports Scooter. Bagi generasi muda yang aktif dan ingin tampil beda, Aerox adalah pilihan yang tidak bisa ditawar. Berikut adalah alasan mengapa motor ini layak ada di garasi Anda:",
+                en: "We focus this promo on Aerox 155 Connected not without reason. This bike is the true definition of a Personal Sports Scooter. For the active young generation who want to stand out, Aerox is a non-negotiable choice. Here are the reasons why this bike deserves to be in your garage:",
+                jp: "このプロモーションをAerox 155 Connectedに集中させているのには理由があります。このバイクは、パーソナルスポーツスクーターの真の定義です。目立ちたいアクティブな若い世代にとって、Aeroxは交渉の余地のない選択肢です。このバイクがガレージにあるに値する理由は次のとおりです。"
+            },
+            "p6": {
+                id: "Agar Anda memiliki gambaran lebih jelas, berikut adalah estimasi simulasi kredit untuk Aerox 155 Connected versi Standard (Harga OTR dapat berbeda tergantung wilayah):",
+                en: "To give you a clearer picture, here is an estimated credit simulation for the Aerox 155 Connected Standard version (OTR Price may vary depending on region):",
+                jp: "より明確な全体像を把握するために、Aerox 155 Connected Standardバージョンの推定クレジットシミュレーションを以下に示します（OTR価格は地域によって異なる場合があります）。"
+            },
+            "p7": {
+                id: "Kami tidak ingin mempersulit Anda. Proses pengajuan kredit di Dealer Resmi Yamaha sangat cepat dan mudah. Cukup siapkan dokumen berikut:",
+                en: "We don't want to make it hard for you. The credit application process at the Authorized Yamaha Dealer is very fast and easy. Just prepare the following documents:",
+                jp: "私たちはあなたを困らせたくありません。ヤマハ正規ディーラーでのクレジット申請プロセスは非常に迅速かつ簡単です。次の書類を準備するだけです。"
+            },
+            "p8": {
+                id: "Data Anda akan dijemput langsung ke rumah oleh tim surveyor kami. Proses persetujuan (approval) biasanya hanya memakan waktu 1x24 jam kerja. Setelah disetujui, unit motor akan langsung dikirim ke depan pintu rumah Anda tanpa biaya tambahan!",
+                en: "Your data will be picked up directly at your home by our surveyor team. The approval process usually only takes 1x24 working hours. Once approved, the motorcycle unit will be sent directly to your doorstep at no additional cost!",
+                jp: "データは、調査員チームが自宅で直接収集します。承認プロセスには通常、1x24営業時間しかかかりません。承認されると、オートバイユニットは追加費用なしで直接玄関先に送られます！"
+            },
+
+            // List Items & Quotes
+            "feat_1": {
+                id: "<strong>Power to Weight Ratio Terbaik:</strong> Dibekali mesin Blue Core 155cc berpendingin cairan (Liquid Cooled), Aerox memiliki performa tarikan paling responsif di kelasnya. Teknologi VVA menjaga tenaga tetap ngisi di setiap putaran mesin.",
+                en: "<strong>Best Power to Weight Ratio:</strong> Equipped with a 155cc liquid-cooled Blue Core engine, Aerox has the most responsive pull performance in its class. VVA technology keeps power filling at every engine speed.",
+                jp: "<strong>最高のパワーウェイトレシオ：</strong> 155cc水冷ブルーコアエンジンを搭載したAeroxは、クラスで最も応答性の高いプルパフォーマンスを備えています。VVAテクノロジーにより、すべてのエンジン速度でパワーが満たされます。"
+            },
+            "feat_2": {
+                id: "<strong>Y-Connect:</strong> Fitur canggih yang menghubungkan motor dengan smartphone Anda. Cek kondisi oli, aki, lokasi parkir terakhir, hingga notifikasi pesan/telepon langsung di dashboard digital.",
+                en: "<strong>Y-Connect:</strong> Advanced feature connecting the bike with your smartphone. Check oil condition, battery, last parking location, to message/call notifications directly on the digital dashboard.",
+                jp: "<strong>Y-Connect:</strong> バイクとスマートフォンを接続する高度な機能。オイルの状態、バッテリー、最終駐車位置を確認し、デジタルダッシュボードで直接メッセージ/電話の通知を確認します。"
+            },
+            "feat_3": {
+                id: "<strong>Desain Aerodinamis:</strong> Tampilan bodi yang tajam dengan motif 'X' di bagian samping memberikan kesan sporty yang kuat. Lampu LED depan dan belakang menambah kesan modern dan futuristik.",
+                en: "<strong>Aerodynamic Design:</strong> Sharp body appearance with 'X' motif on the side gives a strong sporty impression. Front and rear LED lights add a modern and futuristic impression.",
+                jp: "<strong>空力設計：</strong> 側面に「X」モチーフのシャープなボディ外観は、強いスポーティな印象を与えます。フロントとリアのLEDライトは、モダンで未来的な印象を与えます。"
+            },
+            "quote": {
+                id: "\"Aerox 155 bukan sekadar alat transportasi, tapi identitas. Dengan promo ini, gaya hidup sporty kini lebih terjangkau.\"",
+                en: "\"Aerox 155 is not just a means of transportation, but an identity. With this promo, a sporty lifestyle is now more affordable.\"",
+                jp: "「Aerox 155は単なる移動手段ではなく、アイデンティティです。このプロモーションにより、スポーティなライフスタイルがより手頃な価格になりました。」"
+            },
+            "req_1": {
+                id: "Fotokopi KTP Suami & Istri (jika sudah menikah) atau KTP Pemohon & Penjamin (jika belum).",
+                en: "Photocopy of Husband & Wife ID (if married) or Applicant & Guarantor ID (if single).",
+                jp: "夫と妻のIDのコピー（既婚の場合）または申請者と保証人のID（独身の場合）。"
+            },
+            "req_2": {
+                id: "Fotokopi Kartu Keluarga (KK).",
+                en: "Photocopy of Family Card (KK).",
+                jp: "ファミリーカード（KK）のコピー。"
+            },
+            "req_3": {
+                id: "Dokumen pendukung penghasilan (Slip Gaji / Rekening Koran / Bukti Usaha).",
+                en: "Income supporting documents (Payslip / Bank Statement / Business Proof).",
+                jp: "収入を証明する書類（給与明細/銀行取引明細書/ビジネス証明書）。"
+            },
+            "req_4": {
+                id: "Rekening Listrik atau PBB rumah (opsional untuk mempercepat proses).",
+                en: "Electricity Bill or House Tax (optional to speed up process).",
+                jp: "電気代または家屋税（プロセスをスピードアップするためのオプション）。"
+            },
+
+            // FAQ
+            "faq_1_q": { id: "Sampai kapan promo ini berlaku?", en: "Until when is this promo valid?", jp: "このプロモーションはいつまで有効ですか？" },
+            "faq_1_a": { id: "Promo \"New Year, New Ride\" berlaku mulai tanggal 1 Januari hingga 31 Januari 2026. Segera ajukan sebelum kuota promo habis.", en: "\"New Year, New Ride\" promo is valid from January 1 to January 31, 2026. Apply immediately before the promo quota runs out.", jp: "「New Year, New Ride」プロモーションは、2026年1月1日から1月31日まで有効です。プロモーションの割り当てがなくなる前にすぐに申請してください。" },
+            "faq_2_q": { id: "Apakah promo berlaku untuk pembelian cash?", en: "Is the promo valid for cash purchases?", jp: "プロモーションは現金の購入に有効ですか？" },
+            "faq_2_a": { id: "Promo potongan tenor khusus untuk pembelian kredit. Namun, untuk pembelian cash, kami menyediakan hadiah langsung berupa Helm Eksklusif dan Jaket Yamaha.", en: "Tenor discount promo is specific for credit purchases. However, for cash purchases, we provide direct gifts in the form of Exclusive Helmets and Yamaha Jackets.", jp: "テナー割引プロモーションは、クレジット購入に固有のものです。ただし、現金購入の場合は、専用ヘルメットとヤマハジャケットの形で直接ギフトを提供します。" },
+            "faq_3_q": { id: "Apakah KTP luar kota bisa mengajukan?", en: "Can out-of-town ID apply?", jp: "市外のIDは申請できますか？" },
+            "faq_3_a": { id: "Bisa, asalkan Anda berdomisili dan bekerja di wilayah jangkauan dealer kami. Tim kami akan membantu proses verifikasi domisili.", en: "Yes, provided you reside and work within our dealer's coverage area. Our team will assist with the domicile verification process.", jp: "はい、あなたが私たちのディーラーの対象地域内に居住し、働いていることを条件とします。私たちのチームは、居住確認プロセスを支援します。" },
+            "concl_text": {
+                id: "Kesempatan tidak datang dua kali. Promo diskon angsuran hingga 3 bulan ini adalah solusi cerdas bagi Anda yang ingin upgrade kendaraan di tahun 2026 tanpa memberatkan arus kas bulanan. Dengan Aerox 155 Connected, mobilitas Anda akan semakin cepat, gaya semakin maksimal, dan dompet tetap aman. Segera hubungi sales executive kami melalui tombol WhatsApp di bawah ini!",
+                en: "Opportunity does not knock twice. This installment discount promo up to 3 months is a smart solution for those who want to upgrade vehicles in 2026 without burdening monthly cash flow. With Aerox 155 Connected, your mobility will be faster, style maximized, and wallet remains safe. Contact our sales executive immediately via the WhatsApp button below!",
+                jp: "機会は2度ノックしません。この最大3か月の分割払い割引プロモーションは、毎月のキャッシュフローに負担をかけることなく2026年に車両をアップグレードしたい人にとって賢明なソリューションです。Aerox 155 Connectedを使用すると、モビリティが高速化され、スタイルが最大化され、ウォレットが安全に保たれます。下のWhatsAppボタンからすぐに営業担当者に連絡してください！"
+            },
+
+            // Related Card Content
+            "rel_1_title": { id: "Peluncuran NMAX \"TURBO\" Guncang Pasar", en: "NMAX \"TURBO\" Launch Shakes Market", jp: "NMAX「TURBO」の発売が市場を揺るがす" },
+            "rel_1_desc": { id: "Teknologi YECVT terbaru memberikan sensasi berkendara yang berbeda.", en: "Latest YECVT technology provides a different driving sensation.", jp: "最新のYECVTテクノロジーは、異なるドライビング感覚を提供します。" },
+            "rel_2_title": { id: "Tips Merawat Motor di Musim Hujan", en: "Tips for Bike Care in Rainy Season", jp: "雨季のバイクケアのヒント" },
+            "rel_2_desc": { id: "Jangan biarkan motor kesayangan Anda rusak karena air hujan.", en: "Don't let your beloved bike get damaged by rainwater.", jp: "愛するバイクを雨水で傷つけないでください。" },
+            "rel_3_title": { id: "Mengenal Fitur Hybrid Grand Filano", en: "Knowing Grand Filano Hybrid Feature", jp: "グランドフィラーノハイブリッド機能を知る" },
+            "rel_3_desc": { id: "Teknologi ramah lingkungan yang irit bahan bakar.", en: "Environmentally friendly technology that is fuel efficient.", jp: "燃費の良い環境に優しい技術。" }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            if (lang === 'jp') document.body.classList.add('lang-jp');
+            else document.body.classList.remove('lang-jp');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    if (translations[key][lang].includes('<')) {
+                        element.innerHTML = translations[key][lang];
+                    } else {
+                        element.textContent = translations[key][lang];
+                    }
+                }
+            });
+
+            updateTOC(lang);
+        }
+
+        function updateTOC(lang) {
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            tocLinks.forEach(link => {
+                const targetId = link.getAttribute('data-target-id');
+                let transKey = "";
+                if (targetId === "sec-1") transKey = "h2_1";
+                if (targetId === "sec-2") transKey = "h2_2";
+                if (targetId === "sec-3") transKey = "h2_3";
+                if (targetId === "sec-4") transKey = "h2_4";
+
+                if (transKey && translations[transKey][lang]) {
+                    link.textContent = translations[transKey][lang];
+                }
+            });
+        }
+
+        // Load default language
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(savedLang);
+        });
+
+        /* ==============================================
+   LOGIKA BACK TO TOP
+   ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
+        });
+    </script>
+</body>
+
+</html>

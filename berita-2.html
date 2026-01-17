@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Panduan lengkap merawat motor matic di musim hujan. Tips menjaga mesin, rem, dan bodi motor agar tetap awet dan tidak mogok.">
+    <title>5 Tips Merawat Motor Matic Agar Awet di Musim Hujan - Yamaha Motor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. GLOBAL VARIABLES --- */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+            --font-heading: 'Exo 2', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Support Jepang */
+        body.lang-jp {
+            font-family: 'Noto Sans JP', sans-serif !important;
+        }
+
+        body.lang-jp h1,
+        body.lang-jp h2,
+        body.lang-jp h3,
+        body.lang-jp h4 {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            font-weight: 700;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: var(--font-heading);
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+        }
+
+        /* --- 2. NAVBAR MODERN --- */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-link::after,
+        .navbar .dropdown-toggle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border: none !important;
+            margin: 0 !important;
+            vertical-align: baseline !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after,
+        .navbar .nav-item.dropdown:hover .dropdown-toggle::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link.show {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* MODERN DROPDOWN */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+            padding: 10px 0;
+            margin-top: 0;
+            background-color: #fff;
+            min-width: 200px;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                animation: fadeInFast 0.2s ease-in-out forwards;
+            }
+
+            .nav-item.dropdown::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+            }
+        }
+
+        @keyframes fadeInFast {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item {
+            padding: 12px 25px;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+            padding-left: 30px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+                margin: 0;
+            }
+        }
+
+        /* --- 3. ARTICLE HERO --- */
+        .blog-hero {
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            /* Updated Image for Rainy Season Context */
+            background: url('https://images.unsplash.com/photo-1515555230216-82228b88ea98?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 80px;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 53, 148, 0.6), rgba(0, 53, 148, 0.9));
+        }
+
+        .blog-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            backdrop-filter: blur(5px);
+        }
+
+        .author-meta img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--yamaha-red);
+        }
+
+        /* --- 4. CONTENT WRAPPER --- */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            margin-top: -80px;
+            background: white;
+            border-radius: 50px 50px 0 0;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-layout {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* --- 5. ARTICLE STYLING --- */
+        .article-content p {
+            margin-bottom: 1.8rem;
+            font-size: 1.1rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-left: 15px;
+            border-left: 5px solid var(--yamaha-red);
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--yamaha-blue-main);
+        }
+
+        figure {
+            margin: 0 0 3rem;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* TOC */
+        .auto-toc-container {
+            background: var(--bg-light);
+            border: 1px solid rgba(0, 87, 184, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 2rem 0;
+        }
+
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--yamaha-blue-dark);
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+            color: var(--yamaha-blue-main);
+        }
+
+        .toc-list li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .toc-list li a:hover {
+            color: var(--yamaha-red);
+            text-decoration: underline;
+        }
+
+        /* Baca Juga */
+        .baca-juga {
+            background: #eef4ff;
+            border-left: 4px solid var(--yamaha-blue-main);
+            padding: 15px 20px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .baca-juga a {
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* Blockquote */
+        blockquote {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-style: italic;
+            text-align: center;
+            color: var(--yamaha-blue-dark);
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            position: relative;
+            border: 1px dashed var(--yamaha-blue-main);
+        }
+
+        blockquote::before {
+            content: '\201C';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: rgba(0, 87, 184, 0.2);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        details summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--yamaha-blue-main);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        details summary::after {
+            content: '+';
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details p {
+            padding: 15px 20px;
+            background: var(--bg-light);
+            margin: 0;
+            color: #555;
+            border-top: 1px solid #eee;
+        }
+
+        /* Conclusion Box */
+        .conclusion-box {
+            background: linear-gradient(135deg, var(--yamaha-blue-dark), var(--yamaha-blue-main));
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 3rem;
+            text-align: center;
+            color: white;
+        }
+
+        .conclusion-box h2 {
+            color: white !important;
+            border: none;
+            padding: 0;
+        }
+
+        .conclusion-box p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* Author & Share */
+        .post-footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social-share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            color: var(--yamaha-blue-main);
+            border: 1px solid #eee;
+            margin-left: 8px;
+            transition: 0.3s;
+        }
+
+        .social-share-btn:hover {
+            background: var(--yamaha-blue-main);
+            color: white;
+        }
+
+        /* Related Posts Card */
+        .news-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .news-img-wrapper {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .news-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .btn-read-more {
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+
+        /* --- 6. FOOTER --- */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+            transform: rotate(360deg);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                border-radius: 30px 30px 0 0;
+                margin-top: -50px;
+            }
+
+            .post-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ========================================================
+   FLOATING BUTTONS (WA & BACK TO TOP)
+   ======================================================== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Jarak antar tombol */
+        }
+
+        /* Tombol Umum */
+        .btn-float {
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: none;
+        }
+
+        .btn-float:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Tombol WhatsApp */
+        .btn-whatsapp {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            font-size: 32px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animasi Pulse untuk WA agar menarik perhatian */
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Tombol Back to Top */
+        .btn-back-to-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--yamaha-blue-dark);
+            /* Mengikuti tema website */
+            font-size: 20px;
+            opacity: 0;
+            /* Tersembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class untuk memunculkan tombol Back to Top */
+        .btn-back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsif Mobile (Layar Kecil) */
+        @media (max-width: 768px) {
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .btn-back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html" data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="berita.html" data-i18n="nav_news">Berita</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_contact">
+                            Hubungi Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a>
+                            </li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="blog-hero">
+        <div class="blog-hero-content">
+            <h1 data-i18n="art_title">5 Tips Merawat Motor Matic Agar Awet di Musim Hujan</h1>
+            <div class="author-meta">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop"
+                    alt="Author">
+                <div class="text-start">
+                    <strong data-i18n="art_author">Teknisi Handal</strong><br>
+                    <span style="opacity: 0.8;" data-i18n="art_date">15 Jan 2026 • 6 Menit Baca</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="blog-layout">
+
+            <article class="article-content">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop"
+                        alt="Perawatan Motor Musim Hujan" width="800" height="600" loading="lazy">
+                    <figcaption data-i18n="art_caption_main">Lakukan pengecekan rutin pada komponen vital motor matic
+                        Anda saat musim hujan tiba.</figcaption>
+                </figure>
+
+                <div class="auto-toc-container">
+                    <div class="toc-header" onclick="toggleToc()">
+                        <h4 data-i18n="toc_header">Daftar Isi</h4>
+                        <i class="fas fa-chevron-up" id="tocIcon"></i>
+                    </div>
+                    <ul class="toc-list" id="auto-toc-list"></ul>
+                </div>
+
+                <p data-i18n="p1">
+                    Musim hujan telah tiba dengan intensitas yang cukup tinggi di berbagai wilayah Indonesia. Bagi para
+                    pengendara motor matic (skutik), tantangan berkendara di bawah guyuran hujan bukan hanya soal
+                    kenyamanan dan keamanan, tetapi juga soal kesehatan "kuda besi" kesayangan Anda. Genangan air,
+                    lumpur, dan zat asam yang terkandung dalam air hujan dapat menjadi musuh utama bagi komponen mesin
+                    dan kelistrikan motor.
+                </p>
+                <p data-i18n="p2">
+                    Banyak pemilik kendaraan yang mengabaikan perawatan pasca-hujan, beranggapan bahwa motor akan kotor
+                    lagi besoknya. Padahal, pembiaran ini dapat menyebabkan korosi pada rangka, kerusakan pada sistem
+                    CVT, hingga masalah kelistrikan yang fatal. Agar performa skutik Anda tetap prima dan tidak mogok di
+                    tengah jalan, berikut adalah panduan lengkap 5 tips merawat motor matic agar awet di musim hujan
+                    yang wajib Anda terapkan.
+                </p>
+
+                <h2 id="sec-1" data-i18n="h2_1">1. Segera Bilas dengan Air Bersih</h2>
+                <p data-i18n="p3">
+                    Langkah paling sederhana namun paling krusial adalah membilas motor segera setelah terkena air
+                    hujan.
+                    Mengapa? Air hujan mengandung kadar asam yang cukup tinggi (acid rain), terutama di daerah perkotaan
+                    dengan polusi udara. Jika dibiarkan mengering di bodi dan komponen logam motor, air hujan ini akan
+                    mempercepat proses korosi atau karatan.
+                </p>
+                <p data-i18n="p4">
+                    Anda tidak perlu mencucinya menggunakan sabun setiap hari. Cukup bilas seluruh bagian motor, mulai
+                    dari bodi, kaki-kaki, hingga area mesin bagian bawah menggunakan air bersih dari selang. Fokuskan
+                    pada area kolong spakbor dan standar, di mana lumpur bercampur pasir sering menumpuk. Penumpukan
+                    kotoran ini jika mengeras dapat menghambat pergerakan suspensi dan merusak seal shockbreaker.
+                </p>
+
+                <div class="baca-juga">
+                    <i class="fas fa-wrench text-secondary fs-4"></i>
+                    <div>
+                        <strong data-i18n="read_also">Baca Juga:</strong>
+                        <a href="berita-1.html" data-i18n="link_read_1">Layanan Service Kunjung Yamaha (SKY) Makin
+                            Praktis</a>
+                    </div>
+                </div>
+
+                <h2 id="sec-2" data-i18n="h2_2">2. Periksa Kondisi Ban dan Tekanan Angin</h2>
+                <p data-i18n="p5">
+                    Jalanan basah mengurangi daya cengkeram (grip) ban secara signifikan. Oleh karena itu, kondisi ban
+                    menjadi faktor keselamatan nomor satu. Pastikan alur atau kembangan ban motor Anda masih tebal dan
+                    tidak botak (gundul). Ban yang gundul tidak memiliki jalur pembuangan air, sehingga sangat berisiko
+                    mengalami <em>aquaplaning</em>—kondisi di mana ban melayang di atas lapisan air dan kehilangan
+                    kendali sepenuhnya.
+                </p>
+                <p data-i18n="p6">
+                    Selain ketebalan, perhatikan juga tekanan angin. Jangan biarkan tekanan angin terlalu tinggi atau
+                    terlalu rendah. Tekanan yang terlalu tinggi membuat tapak ban yang menyentuh aspal menjadi lebih
+                    sedikit, sehingga licin. Sebaliknya, tekanan terlalu rendah membuat motor tidak stabil saat
+                    maneuver. Gunakan tekanan standar pabrikan yang biasanya tertera di stiker dekat dek pijakan kaki.
+                </p>
+
+                <blockquote>
+                    <span data-i18n="quote">"Keselamatan adalah prioritas. Jangan pertaruhkan nyawa Anda dengan ban
+                        botak di jalanan licin. Ganti segera jika TWI (Tire Wear Indicator) sudah tersentuh."</span>
+                </blockquote>
+
+                <h2 id="sec-3" data-i18n="h2_3">3. Cek Sistem Pengereman</h2>
+                <p data-i18n="p7">
+                    Saat musim hujan, komponen rem seperti kampas (brake pad) dan piringan cakram (disc brake) sangat
+                    rentan tertutup kotoran pasir halus yang terbawa air. Gesekan antara pasir, kampas, dan piringan
+                    dapat menyebabkan baret pada cakram dan suara decit yang mengganggu. Lebih parah lagi, kotoran yang
+                    menumpuk di area piston kaliper bisa membuat rem macet.
+                </p>
+                <p data-i18n="p8">
+                    Lakukan penyemprotan air bertekanan sedang pada area kaliper rem untuk merontokkan pasir. Jika
+                    terasa ada hambatan saat menekan tuas rem atau pengereman tidak pakem, segera bawa ke bengkel resmi
+                    untuk pembersihan dan pelumasan ulang pada pin kaliper. Ingat, rem adalah penyelamat utama Anda di
+                    tengah jarak pandang yang terbatas saat hujan lebat.
+                </p>
+
+                <h2 id="sec-4" data-i18n="h2_4">4. Perhatian Khusus pada Busi dan Saringan Udara</h2>
+                <p data-i18n="p9">
+                    Meskipun posisi busi pada motor matic modern sudah cukup terlindungi, namun risiko terkena cipratan
+                    air tetap ada, terutama jika Anda nekat menerobos genangan air yang cukup tinggi. Pastikan cop busi
+                    (cangklong) terpasang rapat dan karet pelindungnya tidak getas atau robek. Kebocoran pada area ini
+                    dapat menyebabkan mesin mogok seketika saat terkena air.
+                </p>
+
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1632733711679-529326f6db12?q=80&w=800&auto=format&fit=crop"
+                        alt="Pengecekan Filter Udara" loading="lazy">
+                    <figcaption data-i18n="img_caption_2">Pemeriksaan filter udara rutin mencegah masuknya air ke ruang
+                        bakar.</figcaption>
+                </figure>
+
+                <p data-i18n="p10">
+                    Selain busi, periksa juga saringan udara (air filter). Pada motor matic, posisi box filter udara
+                    biasanya berada di bawah, dekat dengan roda belakang (di atas CVT). Jika Anda sering melewati
+                    banjir,
+                    ada risiko air masuk ke dalam box filter. Filter udara yang basah tidak dapat menyaring udara dengan
+                    baik dan justru menghambat pasokan udara ke ruang bakar, membuat tarikan motor menjadi berat dan
+                    boros bensin.
+                </p>
+
+                <h2 id="sec-5" data-i18n="h2_5">5. Servis CVT Secara Berkala</h2>
+                <p data-i18n="p11">
+                    Ini adalah poin yang sering dilupakan pemilik motor matic. Bagian CVT (Continuously Variable
+                    Transmission) memiliki saluran pernapasan untuk pendinginan. Meskipun dirancang anti air, namun uap
+                    air atau rembesan air genangan bisa masuk ke dalam bak CVT.
+                </p>
+                <p data-i18n="p12">
+                    Tanda-tanda CVT kemasukan air atau kotoran adalah timbulnya gejala selip (gas diputar tapi motor
+                    lambat bergerak) dan getaran berlebih (gredek) saat tarikan awal. Jika dibiarkan, komponen seperti
+                    V-belt, roller, dan kampas ganda akan cepat aus dan berkarat. Disarankan untuk melakukan servis CVT
+                    (pembersihan dan pemberian <em>grease</em> ulang) lebih sering di musim hujan, misalnya setiap 2.000
+                    km atau segera setelah menerjang banjir.
+                </p>
+
+                <div class="mt-5">
+                    <h2 style="border:none; padding:0; color:var(--yamaha-blue-dark);" data-i18n="faq_header">Pertanyaan
+                        Sering Diajukan (FAQ)</h2>
+
+                    <details class="faq-item">
+                        <summary data-i18n="faq_1_q">Bolehkah mencuci motor saat mesin masih panas?</summary>
+                        <p data-i18n="faq_1_a">Sebaiknya hindari. Menyiram air dingin ke mesin yang sangat panas dapat
+                            menyebabkan perubahan suhu drastis (thermal shock) yang berpotensi merusak blok mesin
+                            (retak)
+                            atau komponen logam lainnya.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq_2_q">Berapa batas aman ketinggian air untuk motor matic?</summary>
+                        <p data-i18n="faq_2_a">Batas aman adalah di bawah box filter udara dan lubang knalpot. Umumnya,
+                            jangan memaksakan melewati genangan air yang tingginya melebihi as roda (tengah ban), karena
+                            risiko air masuk ke CVT dan mesin sangat besar.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq_3_q">Apa yang harus dilakukan jika motor mogok setelah lewati banjir?
+                        </summary>
+                        <p data-i18n="faq_3_a">Jangan memaksa menyalakan starter elektrik terus-menerus karena bisa
+                            memicu <em>water hammer</em>. Dorong ke tempat kering, cek filter udara, busi, dan oli
+                            mesin. Jika
+                            oli berwarna putih susu, segera bawa ke bengkel, jangan dinyalakan.</p>
+                    </details>
+                </div>
+
+                <div class="conclusion-box">
+                    <h2 data-i18n="concl_title">Kesimpulan</h2>
+                    <p data-i18n="concl_text">
+                        Merawat motor matic di musim hujan memang membutuhkan usaha ekstra, namun hal ini sebanding
+                        dengan
+                        keawetan dan performa motor yang Anda dapatkan. Dengan menerapkan 5 tips di atas—mulai dari
+                        mencuci rutin hingga pengecekan CVT—Anda tidak hanya memperpanjang usia pakai komponen motor,
+                        tetapi juga menjamin keselamatan diri sendiri di jalan raya. Tetap waspada dan "Semakin Di
+                        Depan" dalam perawatan kendaraan!
+                    </p>
+                </div>
+
+                <div class="post-footer">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop"
+                            alt="Teknisi" style="width:70px; height:70px; border-radius:50%;">
+                        <div>
+                            <h5 class="fw-bold mb-1" style="color: var(--yamaha-blue-dark);" data-i18n="art_author">
+                                Teknisi Handal</h5>
+                            <small class="text-muted" data-i18n="author_role">Kepala Mekanik & Safety Advisor</small>
+                        </div>
+                    </div>
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <p class="small text-muted mb-2" data-i18n="share_text">Bagikan artikel ini:</p>
+                        <button class="social-share-btn" onclick="shareSocial('wa')"><i
+                                class="fab fa-whatsapp"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('fb')"><i
+                                class="fab fa-facebook-f"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('tw')"><i
+                                class="fab fa-twitter"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('li')"><i
+                                class="fab fa-linkedin-in"></i></button>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+
+    <section class="container py-5">
+        <h3 class="fw-bold mb-4 text-center" style="color: var(--yamaha-blue-dark);" data-i18n="related_header">Artikel
+            Terkait</h3>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1632733711679-529326f6db12?q=80&w=800&auto=format&fit=crop"
+                            alt="Service Kunjung">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_1_title">Layanan Service Kunjung Yamaha (SKY)</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_1_desc">Malas keluar saat hujan? Teknisi kami
+                            siap datang ke rumah Anda.</p>
+                        <a href="berita-1.html" class="btn-read-more"><span data-i18n="btn_read_more">BACA
+                                SELENGKAPNYA</span> <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1625043484555-47841a752840?q=80&w=800&auto=format&fit=crop"
+                            alt="Safety Gear">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_2_title">Pentingnya Gear Lengkap Saat Touring</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_2_desc">Helm, jaket, dan jas hujan berkualitas
+                            wajib disiapkan.</p>
+                        <a href="#" class="btn-read-more"><span data-i18n="btn_read_more">BACA SELENGKAPNYA</span> <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?q=80&w=800&auto=format&fit=crop"
+                            alt="Apparel">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_3_title">Koleksi Apparel & Aksesoris Resmi</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_3_desc">Tampil gaya dan aman dengan aksesoris
+                            resmi Yamaha.</p>
+                        <a href="#" class="btn-read-more"><span data-i18n="btn_read_more">BACA SELENGKAPNYA</span> <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_help">Bantuan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- 1. TOC GENERATOR ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocList = document.getElementById('auto-toc-list');
+            const headers = document.querySelectorAll('.article-content h2, .article-content h3');
+
+            if (headers.length > 0) {
+                headers.forEach((header, index) => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+
+                    if (!header.id) header.id = 'section-' + index;
+                    a.href = '#' + header.id;
+                    a.textContent = header.textContent; // Initial Text
+
+                    // Add dynamic class for translation update targeting if needed
+                    a.setAttribute('data-target-id', header.id);
+
+                    if (header.tagName === 'H3') {
+                        li.style.marginLeft = '20px';
+                        li.style.listStyleType = 'circle';
+                    }
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+            }
+        });
+
+        // --- 2. TOGGLE TOC ---
+        function toggleToc() {
+            const list = document.getElementById('auto-toc-list');
+            const icon = document.getElementById('tocIcon');
+            if (list.style.display === 'none') {
+                list.style.display = 'block';
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                list.style.display = 'none';
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        // --- 3. SHARE SOCIAL ---
+        function shareSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(document.title);
+            let shareUrl = '';
+            if (platform === 'wa') shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+            else if (platform === 'fb') shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            else if (platform === 'tw') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            else if (platform === 'li') shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // --- 4. TRANSLATION LOGIC ---
+        const translations = {
+            // Navbar & Footer (COMMON)
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_help": { id: "Bantuan", en: "Support", jp: "サポート" },
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "btn_read_more": { id: "BACA SELENGKAPNYA", en: "READ MORE", jp: "続きを読む" },
+
+            // Article Meta
+            "art_title": { id: "5 Tips Merawat Motor Matic Agar Awet di Musim Hujan", en: "5 Tips to Maintain Automatic Motorcycle in Rainy Season", jp: "雨季にオートバイを長持ちさせる5つのヒント" },
+            "art_author": { id: "Teknisi Handal", en: "Expert Technician", jp: "専門技術者" },
+            "art_date": { id: "15 Jan 2026 • 6 Menit Baca", en: "Jan 15, 2026 • 6 Min Read", jp: "2026年1月15日 • 6分読む" },
+            "art_caption_main": { id: "Lakukan pengecekan rutin pada komponen vital motor matic Anda saat musim hujan tiba.", en: "Perform routine checks on vital components of your automatic motorcycle when the rainy season arrives.", jp: "雨季が到来したら、オートバイの重要なコンポーネントの定期点検を実行してください。" },
+
+            // TOC & UI Elements
+            "toc_header": { id: "Daftar Isi", en: "Table of Contents", jp: "目次" },
+            "read_also": { id: "Baca Juga:", en: "Read Also:", jp: "また読む:" },
+            "link_read_1": { id: "Layanan Service Kunjung Yamaha (SKY) Makin Praktis", en: "Yamaha Visit Service (SKY) Becomes More Practical", jp: "ヤマハ訪問サービス（SKY）がより実用的に" },
+            "img_caption_2": { id: "Pemeriksaan filter udara rutin mencegah masuknya air ke ruang bakar.", en: "Routine air filter inspection prevents water from entering the combustion chamber.", jp: "定期的なエアフィルター検査により、水が燃焼室に入るのを防ぎます。" },
+            "author_role": { id: "Kepala Mekanik & Safety Advisor", en: "Head Mechanic & Safety Advisor", jp: "チーフメカニック＆安全アドバイザー" },
+            "share_text": { id: "Bagikan artikel ini:", en: "Share this article:", jp: "この記事を共有する:" },
+            "related_header": { id: "Artikel Terkait", en: "Related Articles", jp: "関連記事" },
+            "faq_header": { id: "Pertanyaan Sering Diajukan (FAQ)", en: "Frequently Asked Questions (FAQ)", jp: "よくある質問 (FAQ)" },
+            "concl_title": { id: "Kesimpulan", en: "Conclusion", jp: "結論" },
+
+            // Article Content Headers (H2)
+            "h2_1": { id: "1. Segera Bilas dengan Air Bersih", en: "1. Rinse Immediately with Clean Water", jp: "1. きれいな水ですぐにすすぐ" },
+            "h2_2": { id: "2. Periksa Kondisi Ban dan Tekanan Angin", en: "2. Check Tire Condition and Air Pressure", jp: "2. タイヤの状態と空気圧を確認する" },
+            "h2_3": { id: "3. Cek Sistem Pengereman", en: "3. Check Braking System", jp: "3. ブレーキシステムを確認する" },
+            "h2_4": { id: "4. Perhatian Khusus pada Busi dan Saringan Udara", en: "4. Special Attention to Spark Plugs and Air Filters", jp: "4. スパークプラグとエアフィルターへの特別な注意" },
+            "h2_5": { id: "5. Servis CVT Secara Berkala", en: "5. Regular CVT Service", jp: "5. 定期的なCVTサービス" },
+
+            // Article Paragraphs
+            "p1": {
+                id: "Musim hujan telah tiba dengan intensitas yang cukup tinggi di berbagai wilayah Indonesia. Bagi para pengendara motor matic (skutik), tantangan berkendara di bawah guyuran hujan bukan hanya soal kenyamanan dan keamanan, tetapi juga soal kesehatan 'kuda besi' kesayangan Anda. Genangan air, lumpur, dan zat asam yang terkandung dalam air hujan dapat menjadi musuh utama bagi komponen mesin dan kelistrikan motor.",
+                en: "The rainy season has arrived with high intensity in various regions of Indonesia. For automatic scooter riders, the challenge of riding in the rain is not only about comfort and safety, but also the health of your beloved bike. Puddles, mud, and acidic substances contained in rainwater can be major enemies for engine and electrical components.",
+                jp: "雨季はインドネシアのさまざまな地域で激しく到来しました。スクーターのライダーにとって、雨の中でのライディングの課題は、快適さと安全性だけでなく、愛車の健康でもあります。水たまり、泥、雨水に含まれる酸性物質は、エンジンや電気部品の主要な敵になる可能性があります。"
+            },
+            "p2": {
+                id: "Banyak pemilik kendaraan yang mengabaikan perawatan pasca-hujan, beranggapan bahwa motor akan kotor lagi besoknya. Padahal, pembiaran ini dapat menyebabkan korosi pada rangka, kerusakan pada sistem CVT, hingga masalah kelistrikan yang fatal. Agar performa skutik Anda tetap prima dan tidak mogok di tengah jalan, berikut adalah panduan lengkap 5 tips merawat motor matic agar awet di musim hujan yang wajib Anda terapkan.",
+                en: "Many vehicle owners ignore post-rain maintenance, assuming the bike will get dirty again tomorrow. In fact, this neglect can cause frame corrosion, CVT system damage, to fatal electrical problems. To keep your scooter performance prime and not break down on the road, here is a complete guide to 5 tips for maintaining automatic motorcycles to last in the rainy season that you must apply.",
+                jp: "多くの車両所有者は、明日またバイクが汚れると思い込んで、雨上がりのメンテナンスを無視しています。実際、この怠慢はフレームの腐食、CVTシステムの損傷、致命的な電気的な問題を引き起こす可能性があります。スクーターのパフォーマンスを最高に保ち、道路で故障しないようにするために、雨季にオートバイを長持ちさせるための5つのヒントの完全なガイドをここに示します。"
+            },
+            "p3": {
+                id: "Langkah paling sederhana namun paling krusial adalah membilas motor segera setelah terkena air hujan. Mengapa? Air hujan mengandung kadar asam yang cukup tinggi (acid rain), terutama di daerah perkotaan dengan polusi udara. Jika dibiarkan mengering di bodi dan komponen logam motor, air hujan ini akan mempercepat proses korosi atau karatan.",
+                en: "The simplest yet most crucial step is to rinse the motorcycle immediately after being exposed to rainwater. Why? Rainwater contains high acid levels (acid rain), especially in urban areas with air pollution. If left to dry on the body and metal components, this rainwater will accelerate the corrosion or rusting process.",
+                jp: "最も単純ですが最も重要なステップは、雨水にさらされた直後にバイクをすすぐことです。なぜでしょうか？雨水には、特に大気汚染のある都市部では、高い酸性度（酸性雨）が含まれています。ボディーや金属部品で乾燥させたままにすると、この雨水は腐食や錆のプロセスを加速させます。"
+            },
+            "p4": {
+                id: "Anda tidak perlu mencucinya menggunakan sabun setiap hari. Cukup bilas seluruh bagian motor, mulai dari bodi, kaki-kaki, hingga area mesin bagian bawah menggunakan air bersih dari selang. Fokuskan pada area kolong spakbor dan standar, di mana lumpur bercampur pasir sering menumpuk. Penumpukan kotoran ini jika mengeras dapat menghambat pergerakan suspensi dan merusak seal shockbreaker.",
+                en: "You don't need to wash it with soap every day. Just rinse all parts of the bike, from the body, legs, to the lower engine area using clean water from a hose. Focus on the under-fender and stand areas, where mud mixed with sand often accumulates. This dirt buildup, if hardened, can inhibit suspension movement and damage shockbreaker seals.",
+                jp: "毎日石鹸で洗う必要はありません。ホースからのきれいな水を使って、ボディ、足回り、下部エンジンエリアまで、バイクのすべての部分をすすぐだけです。泥と砂が混ざって蓄積しやすいフェンダー下やスタンドエリアに焦点を当ててください。この汚れの蓄積が硬化すると、サスペンションの動きを妨げ、ショックブレーカーシールを損傷する可能性があります。"
+            },
+            "p5": {
+                id: "Jalanan basah mengurangi daya cengkeram (grip) ban secara signifikan. Oleh karena itu, kondisi ban menjadi faktor keselamatan nomor satu. Pastikan alur atau kembangan ban motor Anda masih tebal dan tidak botak (gundul). Ban yang gundul tidak memiliki jalur pembuangan air, sehingga sangat berisiko mengalami <em>aquaplaning</em>—kondisi di mana ban melayang di atas lapisan air dan kehilangan kendali sepenuhnya.",
+                en: "Wet roads significantly reduce tire grip. Therefore, tire condition is the number one safety factor. Ensure your tire tread or pattern is still thick and not bald. Bald tires have no water drainage channels, so they are at high risk of experiencing <em>aquaplaning</em>—a condition where the tire floats on a layer of water and loses control completely.",
+                jp: "濡れた道路はタイヤのグリップを大幅に低下させます。したがって、タイヤの状態はナンバーワンの安全要因です。タイヤのトレッドやパターンがまだ厚く、ハゲていないことを確認してください。ハゲたタイヤには排水路がないため、タイヤが水層の上に浮き、完全に制御を失う状態である<em>アクアプレーニング</em>が発生するリスクが高くなります。"
+            },
+            "p6": {
+                id: "Selain ketebalan, perhatikan juga tekanan angin. Jangan biarkan tekanan angin terlalu tinggi atau terlalu rendah. Tekanan yang terlalu tinggi membuat tapak ban yang menyentuh aspal menjadi lebih sedikit, sehingga licin. Sebaliknya, tekanan terlalu rendah membuat motor tidak stabil saat maneuver. Gunakan tekanan standar pabrikan yang biasanya tertera di stiker dekat dek pijakan kaki.",
+                en: "Besides thickness, also pay attention to air pressure. Do not let the air pressure be too high or too low. Too high pressure makes the tire tread touching the asphalt less, making it slippery. Conversely, too low pressure makes the bike unstable when maneuvering. Use the manufacturer's standard pressure usually listed on the sticker near the footrest deck.",
+                jp: "厚さに加えて、空気圧にも注意してください。空気圧が高すぎたり低すぎたりしないようにしてください。圧力が高すぎると、アスファルトに接触するタイヤのトレッドが少なくなり、滑りやすくなります。逆に、圧力が低すぎると、操縦時にバイクが不安定になります。通常、フットレストデッキ近くのステッカーに記載されているメーカーの標準圧力を使用してください。"
+            },
+            "p7": {
+                id: "Saat musim hujan, komponen rem seperti kampas (brake pad) dan piringan cakram (disc brake) sangat rentan tertutup kotoran pasir halus yang terbawa air. Gesekan antara pasir, kampas, dan piringan dapat menyebabkan baret pada cakram dan suara decit yang mengganggu. Lebih parah lagi, kotoran yang menumpuk di area piston kaliper bisa membuat rem macet.",
+                en: "During the rainy season, brake components such as brake pads and discs are very susceptible to being covered by fine sand dirt carried by water. Friction between sand, pads, and discs can cause scratches on the disc and annoying squeaking sounds. Even worse, dirt accumulating in the caliper piston area can make the brakes jam.",
+                jp: "雨季には、ブレーキパッドやディスクなどのブレーキコンポーネントは、水によって運ばれる細かい砂の汚れに覆われやすくなります。砂、パッド、ディスク間の摩擦は、ディスクに傷を付け、迷惑なきしみ音を引き起こす可能性があります。さらに悪いことに、キャリパーピストンエリアに汚れが蓄積すると、ブレーキが詰まる可能性があります。"
+            },
+            "p8": {
+                id: "Lakukan penyemprotan air bertekanan sedang pada area kaliper rem untuk merontokkan pasir. Jika terasa ada hambatan saat menekan tuas rem atau pengereman tidak pakem, segera bawa ke bengkel resmi untuk pembersihan dan pelumasan ulang pada pin kaliper. Ingat, rem adalah penyelamat utama Anda di tengah jarak pandang yang terbatas saat hujan lebat.",
+                en: "Spray medium pressure water on the brake caliper area to dislodge sand. If there is resistance when pressing the brake lever or braking is not gripping, immediately take it to an official workshop for cleaning and re-lubrication of the caliper pins. Remember, brakes are your main lifesaver amidst limited visibility during heavy rain.",
+                jp: "砂を取り除くために、ブレーキキャリパーエリアに中圧の水をスプレーしてください。ブレーキレバーを押したときに抵抗がある場合、またはブレーキが効かない場合は、すぐに公式ワークショップに持ち込み、キャリパーピンの清掃と再潤滑を行ってください。大雨の際の視界が限られている中で、ブレーキがあなたの主な命綱であることを忘れないでください。"
+            },
+            "p9": {
+                id: "Meskipun posisi busi pada motor matic modern sudah cukup terlindungi, namun risiko terkena cipratan air tetap ada, terutama jika Anda nekat menerobos genangan air yang cukup tinggi. Pastikan cop busi (cangklong) terpasang rapat dan karet pelindungnya tidak getas atau robek. Kebocoran pada area ini dapat menyebabkan mesin mogok seketika saat terkena air.",
+                en: "Although the spark plug position on modern automatic motorcycles is quite protected, the risk of water splashes remains, especially if you insist on breaking through high puddles. Ensure the spark plug cap is tightly installed and the protective rubber is not brittle or torn. Leaks in this area can cause the engine to stall instantly when exposed to water.",
+                jp: "最新のオートバイのスパークプラグの位置はかなり保護されていますが、特に高い水たまりを突破しようとする場合、水しぶきのリスクは残ります。スパークプラグキャップがしっかりと取り付けられており、保護ゴムが脆くなったり破れたりしていないことを確認してください。この領域の漏れは、水にさらされるとすぐにエンストを引き起こす可能性があります。"
+            },
+            "p10": {
+                id: "Selain busi, periksa juga saringan udara (air filter). Pada motor matic, posisi box filter udara biasanya berada di bawah, dekat dengan roda belakang (di atas CVT). Jika Anda sering melewati banjir, ada risiko air masuk ke dalam box filter. Filter udara yang basah tidak dapat menyaring udara dengan baik dan justru menghambat pasokan udara ke ruang bakar, membuat tarikan motor menjadi berat dan boros bensin.",
+                en: "Besides spark plugs, also check the air filter. On automatic motorcycles, the air filter box position is usually at the bottom, near the rear wheel (above the CVT). If you often go through floods, there is a risk of water entering the filter box. Wet air filters cannot filter air properly and actually inhibit air supply to the combustion chamber, making the bike pull heavy and fuel wasteful.",
+                jp: "スパークプラグに加えて、エアフィルターも確認してください。オートバイでは、エアフィルターボックスの位置は通常、後輪の近く（CVTの上）の下部にあります。洪水の中を頻繁に通る場合、フィルターボックスに水が入るリスクがあります。濡れたエアフィルターは空気を適切にろ過できず、実際に燃焼室への空気供給を阻害し、バイクの引きを重くし、燃料を無駄にします。"
+            },
+            "p11": {
+                id: "Ini adalah poin yang sering dilupakan pemilik motor matic. Bagian CVT (Continuously Variable Transmission) memiliki saluran pernapasan untuk pendinginan. Meskipun dirancang anti air, namun uap air atau rembesan air genangan bisa masuk ke dalam bak CVT.",
+                en: "This is a point often forgotten by automatic motorcycle owners. The CVT (Continuously Variable Transmission) part has a breather for cooling. Although designed to be water-resistant, water vapor or puddle seepage can enter the CVT case.",
+                jp: "これは、オートバイの所有者が忘れがちなポイントです。CVT（無段変速機）部分には冷却用のブリーザーがあります。耐水設計になっていますが、水蒸気や水たまりの浸透がCVTケースに入る可能性があります。"
+            },
+            "p12": {
+                id: "Tanda-tanda CVT kemasukan air atau kotoran adalah timbulnya gejala selip (gas diputar tapi motor lambat bergerak) dan getaran berlebih (gredek) saat tarikan awal. Jika dibiarkan, komponen seperti V-belt, roller, dan kampas ganda akan cepat aus dan berkarat. Disarankan untuk melakukan servis CVT (pembersihan dan pemberian <em>grease</em> ulang) lebih sering di musim hujan, misalnya setiap 2.000 km atau segera setelah menerjang banjir.",
+                en: "Signs of CVT water or dirt entry are slipping symptoms (throttle twisted but bike moves slowly) and excessive vibration (shuddering) during initial pull. If left alone, components like V-belt, rollers, and clutch pads will wear out quickly and rust. It is recommended to perform CVT service (cleaning and regreasing) more often in the rainy season, for example every 2,000 km or immediately after hitting a flood.",
+                jp: "CVTの水や汚れの侵入の兆候は、滑りの症状（スロットルをひねってもバイクの動きが遅い）や、最初の引き時の過度の振動（震え）です。放置すると、Vベルト、ローラー、クラッチパッドなどのコンポーネントがすぐに摩耗して錆びます。雨季には、たとえば2,000 kmごと、または洪水に見舞われた直後など、CVTサービス（清掃と再グリース）をより頻繁に実行することをお勧めします。"
+            },
+            "quote": {
+                id: "\"Keselamatan adalah prioritas. Jangan pertaruhkan nyawa Anda dengan ban botak di jalanan licin. Ganti segera jika TWI (Tire Wear Indicator) sudah tersentuh.\"",
+                en: "\"Safety is a priority. Do not risk your life with bald tires on slippery roads. Replace immediately if the TWI (Tire Wear Indicator) is touched.\"",
+                jp: "「安全が優先事項です。滑りやすい道路でハゲたタイヤで命を危険にさらさないでください。TWI（タイヤ摩耗インジケーター）に触れた場合はすぐに交換してください。」"
+            },
+            "concl_text": {
+                id: "Merawat motor matic di musim hujan memang membutuhkan usaha ekstra, namun hal ini sebanding dengan keawetan dan performa motor yang Anda dapatkan. Dengan menerapkan 5 tips di atas—mulai dari mencuci rutin hingga pengecekan CVT—Anda tidak hanya memperpanjang usia pakai komponen motor, tetapi juga menjamin keselamatan diri sendiri di jalan raya. Tetap waspada dan \"Semakin Di Depan\" dalam perawatan kendaraan!",
+                en: "Maintaining an automatic motorcycle in the rainy season indeed requires extra effort, but it is worth the durability and performance you get. By applying the 5 tips above—from routine washing to CVT checks—you not only extend the life of motorcycle components but also ensure your own safety on the road. Stay alert and \"Revs Your Heart\" in vehicle maintenance!",
+                jp: "雨季にオートバイをメンテナンスするには確かに余分な労力が必要ですが、それによって得られる耐久性とパフォーマンスには価値があります。上記の5つのヒント（定期的な洗浄からCVTチェックまで）を適用することで、オートバイのコンポーネントの寿命を延ばすだけでなく、道路上の自身の安全も確保できます。車両メンテナンスで常に注意を払い、「Revs Your Heart」を維持してください！"
+            },
+
+            // FAQ
+            "faq_1_q": { id: "Bolehkah mencuci motor saat mesin masih panas?", en: "Can I wash the motorcycle when the engine is still hot?", jp: "エンジンがまだ熱いときにバイクを洗ってもいいですか？" },
+            "faq_1_a": { id: "Sebaiknya hindari. Menyiram air dingin ke mesin yang sangat panas dapat menyebabkan perubahan suhu drastis (thermal shock) yang berpotensi merusak blok mesin (retak).", en: "Better avoid it. Pouring cold water on a very hot engine can cause drastic temperature changes (thermal shock) potentially damaging the engine block (cracking).", jp: "避けた方が良いでしょう。非常に熱いエンジンに冷水をかけると、急激な温度変化（熱衝撃）が起こり、エンジンブロックが損傷（亀裂）する可能性があります。" },
+            "faq_2_q": { id: "Berapa batas aman ketinggian air untuk motor matic?", en: "What is the safe water height limit for automatic motorcycles?", jp: "オートバイの安全な水位制限はどれくらいですか？" },
+            "faq_2_a": { id: "Batas aman adalah di bawah box filter udara dan lubang knalpot. Umumnya, jangan memaksakan melewati genangan air yang tingginya melebihi as roda.", en: "The safe limit is below the air filter box and exhaust hole. Generally, do not force through puddles higher than the wheel axle.", jp: "安全限界は、エアフィルターボックスと排気穴の下です。一般的に、車軸より高い水たまりを無理に通過しないでください。" },
+            "faq_3_q": { id: "Apa yang harus dilakukan jika motor mogok setelah lewati banjir?", en: "What to do if the bike stalls after passing a flood?", jp: "洪水を通過した後にバイクがエンストした場合はどうすればよいですか？" },
+            "faq_3_a": { id: "Jangan memaksa menyalakan starter elektrik. Dorong ke tempat kering, cek filter udara, busi, dan oli mesin. Jika oli berwarna putih susu, bawa ke bengkel.", en: "Do not force the electric starter. Push to a dry place, check air filter, spark plugs, and engine oil. If oil is milky white, take to workshop.", jp: "電気スターターを無理に回さないでください。乾燥した場所に押し、エアフィルター、スパークプラグ、エンジンオイルを確認します。オイルが乳白色の場合は、ワークショップに持ち込んでください。" },
+
+            // Related Card Content
+            "rel_1_title": { id: "Layanan Service Kunjung Yamaha (SKY)", en: "Yamaha Visit Service (SKY)", jp: "ヤマハ訪問サービス（SKY）" },
+            "rel_1_desc": { id: "Malas keluar saat hujan? Teknisi kami siap datang ke rumah Anda.", en: "Lazy to go out in the rain? Our technicians are ready to come to your home.", jp: "雨の中外出するのが面倒ですか？私たちの技術者があなたの家に来る準備ができています。" },
+            "rel_2_title": { id: "Pentingnya Gear Lengkap Saat Touring", en: "Importance of Full Gear When Touring", jp: "ツーリング時のフルギアの重要性" },
+            "rel_2_desc": { id: "Helm, jaket, dan jas hujan berkualitas wajib disiapkan.", en: "Helmets, jackets, and quality raincoats must be prepared.", jp: "ヘルメット、ジャケット、高品質のレインコートを用意する必要があります。" },
+            "rel_3_title": { id: "Koleksi Apparel & Aksesoris Resmi", en: "Official Apparel & Accessories Collection", jp: "公式アパレル＆アクセサリーコレクション" },
+            "rel_3_desc": { id: "Tampil gaya dan aman dengan aksesoris resmi Yamaha.", en: "Look stylish and safe with official Yamaha accessories.", jp: "公式ヤマハアクセサリーでスタイリッシュで安全に。" }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            if (lang === 'jp') document.body.classList.add('lang-jp');
+            else document.body.classList.remove('lang-jp');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    if (translations[key][lang].includes('<')) {
+                        element.innerHTML = translations[key][lang];
+                    } else {
+                        element.textContent = translations[key][lang];
+                    }
+                }
+            });
+
+            updateTOC(lang);
+        }
+
+        function updateTOC(lang) {
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            tocLinks.forEach(link => {
+                const targetId = link.getAttribute('data-target-id');
+                let transKey = "";
+                if (targetId === "sec-1") transKey = "h2_1";
+                if (targetId === "sec-2") transKey = "h2_2";
+                if (targetId === "sec-3") transKey = "h2_3";
+                if (targetId === "sec-4") transKey = "h2_4";
+                if (targetId === "sec-5") transKey = "h2_5";
+
+                if (transKey && translations[transKey][lang]) {
+                    link.textContent = translations[transKey][lang];
+                }
+            });
+        }
+
+        // Load default language
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(savedLang);
+        });
+
+        /* ==============================================
+   LOGIKA BACK TO TOP
+   ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
+        });
+    </script>
+</body>
+
+</html>

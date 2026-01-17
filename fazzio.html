@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spesifikasi dan Harga Terbaru Yamaha Fazzio Hybrid - Classy Yamaha">
+    <title>Detail Produk - Fazzio Hybrid</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           GLOBAL STYLE (WARISAN DARI INDEX & NMAX)
+           ========================================= */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+        }
+
+        /* Typography Consistency */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand,
+        .price-tag {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* NAVBAR STYLE */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+        }
+
+        /* =========================================
+           DETAIL PAGE SPECIFIC STYLES
+           ========================================= */
+
+        /* Product Main Section */
+        .product-detail-wrapper {
+            padding: 40px 0 60px;
+            background: #fff;
+        }
+
+        /* Left Side: Image */
+        .product-gallery {
+            background: radial-gradient(circle, #f8f9fa 0%, #ececec 100%);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 400px;
+        }
+
+        .main-img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+            transition: all 0.4s ease-in-out;
+        }
+
+        .main-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Right Side: Info */
+        .product-info {
+            padding-left: 20px;
+        }
+
+        .badge-category {
+            background: var(--yamaha-black);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .product-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--yamaha-blue-dark);
+            margin-bottom: 10px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .product-price {
+            font-size: 32px;
+            color: var(--yamaha-red);
+            font-weight: 800;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .price-label {
+            font-size: 14px;
+            color: var(--text-grey);
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        /* Color Options */
+        .color-selector {
+            margin-bottom: 30px;
+        }
+
+        .color-label {
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 14px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .color-circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #ddd;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .color-circle.active {
+            box-shadow: 0 0 0 2px var(--yamaha-blue-main);
+            transform: scale(1.1);
+        }
+
+        /* --- WARNA FAZZIO --- */
+        .color-circle[data-color="cyan"] {
+            background: #00BCD4;
+            /* Neo Cyan */
+        }
+
+        .color-circle[data-color="red"] {
+            background: #D32F2F;
+            /* Neo Red */
+        }
+
+        .color-circle[data-color="white"] {
+            background: #F5F5F5;
+            /* Lux White */
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-main-action {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            transition: all 0.3s;
+            font-size: 16px;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-yamaha-blue {
+            background-color: var(--yamaha-blue-main);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 87, 184, 0.3);
+            border: 1px solid var(--yamaha-blue-main);
+        }
+
+        .btn-yamaha-blue:hover {
+            background-color: var(--yamaha-blue-dark);
+            border-color: var(--yamaha-blue-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 53, 148, 0.4);
+        }
+
+        /* TAB SECTION */
+        .specs-section {
+            background-color: #fcfcfc;
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .nav-tabs {
+            border-bottom: 2px solid #eee;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-tabs .nav-link {
+            border: none;
+            background: transparent;
+            font-weight: 700;
+            color: var(--text-grey);
+            font-size: 16px;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: var(--yamaha-blue-main);
+            border-bottom: 3px solid var(--yamaha-blue-main);
+            background: transparent;
+        }
+
+        .tab-content {
+            padding-top: 40px;
+            background: #fcfcfc;
+        }
+
+        .desc-text p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .desc-highlight {
+            font-weight: 600;
+            color: var(--yamaha-blue-dark);
+        }
+
+        .spec-table tr td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-table tr td:first-child {
+            font-weight: 600;
+            width: 30%;
+            color: var(--text-grey);
+        }
+
+        /* Related Products */
+        .related-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .section-header h3 {
+            font-weight: 800;
+            color: var(--yamaha-black);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h3::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 4px;
+            background: var(--yamaha-blue-main);
+            margin-top: 10px;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.15);
+            border-color: var(--yamaha-blue-main);
+        }
+
+        .pc-img-box {
+            background: radial-gradient(circle, #f8f9fa 0%, #ececec 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .pc-img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .pc-img-box img {
+            transform: scale(1.1);
+        }
+
+        .pc-content {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pc-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--yamaha-black);
+            margin-bottom: 5px;
+        }
+
+        .pc-price {
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .pc-btn {
+            border: 1px solid var(--yamaha-black);
+            color: var(--yamaha-black);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 15px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover .pc-btn {
+            background: var(--yamaha-black);
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .product-info {
+                padding-left: 0;
+                margin-top: 30px;
+            }
+
+            .product-title {
+                font-size: 32px;
+            }
+
+            .product-gallery {
+                min-height: 300px;
+            }
+
+            .desc-text p {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .btn-main-action {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produk.html"
+                            data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html" data-i18n="nav_news">Berita</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" data-i18n="nav_contact">Hubungi Kami</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a>
+                            </li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="product-detail-wrapper">
+        <div class="container">
+            <div class="row align-items-start">
+
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="product-gallery">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s600/yamaha-fazzio.png"
+                            alt="Fazzio Hybrid" class="main-img" id="mainProductImage"
+                            onerror="this.src='https://placehold.co/600x400?text=Fazzio+Hybrid'">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="product-info sticky-top" style="top: 100px; z-index: 1;">
+                        <span class="badge-category">CLASSY YAMAHA</span>
+                        <h1 class="product-title">Fazzio Hybrid</h1>
+
+                        <div class="price-wrapper">
+                            <span class="price-label" data-i18n="price_start">Mulai</span>
+                            <span class="product-price">Rp 23.250.000 <small class="text-muted fw-normal fs-6">OTR
+                                    Jakarta</small></span>
+                        </div>
+
+                        <div class="color-selector">
+                            <span class="color-label">
+                                <span data-i18n="choose_color">PILIH WARNA:</span>
+                                <span id="selectedColorName" class="fw-normal">Neo Cyan</span>
+                            </span>
+                            <div class="color-options">
+                                <div class="color-circle active" data-color="cyan" data-name="Neo Cyan"
+                                    onclick="changeColor(this, 'cyan')"></div>
+                                <div class="color-circle" data-color="red" data-name="Neo Red"
+                                    onclick="changeColor(this, 'red')"></div>
+                                <div class="color-circle" data-color="white" data-name="Lux White Pearl"
+                                    onclick="changeColor(this, 'white')"></div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="row g-2">
+                                <div class="col-12">
+                                    <a href="https://wa.me/6282257391460?text=Halo,%20saya%20tertarik%20dengan%20Fazzio%20Hybrid"
+                                        target="_blank" class="btn btn-main-action btn-yamaha-blue">
+                                        <i class="fab fa-whatsapp me-2"></i> <span data-i18n="btn_order">Pesan
+                                            Sekarang</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="alert alert-light border mt-3" role="alert" style="font-size: 13px;">
+                                <i class="fas fa-info-circle text-primary me-2"></i>
+                                <span data-i18n="stock_info">Stok tersedia. Proses cepat 1 hari kerja. Melayani tukar
+                                    tambah.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs-section">
+        <div class="container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc"
+                        type="button" role="tab" data-i18n="tab_desc">DESKRIPSI</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="spec-tab" data-bs-toggle="tab" data-bs-target="#spec" type="button"
+                        role="tab" data-i18n="tab_spec">SPESIFIKASI</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="feature-tab" data-bs-toggle="tab" data-bs-target="#feature"
+                        type="button" role="tab" data-i18n="tab_feature">FITUR UNGGULAN</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="desc" role="tabpanel">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+
+                            <div class="text-center mb-5">
+                                <h3 class="fw-bold text-uppercase display-6" data-i18n="desc_main_title">Color Up Your
+                                    Life</h3>
+                                <div
+                                    style="width: 60px; height: 4px; background: var(--yamaha-blue-main); margin: 15px auto; border-radius: 2px;">
+                                </div>
+                            </div>
+
+                            <div class="desc-text">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <p>
+                                            <span class="desc-highlight" data-i18n="desc_p1_highlight">Classy & Trendy
+                                                Design.</span>
+                                            <span data-i18n="desc_p1_text">Yamaha Fazzio Hybrid - Connected hadir dengan
+                                                desain fresh, simple, dan modern yang mendukung gaya hidup masa kini.
+                                                Menjadi skutik pertama di kategori Classy Yamaha yang tampil beda dan
+                                                berkelas.</span>
+                                        </p>
+                                        <p>
+                                            <span data-i18n="desc_p2_text">Didukung teknologi terbaru</span>
+                                            <span class="desc-highlight" data-i18n="desc_p2_highlight">Blue Core
+                                                Hybrid</span>
+                                            <span data-i18n="desc_p2_text_2">yang membuat mesin lebih bertenaga, ramah
+                                                lingkungan, dan andal. Electric Power Assist Start membuat akselerasi
+                                                awal lebih bertenaga dan halus.</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>
+                                            <span class="desc-highlight" data-i18n="desc_p3_highlight">Always
+                                                Connected.</span>
+                                            <span data-i18n="desc_p3_text">Teknologi Y-Connect menghubungkan motor
+                                                dengan smartphone Anda. Dapatkan notifikasi pesan & panggilan,
+                                                rekomendasi perawatan, hingga lokasi parkir terakhir langsung di layar
+                                                smartphone.</span>
+                                        </p>
+                                        <p>
+                                            <span data-i18n="desc_p4_text">Kenyamanan maksimal dengan</span>
+                                            <span class="desc-highlight" data-i18n="desc_p4_highlight">Smart Key
+                                                System</span>
+                                            <span data-i18n="desc_p4_text_2">serta kapasitas bagasi 17.8L yang luas.
+                                                Fazzio Hybrid adalah pilihan tepat bagi Anda yang ingin tampil stylish
+                                                namun tetap mengutamakan efisiensi.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="spec" role="tabpanel">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <table class="table table-striped spec-table">
+                                <tbody>
+                                    <tr>
+                                        <td data-i18n="spec_label_engine">Tipe Mesin</td>
+                                        <td data-i18n="spec_val_engine">Air cooled 4-stroke, SOHC</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_disp">Kapasitas Mesin</td>
+                                        <td data-i18n="spec_val_disp">124.86 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_power">Daya Maksimum</td>
+                                        <td data-i18n="spec_val_power">6.2 kW / 6500 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_torque">Torsi Maksimum</td>
+                                        <td data-i18n="spec_val_torque">10.6 Nm / 4500 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_fuel">Sistem Bahan Bakar</td>
+                                        <td data-i18n="spec_val_fuel">Fuel Injection</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_trans">Tipe Transmisi</td>
+                                        <td data-i18n="spec_val_trans">Automatic (V-Belt)</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_tank">Kapasitas Tangki</td>
+                                        <td data-i18n="spec_val_tank">5.1 Liter</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_weight">Berat Isi</td>
+                                        <td data-i18n="spec_val_weight">95 kg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="feature" role="tabpanel">
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="fas fa-bolt fa-3x text-primary mb-3"></i>
+                                <h5 class="fw-bold" data-i18n="feat_1_title">Blue Core Hybrid</h5>
+                                <p class="text-muted small" data-i18n="feat_1_desc">Mesin 125cc dengan Electric Power
+                                    Assist Start untuk akselerasi awal lebih bertenaga.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                                <h5 class="fw-bold" data-i18n="feat_2_title">Y-Connect</h5>
+                                <p class="text-muted small" data-i18n="feat_2_desc">Terhubung dengan smartphone untuk
+                                    notifikasi pesan, panggilan, dan kondisi motor.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="fas fa-key fa-3x text-primary mb-3"></i>
+                                <h5 class="fw-bold" data-i18n="feat_3_title">Smart Key System</h5>
+                                <p class="text-muted small" data-i18n="feat_3_desc">Sistem kunci canggih tanpa anak
+                                    kunci (Keyless) dengan fitur Answer Back System.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="related-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 data-i18n="related_products">PRODUK LAINNYA</h3>
+            </div>
+            <div class="row" id="relatedProductGrid">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_support">Bantuan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- DATA GAMBAR PRODUK FAZZIO BERDASARKAN WARNA ---
+        // Catatan: URL gambar menggunakan link placeholder yang relevan atau link resmi jika tersedia
+        const productImages = {
+            'cyan': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s600/yamaha-fazzio.png', // Neo Cyan
+
+            'red': 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202201171052144369B75171.png', // Neo Red
+
+            'white': 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202201171049583777T64878.png' // Lux White
+        };
+
+        // --- DATA PRODUK UNTUK REKOMENDASI (Mix Classy & Maxi) ---
+        const products = [
+            { id: 4, name: 'Grand Filano Hybrid', category: 'classy', price: 'Rp 27.500.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png', link: 'filano.html' },
+            { id: 1, name: 'NMAX "TURBO"', category: 'maxi', price: 'Rp 32.850.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-nmax.png', link: 'nmax.html' },
+            { id: 2, name: 'Aerox 155 Connected', category: 'maxi', price: 'Rp 28.500.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-aerox.png', link: '#' },
+            { id: 8, name: 'Vega Force', category: 'moped', price: 'Rp 18.430.000', image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202306061122119957J66427.png', link: '#' }
+        ];
+
+        // --- FUNGSI GANTI WARNA & GAMBAR ---
+        function changeColor(element, colorKey) {
+            // 1. Update UI Tombol
+            document.querySelectorAll('.color-circle').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+
+            // 2. Update Teks Nama Warna
+            document.getElementById('selectedColorName').innerText = element.getAttribute('data-name');
+
+            // 3. Efek Transisi Gambar
+            const img = document.getElementById('mainProductImage');
+
+            // Fade out & Zoom out sedikit
+            img.style.opacity = '0';
+            img.style.transform = 'scale(0.95)';
+
+            setTimeout(() => {
+                // Ganti source gambar jika tersedia di mapping
+                if (productImages[colorKey]) {
+                    img.src = productImages[colorKey];
+                } else {
+                    // Fallback jika gambar error/tidak ada
+                    img.src = 'https://placehold.co/600x400?text=Fazzio+' + colorKey;
+                }
+
+                // Fade in & Zoom in kembali
+                img.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+            }, 300); // Waktu ini (300ms) sinkron dengan transition CSS di atas
+        }
+
+        // --- RENDER RELATED PRODUCTS ---
+        function renderRelatedProducts() {
+            const container = document.getElementById('relatedProductGrid');
+            products.forEach(product => {
+                const col = document.createElement('div');
+                col.className = 'col-6 col-md-3 mb-4';
+                col.innerHTML = `
+                    <div class="product-card">
+                        <div class="pc-img-box">
+                            <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/300x200?text=Yamaha'">
+                        </div>
+                        <div class="pc-content">
+                            <div><h3 class="pc-title">${product.name}</h3></div>
+                            <div>
+                                <span class="pc-price">${product.price}</span>
+                                <a href="${product.link}" class="pc-btn stretched-link" data-i18n="btn_detail">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+        }
+
+        // --- TRANSLATION LOGIC (UPDATED FOR FAZZIO) ---
+        const translations = {
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+
+            "price_start": { id: "Mulai", en: "Starts from", jp: "から" },
+            "choose_color": { id: "PILIH WARNA:", en: "SELECT COLOR:", jp: "カラー選択:" },
+            "btn_order": { id: "Pesan Sekarang", en: "Order Now", jp: "今すぐ注文" },
+            "stock_info": {
+                id: "Stok tersedia. Proses cepat 1 hari kerja. Melayani tukar tambah.",
+                en: "Stock available. Fast process 1 working day. Trade-in available.",
+                jp: "在庫あり。1営業日での迅速な処理。下取り可能。"
+            },
+            "tab_desc": { id: "DESKRIPSI", en: "DESCRIPTION", jp: "説明" },
+            "tab_spec": { id: "SPESIFIKASI", en: "SPECIFICATIONS", jp: "スペック" },
+            "tab_feature": { id: "FITUR UNGGULAN", en: "KEY FEATURES", jp: "主な機能" },
+
+            // --- DESCRIPTION TAB TRANSLATIONS (FAZZIO SPECIFIC) ---
+            "desc_main_title": { id: "Color Up Your Life", en: "Color Up Your Life", jp: "人生を彩る" },
+            "desc_p1_highlight": { id: "Classy & Trendy Design.", en: "Classy & Trendy Design.", jp: "クラッシー＆トレンディなデザイン。" },
+            "desc_p1_text": {
+                id: "Yamaha Fazzio Hybrid - Connected hadir dengan desain fresh, simple, dan modern yang mendukung gaya hidup masa kini. Menjadi skutik pertama di kategori Classy Yamaha yang tampil beda dan berkelas.",
+                en: "Yamaha Fazzio Hybrid - Connected comes with a fresh, simple, and modern design supporting today's lifestyle. Being the first scooter in the Classy Yamaha category to look different and classy.",
+                jp: "ヤマハ Fazzio Hybrid - Connectedは、現代のライフスタイルをサポートするフレッシュでシンプル、そしてモダンなデザインで登場。Classy Yamahaカテゴリー初のスクーターとして、個性的で上品な外観を実現しました。"
+            },
+            "desc_p2_text": { id: "Didukung teknologi terbaru", en: "Powered by the latest", jp: "最新技術を搭載" },
+            "desc_p2_highlight": { id: "Blue Core Hybrid", en: "Blue Core Hybrid", jp: "ブルーコアハイブリッド" },
+            "desc_p2_text_2": {
+                id: "yang membuat mesin lebih bertenaga, ramah lingkungan, dan andal. Electric Power Assist Start membuat akselerasi awal lebih bertenaga dan halus.",
+                en: "technology making the engine more powerful, eco-friendly, and reliable. Electric Power Assist Start makes initial acceleration more powerful and smooth.",
+                jp: "技術により、エンジンはよりパワフルで環境に優しく、信頼性が高まりました。エレクトリックパワーアシストスタートにより、発進加速がより力強くスムーズになります。"
+            },
+            "desc_p3_highlight": { id: "Always Connected.", en: "Always Connected.", jp: "常につながる。" },
+            "desc_p3_text": {
+                id: "Teknologi Y-Connect menghubungkan motor dengan smartphone Anda. Dapatkan notifikasi pesan & panggilan, rekomendasi perawatan, hingga lokasi parkir terakhir langsung di layar smartphone.",
+                en: "Y-Connect technology connects the motorcycle with your smartphone. Get message & call notifications, maintenance recommendations, and last parking location directly on your smartphone screen.",
+                jp: "Y-Connect技術により、バイクとスマートフォンを接続。メッセージや着信の通知、メンテナンスの推奨、最終駐車位置などをスマートフォンの画面で直接確認できます。"
+            },
+            "desc_p4_text": { id: "Kenyamanan maksimal dengan", en: "Maximum comfort with", jp: "最高の快適さ" },
+            "desc_p4_highlight": { id: "Smart Key System", en: "Smart Key System", jp: "スマートキーシステム" },
+            "desc_p4_text_2": { id: "serta kapasitas bagasi 17.8L yang luas. Fazzio Hybrid adalah pilihan tepat bagi Anda yang ingin tampil stylish namun tetap mengutamakan efisiensi.", en: "and spacious 17.8L luggage capacity. Fazzio Hybrid is the right choice for you who want to look stylish while prioritizing efficiency.", jp: "そして広々とした17.8Lのラゲッジ容量。Fazzio Hybridは、効率性を重視しながらもスタイリッシュに見せたいあなたに最適な選択です。" },
+
+            // --- SPECIFICATION TAB TRANSLATIONS (FAZZIO SPECIFIC) ---
+            "spec_label_engine": { id: "Tipe Mesin", en: "Engine Type", jp: "エンジンタイプ" },
+            "spec_val_engine": { id: "Air cooled 4-stroke, SOHC", en: "Air cooled 4-stroke, SOHC", jp: "空冷4ストローク・SOHC" },
+            "spec_label_disp": { id: "Kapasitas Mesin", en: "Displacement", jp: "排気量" },
+            "spec_val_disp": { id: "124.86 cc", en: "124.86 cc", jp: "124.86 cc" },
+            "spec_label_power": { id: "Daya Maksimum", en: "Max Power", jp: "最高出力" },
+            "spec_val_power": { id: "6.2 kW / 6500 rpm", en: "6.2 kW / 6500 rpm", jp: "6.2 kW / 6500 rpm" },
+            "spec_label_torque": { id: "Torsi Maksimum", en: "Max Torque", jp: "最大トルク" },
+            "spec_val_torque": { id: "10.6 Nm / 4500 rpm", en: "10.6 Nm / 4500 rpm", jp: "10.6 Nm / 4500 rpm" },
+            "spec_label_fuel": { id: "Sistem Bahan Bakar", en: "Fuel System", jp: "燃料システム" },
+            "spec_val_fuel": { id: "Fuel Injection", en: "Fuel Injection", jp: "フューエルインジェクション" },
+            "spec_label_trans": { id: "Tipe Transmisi", en: "Transmission Type", jp: "トランスミッション" },
+            "spec_val_trans": { id: "Automatic (V-Belt)", en: "Automatic (V-Belt)", jp: "オートマチック (Vベルト)" },
+            "spec_label_tank": { id: "Kapasitas Tangki", en: "Tank Capacity", jp: "タンク容量" },
+            "spec_val_tank": { id: "5.1 Liter", en: "5.1 Liters", jp: "5.1 リットル" },
+            "spec_label_weight": { id: "Berat Isi", en: "Wet Weight", jp: "車両重量" },
+            "spec_val_weight": { id: "95 kg", en: "95 kg", jp: "95 kg" },
+
+            // --- FEATURE TAB TRANSLATIONS (FAZZIO SPECIFIC) ---
+            "feat_1_title": { id: "Blue Core Hybrid", en: "Blue Core Hybrid", jp: "ブルーコアハイブリッド" },
+            "feat_1_desc": { id: "Mesin 125cc dengan Electric Power Assist Start untuk akselerasi awal lebih bertenaga.", en: "125cc engine with Electric Power Assist Start for more powerful initial acceleration.", jp: "電動パワーアシストスタート付き125ccエンジンで、より力強い発進加速を実現。" },
+            "feat_2_title": { id: "Y-Connect", en: "Y-Connect", jp: "Y-Connect" },
+            "feat_2_desc": { id: "Terhubung dengan smartphone untuk notifikasi pesan, panggilan, dan kondisi motor.", en: "Connected to smartphone for message, call notifications, and bike condition.", jp: "スマートフォンと接続して、メッセージ、着信通知、バイクの状態を確認。" },
+            "feat_3_title": { id: "Smart Key System", en: "Smart Key System", jp: "スマートキーシステム" },
+            "feat_3_desc": { id: "Sistem kunci canggih tanpa anak kunci (Keyless) dengan fitur Answer Back System.", en: "Advanced keyless system with Answer Back System feature.", jp: "アンサーバックシステム機能を備えた高度なキーレスシステム。" },
+
+            "related_products": { id: "PRODUK LAINNYA", en: "RELATED PRODUCTS", jp: "関連製品" },
+            "btn_detail": { id: "Detail", en: "Detail", jp: "詳細" },
+
+            // Footer
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_support": { id: "Bantuan", en: "Support", jp: "サポート" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('selectedLang', lang);
+
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            if (lang === 'jp') document.body.classList.add('lang-jp');
+            else document.body.classList.remove('lang-jp');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    if (element.children.length > 0 && element.tagName !== 'SELECT' && element.tagName !== 'P') {
+                        let textNode = null;
+                        for (let node of element.childNodes) {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "") {
+                                textNode = node;
+                                break;
+                            }
+                        }
+                        if (textNode) {
+                            textNode.textContent = translations[key][lang];
+                        } else {
+                            element.lastChild.textContent = translations[key][lang];
+                        }
+                    } else {
+                        element.textContent = translations[key][lang];
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderRelatedProducts();
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(savedLang);
+        });
+
+        /* ==============================================
+   LOGIKA BACK TO TOP
+   ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
+        });
+
+    </script>
+</body>
+
+</html>

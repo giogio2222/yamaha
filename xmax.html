@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spesifikasi dan Harga Terbaru Yamaha XMAX 250 Tech MAX">
+    <title>Detail Produk - XMAX 250 Tech MAX</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           GLOBAL STYLE
+           ========================================= */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+        }
+
+        /* Typography Consistency */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand,
+        .price-tag {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* NAVBAR STYLE */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+        }
+
+        /* =========================================
+           DETAIL PAGE SPECIFIC STYLES
+           ========================================= */
+
+        /* Product Main Section */
+        .product-detail-wrapper {
+            padding: 40px 0 60px;
+            background: #fff;
+        }
+
+        /* Left Side: Image */
+        .product-gallery {
+            background: radial-gradient(circle, #f8f9fa 0%, #ececec 100%);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 400px;
+        }
+
+        .main-img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+            transition: all 0.4s ease-in-out;
+        }
+
+        .main-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Right Side: Info */
+        .product-info {
+            padding-left: 20px;
+        }
+
+        .badge-category {
+            background: var(--yamaha-black);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .product-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--yamaha-blue-dark);
+            margin-bottom: 10px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .product-price {
+            font-size: 32px;
+            color: var(--yamaha-red);
+            font-weight: 800;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .price-label {
+            font-size: 14px;
+            color: var(--text-grey);
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        /* Color Options */
+        .color-selector {
+            margin-bottom: 30px;
+        }
+
+        .color-label {
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 14px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .color-circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #ddd;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .color-circle.active {
+            box-shadow: 0 0 0 2px var(--yamaha-blue-main);
+            transform: scale(1.1);
+        }
+
+        /* --- WARNA KHUSUS XMAX --- */
+        .color-circle[data-color="magma-black"] {
+            background: linear-gradient(135deg, #1a1a1a 0%, #3e2723 100%);
+        }
+
+        .color-circle[data-color="elixir-silver"] {
+            background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+        }
+
+        .color-circle[data-color="luxury-red"] {
+            background: linear-gradient(135deg, #800000 0%, #300000 100%);
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-main-action {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            transition: all 0.3s;
+            font-size: 16px;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-yamaha-blue {
+            background-color: var(--yamaha-blue-main);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 87, 184, 0.3);
+            border: 1px solid var(--yamaha-blue-main);
+        }
+
+        .btn-yamaha-blue:hover {
+            background-color: var(--yamaha-blue-dark);
+            border-color: var(--yamaha-blue-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 53, 148, 0.4);
+        }
+
+        /* TAB SECTION */
+        .specs-section {
+            background-color: #fcfcfc;
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .nav-tabs {
+            border-bottom: 2px solid #eee;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-tabs .nav-link {
+            border: none;
+            background: transparent;
+            font-weight: 700;
+            color: var(--text-grey);
+            font-size: 16px;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: var(--yamaha-blue-main);
+            border-bottom: 3px solid var(--yamaha-blue-main);
+            background: transparent;
+        }
+
+        .tab-content {
+            padding-top: 40px;
+            background: #fcfcfc;
+        }
+
+        .desc-text p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .desc-highlight {
+            font-weight: 600;
+            color: var(--yamaha-blue-dark);
+        }
+
+        .spec-table tr td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-table tr td:first-child {
+            font-weight: 600;
+            width: 30%;
+            color: var(--text-grey);
+        }
+
+        /* Related Products */
+        .related-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .section-header h3 {
+            font-weight: 800;
+            color: var(--yamaha-black);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h3::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 4px;
+            background: var(--yamaha-blue-main);
+            margin-top: 10px;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.15);
+            border-color: var(--yamaha-blue-main);
+        }
+
+        .pc-img-box {
+            background: radial-gradient(circle, #f8f9fa 0%, #ececec 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .pc-img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .pc-img-box img {
+            transform: scale(1.1);
+        }
+
+        .pc-content {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pc-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--yamaha-black);
+            margin-bottom: 5px;
+        }
+
+        .pc-price {
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .pc-btn {
+            border: 1px solid var(--yamaha-black);
+            color: var(--yamaha-black);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 15px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover .pc-btn {
+            background: var(--yamaha-black);
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .product-info {
+                padding-left: 0;
+                margin-top: 30px;
+            }
+
+            .product-title {
+                font-size: 32px;
+            }
+
+            .product-gallery {
+                min-height: 300px;
+            }
+
+            .desc-text p {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .btn-main-action {
+                width: 100%;
+            }
+        }
+
+        /* ========================================================
+   FLOATING BUTTONS (WA & BACK TO TOP)
+   ======================================================== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Jarak antar tombol */
+        }
+
+        /* Tombol Umum */
+        .btn-float {
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: none;
+        }
+
+        .btn-float:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Tombol WhatsApp */
+        .btn-whatsapp {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            font-size: 32px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animasi Pulse untuk WA agar menarik perhatian */
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Tombol Back to Top */
+        .btn-back-to-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--yamaha-blue-dark);
+            /* Mengikuti tema website */
+            font-size: 20px;
+            opacity: 0;
+            /* Tersembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class untuk memunculkan tombol Back to Top */
+        .btn-back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsif Mobile (Layar Kecil) */
+        @media (max-width: 768px) {
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .btn-back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produk.html"
+                            data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html" data-i18n="nav_news">Berita</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" data-i18n="nav_contact">Hubungi Kami</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a>
+                            </li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="product-detail-wrapper">
+        <div class="container">
+            <div class="row align-items-start">
+
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="product-gallery">
+                        <img src="https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305050853509156V67794.png"
+                            alt="XMAX 250 Tech MAX" class="main-img" id="mainProductImage">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="product-info sticky-top" style="top: 100px; z-index: 1;">
+                        <span class="badge-category">MAXI YAMAHA</span>
+                        <h1 class="product-title">XMAX 250 Tech MAX</h1>
+
+                        <div class="price-wrapper">
+                            <span class="price-label" data-i18n="price_start">Mulai</span>
+                            <span class="product-price">Rp 66.000.000 <small class="text-muted fw-normal fs-6">OTR
+                                    Jakarta</small></span>
+                        </div>
+
+                        <div class="color-selector">
+                            <span class="color-label">
+                                <span data-i18n="choose_color">PILIH WARNA:</span>
+                                <span id="selectedColorName" class="fw-normal">Magma Black</span>
+                            </span>
+                            <div class="color-options">
+                                <div class="color-circle active" data-color="magma-black" data-name="Magma Black"
+                                    onclick="changeColor(this, 'magma-black')"></div>
+                                <div class="color-circle" data-color="elixir-silver" data-name="Elixir Dark Silver"
+                                    onclick="changeColor(this, 'elixir-silver')"></div>
+                                <div class="color-circle" data-color="luxury-red" data-name="Luxury Red"
+                                    onclick="changeColor(this, 'luxury-red')"></div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="row g-2">
+                                <div class="col-12">
+                                    <a href="https://wa.me/6282257391460?text=Halo,%20saya%20tertarik%20dengan%20XMAX%20Tech%20MAX"
+                                        target="_blank" class="btn btn-main-action btn-yamaha-blue">
+                                        <i class="fab fa-whatsapp me-2"></i> <span data-i18n="btn_order">Pesan
+                                            Sekarang</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="alert alert-light border mt-3" role="alert" style="font-size: 13px;">
+                                <i class="fas fa-info-circle text-primary me-2"></i>
+                                <span data-i18n="stock_info">Stok tersedia. Proses cepat 1 hari kerja. Melayani tukar
+                                    tambah.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs-section">
+        <div class="container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc"
+                        type="button" role="tab" data-i18n="tab_desc">DESKRIPSI</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="spec-tab" data-bs-toggle="tab" data-bs-target="#spec" type="button"
+                        role="tab" data-i18n="tab_spec">SPESIFIKASI</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="feature-tab" data-bs-toggle="tab" data-bs-target="#feature"
+                        type="button" role="tab" data-i18n="tab_feature">FITUR UNGGULAN</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="desc" role="tabpanel">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+
+                            <div class="text-center mb-5">
+                                <h3 class="fw-bold text-uppercase display-6" data-i18n="desc_main_title">The Ultimate
+                                    Pride</h3>
+                                <div
+                                    style="width: 60px; height: 4px; background: var(--yamaha-blue-main); margin: 15px auto; border-radius: 2px;">
+                                </div>
+                            </div>
+
+                            <div class="desc-text">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <p>
+                                            <span class="desc-highlight" data-i18n="desc_p1_highlight">Performa Master
+                                                Class.</span>
+                                            <span data-i18n="desc_p1_text">Rasakan kekuatan mesin Blue Core 250cc yang
+                                                bertenaga, dilengkapi dengan Liquid Cooled 4 Stroke, SOHC. Akselerasi
+                                                yang halus namun bertenaga memberikan kepercayaan diri di setiap
+                                                perjalanan.</span>
+                                        </p>
+                                        <p>
+                                            <span data-i18n="desc_p2_text">XMAX Tech MAX menghadirkan pengalaman touring
+                                                premium dengan</span>
+                                            <span class="desc-highlight" data-i18n="desc_p2_highlight">Comfort Seat
+                                                Eksklusif</span>
+                                            <span data-i18n="desc_p2_text_2">dan desain jok bertekstur kulit premium
+                                                yang memberikan kenyamanan maksimal bagi pengendara dan
+                                                penumpang.</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>
+                                            <span class="desc-highlight" data-i18n="desc_p3_highlight">Navigasi
+                                                Terintegrasi.</span>
+                                            <span data-i18n="desc_p3_text">Dilengkapi dengan Garmin Street Cross
+                                                Navigation System yang ditampilkan langsung pada layar TFT Infotainment
+                                                Display. Anda tidak akan pernah tersesat saat menjelajahi rute
+                                                baru.</span>
+                                        </p>
+                                        <p>
+                                            <span data-i18n="desc_p4_text">Desain "X" motif yang ikonik pada lampu depan
+                                                memberikan kesan</span>
+                                            <span class="desc-highlight" data-i18n="desc_p4_highlight">Agresif &
+                                                Mewah</span>
+                                            <span data-i18n="desc_p4_text_2">. Dipadukan dengan emblem Tech MAX spesial
+                                                yang menegaskan status premium skutik ini.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="spec" role="tabpanel">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <table class="table table-striped spec-table">
+                                <tbody>
+                                    <tr>
+                                        <td data-i18n="spec_label_engine">Tipe Mesin</td>
+                                        <td data-i18n="spec_val_engine">Liquid Cooled, 4-Stroke, SOHC, 4 Valves</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_disp">Kapasitas Mesin</td>
+                                        <td data-i18n="spec_val_disp">249.8 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_power">Daya Maksimum</td>
+                                        <td data-i18n="spec_val_power">16.8 kW / 7000 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_torque">Torsi Maksimum</td>
+                                        <td data-i18n="spec_val_torque">24.3 Nm / 5500 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_fuel">Sistem Bahan Bakar</td>
+                                        <td data-i18n="spec_val_fuel">Fuel Injection</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_trans">Tipe Transmisi</td>
+                                        <td data-i18n="spec_val_trans">V-Belt Automatic</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_tank">Kapasitas Tangki</td>
+                                        <td data-i18n="spec_val_tank">13 Liter</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="spec_label_weight">Berat Isi</td>
+                                        <td data-i18n="spec_val_weight">181 kg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="feature" role="tabpanel">
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
+                                <h5 class="fw-bold" data-i18n="feat_1_title">TFT Infotainment</h5>
+                                <p class="text-muted small" data-i18n="feat_1_desc">Layar TFT canggih yang terhubung
+                                    dengan Smartphone dan Garmin Navigation System.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                                <h5 class="fw-bold" data-i18n="feat_2_title">TCS & ABS</h5>
+                                <p class="text-muted small" data-i18n="feat_2_desc">Traction Control System & Anti-lock
+                                    Braking System untuk keamanan berkendara maksimal.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="fas fa-sliders-h fa-3x text-primary mb-3"></i>
+                                <h5 class="fw-bold" data-i18n="feat_3_title">Adjustable Windshield</h5>
+                                <p class="text-muted small" data-i18n="feat_3_desc">Posisi windshield dan stang kemudi
+                                    yang dapat diatur sesuai kenyamanan pengendara.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="related-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 data-i18n="related_products">PRODUK LAINNYA</h3>
+            </div>
+            <div class="row" id="relatedProductGrid">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_support">Bantuan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- DATA GAMBAR PRODUK BERDASARKAN WARNA ---
+        const productImages = {
+            'magma-black': 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305050853509156V67794.png',
+            'elixir-silver': 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305050854336043T85987.png',
+            'luxury-red': 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305050855214041C89839.png'
+        };
+
+        // --- DATA PRODUK UNTUK REKOMENDASI ---
+        const products = [
+            { id: 1, name: 'NMAX "TURBO"', category: 'maxi', price: 'Rp 32.850.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-nmax.png', link: 'nmax.html' },
+            { id: 2, name: 'Aerox 155 Connected', category: 'maxi', price: 'Rp 28.500.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-aerox.png', link: 'aerox.html' },
+            { id: 6, name: 'Yamaha R15 Connected', category: 'sport', price: 'Rp 39.875.000', image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202112011400277344Y96472.png', link: '#' },
+            { id: 4, name: 'Grand Filano Hybrid', category: 'classy', price: 'Rp 27.500.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png', link: '#' }
+        ];
+
+        // --- FUNGSI GANTI WARNA & GAMBAR ---
+        function changeColor(element, colorKey) {
+            document.querySelectorAll('.color-circle').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('selectedColorName').innerText = element.getAttribute('data-name');
+            const img = document.getElementById('mainProductImage');
+            img.style.opacity = '0';
+            img.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                img.src = productImages[colorKey] || productImages['magma-black'];
+                img.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // --- RENDER RELATED PRODUCTS ---
+        function renderRelatedProducts() {
+            const container = document.getElementById('relatedProductGrid');
+            products.forEach(product => {
+                const col = document.createElement('div');
+                col.className = 'col-6 col-md-3 mb-4';
+                col.innerHTML = `
+                    <div class="product-card">
+                        <div class="pc-img-box">
+                            <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/300x200?text=Yamaha'">
+                        </div>
+                        <div class="pc-content">
+                            <div><h3 class="pc-title">${product.name}</h3></div>
+                            <div>
+                                <span class="pc-price">${product.price}</span>
+                                <a href="${product.link}" class="pc-btn stretched-link" data-i18n="btn_detail">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+            // Re-apply translation after rendering dynamic content
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(savedLang);
+        }
+
+        // --- TRANSLATION LOGIC ---
+        const translations = {
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+            "price_start": { id: "Mulai", en: "Starts from", jp: "から" },
+            "choose_color": { id: "PILIH WARNA:", en: "SELECT COLOR:", jp: "カラー選択:" },
+            "btn_order": { id: "Pesan Sekarang", en: "Order Now", jp: "今すぐ注文" },
+            "stock_info": {
+                id: "Stok tersedia. Proses cepat 1 hari kerja. Melayani tukar tambah.",
+                en: "Stock available. Fast process 1 working day. Trade-in available.",
+                jp: "在庫あり。1営業日での迅速な処理。下取り可能。"
+            },
+            "tab_desc": { id: "DESKRIPSI", en: "DESCRIPTION", jp: "説明" },
+            "tab_spec": { id: "SPESIFIKASI", en: "SPECIFICATIONS", jp: "スペック" },
+            "tab_feature": { id: "FITUR UNGGULAN", en: "KEY FEATURES", jp: "主な機能" },
+            "desc_main_title": { id: "The Ultimate Pride", en: "The Ultimate Pride", jp: "究極の誇り" },
+            "desc_p1_highlight": { id: "Performa Master Class.", en: "Master Class Performance.", jp: "マスタークラスのパフォーマンス。" },
+            "desc_p1_text": {
+                id: "Rasakan kekuatan mesin Blue Core 250cc yang bertenaga, dilengkapi dengan Liquid Cooled 4 Stroke, SOHC. Akselerasi yang halus namun bertenaga memberikan kepercayaan diri di setiap perjalanan.",
+                en: "Experience the power of the 250cc Blue Core engine, equipped with Liquid Cooled 4 Stroke, SOHC. Smooth yet powerful acceleration gives confidence on every journey.",
+                jp: "水冷4ストロークSOHCを搭載した強力な250ccブルーコアエンジンのパワーを体験してください。スムーズかつ強力な加速は、あらゆる旅に自信を与えます。"
+            },
+            "desc_p2_text": { id: "XMAX Tech MAX menghadirkan pengalaman touring premium dengan", en: "XMAX Tech MAX delivers a premium touring experience with", jp: "XMAX Tech MAXは、" },
+            "desc_p2_highlight": { id: "Comfort Seat Eksklusif", en: "Exclusive Comfort Seat", jp: "専用コンフォートシート" },
+            "desc_p2_text_2": {
+                id: "dan desain jok bertekstur kulit premium yang memberikan kenyamanan maksimal bagi pengendara dan penumpang.",
+                en: "and premium textured seat design that provides maximum comfort for rider and passenger.",
+                jp: "によるプレミアムなツーリング体験と、ライダーと同乗者に最高の快適さを提供するプレミアムな質感のシートデザインを提供します。"
+            },
+            "desc_p3_highlight": { id: "Navigasi Terintegrasi.", en: "Integrated Navigation.", jp: "統合ナビゲーション。" },
+            "desc_p3_text": {
+                id: "Dilengkapi dengan Garmin Street Cross Navigation System yang ditampilkan langsung pada layar TFT Infotainment Display. Anda tidak akan pernah tersesat saat menjelajahi rute baru.",
+                en: "Equipped with Garmin Street Cross Navigation System displayed directly on the TFT Infotainment Display. You will never get lost exploring new routes.",
+                jp: "TFTインフォテインメントディスプレイに直接表示されるGarmin Street Crossナビゲーションシステムを搭載。新しいルートを探索する際に迷うことはありません。"
+            },
+            "desc_p4_text": { id: "Desain 'X' motif yang ikonik pada lampu depan memberikan kesan", en: "The iconic 'X' motif design on the headlights gives an", jp: "ヘッドライトの象徴的な「X」モチーフデザインは、" },
+            "desc_p4_highlight": { id: "Agresif & Mewah", en: "Aggressive & Luxurious", jp: "アグレッシブ＆ラグジュアリー" },
+            "desc_p4_text_2": { id: ". Dipadukan dengan emblem Tech MAX spesial yang menegaskan status premium skutik ini.", en: "impression. Combined with special Tech MAX emblem asserting this scooter's premium status.", jp: "な印象を与えます。このスクーターのプレミアムな地位を主張する特別なTech MAXエンブレムと組み合わされています。" },
+            "spec_label_engine": { id: "Tipe Mesin", en: "Engine Type", jp: "エンジンタイプ" },
+            "spec_val_engine": { id: "Liquid Cooled, 4-Stroke, SOHC, 4 Valves", en: "Liquid Cooled, 4-Stroke, SOHC, 4 Valves", jp: "水冷4ストローク・SOHC・4バルブ" },
+            "spec_label_disp": { id: "Kapasitas Mesin", en: "Displacement", jp: "排気量" },
+            "spec_val_disp": { id: "249.8 cc", en: "249.8 cc", jp: "249.8 cc" },
+            "spec_label_power": { id: "Daya Maksimum", en: "Max Power", jp: "最高出力" },
+            "spec_val_power": { id: "16.8 kW / 7000 rpm", en: "16.8 kW / 7000 rpm", jp: "16.8 kW / 7000 rpm" },
+            "spec_label_torque": { id: "Torsi Maksimum", en: "Max Torque", jp: "最大トルク" },
+            "spec_val_torque": { id: "24.3 Nm / 5500 rpm", en: "24.3 Nm / 5500 rpm", jp: "24.3 Nm / 5500 rpm" },
+            "spec_label_fuel": { id: "Sistem Bahan Bakar", en: "Fuel System", jp: "燃料システム" },
+            "spec_val_fuel": { id: "Fuel Injection", en: "Fuel Injection", jp: "フューエルインジェクション" },
+            "spec_label_trans": { id: "Tipe Transmisi", en: "Transmission Type", jp: "トランスミッション" },
+            "spec_val_trans": { id: "V-Belt Automatic", en: "V-Belt Automatic", jp: "Vベルトオートマチック" },
+            "spec_label_tank": { id: "Kapasitas Tangki", en: "Tank Capacity", jp: "タンク容量" },
+            "spec_val_tank": { id: "13 Liter", en: "13 Liters", jp: "13 リットル" },
+            "spec_label_weight": { id: "Berat Isi", en: "Wet Weight", jp: "車両重量" },
+            "spec_val_weight": { id: "181 kg", en: "181 kg", jp: "181 kg" },
+            "feat_1_title": { id: "TFT Infotainment", en: "TFT Infotainment", jp: "TFTインフォテインメント" },
+            "feat_1_desc": { id: "Layar TFT canggih yang terhubung dengan Smartphone dan Garmin Navigation System.", en: "Advanced TFT screen connected with Smartphone and Garmin Navigation System.", jp: "スマートフォンやGarminナビゲーションシステムと連携する高度なTFTスクリーン。" },
+            "feat_2_title": { id: "TCS & ABS", en: "TCS & ABS", jp: "TCS & ABS" },
+            "feat_2_desc": { id: "Traction Control System & Anti-lock Braking System untuk keamanan berkendara maksimal.", en: "Traction Control System & Anti-lock Braking System for maximum riding safety.", jp: "最高のライディング安全性のためのトラクションコントロールシステムとアンチロックブレーキシステム。" },
+            "feat_3_title": { id: "Adjustable Windshield", en: "Adjustable Windshield", jp: "調整可能なフロントガラス" },
+            "feat_3_desc": { id: "Posisi windshield dan stang kemudi yang dapat diatur sesuai kenyamanan pengendara.", en: "Windshield and handlebar positions can be adjusted for rider comfort.", jp: "ライダーの快適さに合わせてフロントガラスとハンドルの位置を調整可能。" },
+            "related_products": { id: "PRODUK LAINNYA", en: "RELATED PRODUCTS", jp: "関連製品" },
+            "btn_detail": { id: "Detail", en: "Detail", jp: "詳細" },
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_support": { id: "Bantuan", en: "Support", jp: "サポート" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('selectedLang', lang);
+
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            if (lang === 'jp') document.body.classList.add('lang-jp');
+            else document.body.classList.remove('lang-jp');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    // SAFE TRANSLATION LOGIC (Mencegah teks kepotong/hilang)
+                    if (element.children.length === 0) {
+                        // Elemen sederhana tanpa anak (h5, p, span, a)
+                        element.textContent = translations[key][lang];
+                    } else {
+                        // Elemen dengan konten campuran (misalnya ikon + teks)
+                        // Cari node teks di dalam elemen dan ganti hanya teksnya
+                        let textNode = null;
+                        for (let node of element.childNodes) {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+                                textNode = node;
+                                break;
+                            }
+                        }
+                        if (textNode) {
+                            textNode.textContent = " " + translations[key][lang];
+                        } else {
+                            // Fallback: Jika tidak ada node teks tapi punya anak (langka), 
+                            // opsi aman adalah tidak menimpa children, atau log error.
+                            // Untuk template ini, kasus ini sudah aman.
+                        }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderRelatedProducts();
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(savedLang);
+        });
+
+        /* ==============================================
+   LOGIKA BACK TO TOP
+   ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ulasan lengkap peluncuran Yamaha NMAX Turbo dengan teknologi YECVT. Spesifikasi, fitur, dan harga terbaru 2026.">
+    <title>Peluncuran NMAX "TURBO" Guncang Pasar Otomotif - Yamaha Motor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. GLOBAL VARIABLES --- */
+        :root {
+            --yamaha-blue-main: #0057B8;
+            --yamaha-blue-dark: #003594;
+            --yamaha-red: #EC1C24;
+            --yamaha-black: #1a1a1a;
+            --text-grey: #6c757d;
+            --bg-light: #f8faff;
+            --font-heading: 'Exo 2', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Support Jepang */
+        body.lang-jp {
+            font-family: 'Noto Sans JP', sans-serif !important;
+        }
+
+        body.lang-jp h1,
+        body.lang-jp h2,
+        body.lang-jp h3,
+        body.lang-jp h4 {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            font-weight: 700;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: var(--font-heading);
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+        }
+
+        /* --- 2. NAVBAR MODERN (SAMA PERSIS DENGAN INDEX.HTML) --- */
+        .navbar {
+            box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--yamaha-blue-dark) !important;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--yamaha-red);
+        }
+
+        /* Style Default Nav Link */
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--yamaha-black) !important;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-link::after,
+        .navbar .dropdown-toggle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--yamaha-blue-main);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border: none !important;
+            margin: 0 !important;
+            vertical-align: baseline !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after,
+        .navbar .nav-item.dropdown:hover .dropdown-toggle::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link.show {
+            color: var(--yamaha-blue-main) !important;
+        }
+
+        /* MODERN DROPDOWN */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 53, 148, 0.15);
+            padding: 10px 0;
+            margin-top: 0;
+            background-color: #fff;
+            min-width: 200px;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                animation: fadeInFast 0.2s ease-in-out forwards;
+            }
+
+            .nav-item.dropdown::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+            }
+        }
+
+        @keyframes fadeInFast {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-item {
+            padding: 12px 25px;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 87, 184, 0.05);
+            color: var(--yamaha-blue-main);
+            padding-left: 30px;
+            font-weight: 700;
+        }
+
+        /* Responsive Mobile Navbar */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+                margin: 0;
+            }
+        }
+
+        /* --- 3. ARTICLE HERO --- */
+        .blog-hero {
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 80px;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 53, 148, 0.6), rgba(0, 53, 148, 0.9));
+        }
+
+        .blog-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            backdrop-filter: blur(5px);
+        }
+
+        .author-meta img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--yamaha-red);
+        }
+
+        /* --- 4. CONTENT WRAPPER --- */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            margin-top: -80px;
+            background: white;
+            border-radius: 50px 50px 0 0;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-layout {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* --- 5. ARTICLE STYLING --- */
+        .article-content p {
+            margin-bottom: 1.8rem;
+            font-size: 1.1rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-left: 15px;
+            border-left: 5px solid var(--yamaha-red);
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--yamaha-blue-main);
+        }
+
+        figure {
+            margin: 0 0 3rem;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* TOC */
+        .auto-toc-container {
+            background: var(--bg-light);
+            border: 1px solid rgba(0, 87, 184, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 2rem 0;
+        }
+
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--yamaha-blue-dark);
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+            color: var(--yamaha-blue-main);
+        }
+
+        .toc-list li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .toc-list li a:hover {
+            color: var(--yamaha-red);
+            text-decoration: underline;
+        }
+
+        /* Baca Juga */
+        .baca-juga {
+            background: #eef4ff;
+            border-left: 4px solid var(--yamaha-blue-main);
+            padding: 15px 20px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .baca-juga a {
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* Blockquote */
+        blockquote {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-style: italic;
+            text-align: center;
+            color: var(--yamaha-blue-dark);
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            position: relative;
+            border: 1px dashed var(--yamaha-blue-main);
+        }
+
+        blockquote::before {
+            content: '\201C';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: rgba(0, 87, 184, 0.2);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        details summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--yamaha-blue-main);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        details summary::after {
+            content: '+';
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details p {
+            padding: 15px 20px;
+            background: var(--bg-light);
+            margin: 0;
+            color: #555;
+            border-top: 1px solid #eee;
+        }
+
+        /* Conclusion Box */
+        .conclusion-box {
+            background: linear-gradient(135deg, var(--yamaha-blue-dark), var(--yamaha-blue-main));
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 3rem;
+            text-align: center;
+            color: white;
+        }
+
+        .conclusion-box h2 {
+            color: white !important;
+            border: none;
+            padding: 0;
+        }
+
+        .conclusion-box p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* Author & Share */
+        .post-footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social-share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            color: var(--yamaha-blue-main);
+            border: 1px solid #eee;
+            margin-left: 8px;
+            transition: 0.3s;
+        }
+
+        .social-share-btn:hover {
+            background: var(--yamaha-blue-main);
+            color: white;
+        }
+
+        /* Related Posts Card */
+        .news-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .news-img-wrapper {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .news-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .btn-read-more {
+            color: var(--yamaha-blue-main);
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+
+        /* --- 6. FOOTER (SAMA PERSIS DENGAN INDEX.HTML) --- */
+        footer {
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+            color: white;
+            padding: 80px 0 30px;
+            font-size: 14px;
+            border-top: 5px solid var(--yamaha-blue-main);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-left: 3px solid var(--yamaha-blue-main);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yamaha-blue-main);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--yamaha-blue-main);
+            transform: rotate(360deg);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                border-radius: 30px 30px 0 0;
+                margin-top: -50px;
+            }
+
+            .post-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ========================================================
+   FLOATING BUTTONS (WA & BACK TO TOP)
+   ======================================================== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Jarak antar tombol */
+        }
+
+        /* Tombol Umum */
+        .btn-float {
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: none;
+        }
+
+        .btn-float:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Tombol WhatsApp */
+        .btn-whatsapp {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            font-size: 32px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animasi Pulse untuk WA agar menarik perhatian */
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Tombol Back to Top */
+        .btn-back-to-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--yamaha-blue-dark);
+            /* Mengikuti tema website */
+            font-size: 20px;
+            opacity: 0;
+            /* Tersembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class untuk memunculkan tombol Back to Top */
+        .btn-back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsif Mobile (Layar Kecil) */
+        @media (max-width: 768px) {
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .btn-back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2 fa-lg"></i>
+                <div>
+                    YAMAHA <span
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized Dealer</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html" data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="berita.html" data-i18n="nav_news">Berita</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_contact">
+                            Hubungi Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a>
+                            </li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="blog-hero">
+        <div class="blog-hero-content">
+            <h1 data-i18n="art_title">Peluncuran NMAX "TURBO" Guncang Pasar Otomotif</h1>
+            <div class="author-meta">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                    alt="Author">
+                <div class="text-start">
+                    <strong data-i18n="art_author">Budi Otomotif</strong><br>
+                    <span style="opacity: 0.8;" data-i18n="art_date">16 Jan 2026 • 8 Menit Baca</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="blog-layout">
+
+            <article class="article-content">
+                <figure>
+                    <img src="image_8f2284.png" alt="Yamaha NMAX Turbo 2026" width="800" height="600" loading="lazy">
+                    <figcaption data-i18n="art_caption_main">Tampilan garang Yamaha NMAX Turbo terbaru dengan desain
+                        yang lebih futuristik.</figcaption>
+                </figure>
+
+                <div class="auto-toc-container">
+                    <div class="toc-header" onclick="toggleToc()">
+                        <h4 data-i18n="toc_header">Daftar Isi</h4>
+                        <i class="fas fa-chevron-up" id="tocIcon"></i>
+                    </div>
+                    <ul class="toc-list" id="auto-toc-list"></ul>
+                </div>
+
+                <p data-i18n="p1">
+                    Dunia otomotif Indonesia kembali dibuat gempar. Yamaha Indonesia Motor Manufacturing (YIMM) secara
+                    resmi meluncurkan generasi terbaru dari skuter matic bongsor andalannya, NMAX, yang kini menyandang
+                    label "TURBO". Bukan sekadar gimik pemasaran, label ini mewakili lompatan teknologi terbesar dalam
+                    sejarah Maxi Yamaha.
+                </p>
+                <p data-i18n="p2">
+                    Peluncuran ini sekaligus menjawab rasa penasaran publik yang selama ini hanya mendengar rumor.
+                    Dengan tagline "Semakin Di Depan", NMAX Turbo hadir untuk mendefinisikan ulang standar performa
+                    skuter matic 155cc, memberikan sensasi berkendara yang belum pernah dirasakan sebelumnya. Apa
+                    sebenarnya rahasia di balik nama "Turbo" ini? Mari kita bedah lebih dalam.
+                </p>
+
+                <div class="baca-juga">
+                    <i class="fas fa-lightbulb text-warning fs-4"></i>
+                    <div>
+                        <strong data-i18n="read_also">Baca Juga:</strong>
+                        <a href="#" data-i18n="link_read_1">Perbedaan Varian NMAX Neo dan NMAX Turbo Tech MAX</a>
+                    </div>
+                </div>
+
+                <h2 id="sec-1" data-i18n="h2_1">1. Mengenal Teknologi YECVT: Sang "Turbo" Elektrik</h2>
+                <p data-i18n="p3">
+                    Inti dari kehebohan ini bukanlah turbocharger konvensional yang menggunakan gas buang seperti pada
+                    mobil balap, melainkan teknologi revolusioner bernama <strong>Yamaha Electric CVT (YECVT)</strong>.
+                    Teknologi ini menggantikan peran roller konvensional pada sistem transmisi CVT dengan motor
+                    penggerak elektrik yang presisi.
+                </p>
+                <p data-i18n="p4">
+                    Dengan YECVT, puli depan (primary sheave) digerakkan secara elektrik, memungkinkan rasio transmisi
+                    berubah jauh lebih cepat dan akurat. Hasilnya? Akselerasi instan yang terasa seperti dorongan turbo
+                    saat tuas gas diputar. Tidak ada lagi gejala "lag" atau jeda yang biasa dirasakan pada CVT
+                    konvensional saat hendak menyalip.
+                </p>
+
+                <blockquote>
+                    <span data-i18n="quote">"Sensasi YECVT memberikan akselerasi instan yang membuat pengendara serasa
+                        dijambak. Ini adalah evolusi nyata dari teknologi Blue Core."</span>
+                </blockquote>
+
+                <h2 id="sec-2" data-i18n="h2_2">2. Fitur Riding Mode: T-Mode dan S-Mode</h2>
+                <p data-i18n="p5">
+                    Berkat YECVT, NMAX Turbo kini memiliki fitur layaknya motor sport berkapasitas besar, yaitu Riding
+                    Mode. Pengendara dapat memilih dua mode berkendara melalui tombol di stang kemudi:
+                </p>
+                <ul>
+                    <li data-i18n="li_1"><strong>T-Mode (Town Commuting):</strong> Mode ini dirancang untuk penggunaan
+                        harian di dalam kota. Karakter mesin lebih halus, efisien bahan bakar, dan santai. Cocok untuk
+                        menembus kemacetan Jakarta atau Surabaya.</li>
+                    <li data-i18n="li_2"><strong>S-Mode (Sport Touring):</strong> Inilah mode "beast". Saat diaktifkan,
+                        putaran mesin akan dijaga lebih tinggi, respon gas menjadi sangat agresif, dan akselerasi
+                        maksimal terbuka lebar. Sangat cocok untuk perjalanan jauh, tanjakan curam, atau saat butuh
+                        tenaga instan untuk menyalip.</li>
+                </ul>
+
+                <div class="my-4 text-center">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3ZqeWxpYmZqeWxpYmZqeWxpYmZqeWxpYmZqeWxpYmZqeWxpYmZqeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKrEzvLbsVAud8I/giphy.gif"
+                        alt="Promo Yamaha Speed" style="width:100%; max-width:800px; border-radius:15px;">
+                    <div class="bg-dark text-white p-2 small mt-1 rounded" data-i18n="promo_caption">Rasakan Sensasi
+                        Turbo Sekarang di Dealer Terdekat!</div>
+                </div>
+
+                <h2 id="sec-3" data-i18n="h2_3">3. Tombol "Turbo" Y-Shift</h2>
+                <p data-i18n="p6">
+                    Salah satu fitur paling menarik adalah adanya tombol <strong>Y-Shift</strong>. Tombol ini berfungsi
+                    memberikan sensasi deselerasi (engine brake) maupun akselerasi instan dengan tiga tingkatan: Low,
+                    Medium, dan High.
+                </p>
+                <p data-i18n="p7">
+                    Saat memasuki tikungan tajam atau turunan curam, pengendara bisa menekan tombol Y-Shift untuk
+                    mendapatkan efek engine brake, membantu pengereman menjadi lebih stabil. Sebaliknya, saat butuh
+                    tenaga keluar tikungan, fitur ini membantu menjaga RPM tetap di puncaknya.
+                </p>
+
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1625043484555-47841a752840?q=80&w=800&auto=format&fit=crop"
+                        alt="Dashboard TFT NMAX Turbo" loading="lazy">
+                    <figcaption data-i18n="img_caption_2">Dashboard TFT Navigasi yang canggih pada varian Tech MAX.
+                    </figcaption>
+                </figure>
+
+                <h3 id="sec-4" data-i18n="h3_1">Desain dan Kokpit Mewah</h3>
+                <p data-i18n="p8">
+                    Secara visual, NMAX Turbo tampil lebih tajam. Lampu depan kini menggunakan LED Projector ganda yang
+                    disusun vertikal, memberikan tatapan yang intimidatif. Bagian belakang juga mendapat sentuhan baru
+                    dengan lampu rem yang lebih pipih dan modern.
+                </p>
+                <p data-i18n="p9">
+                    Di area kokpit, varian tertinggi (Tech MAX) sudah dibekali layar <strong>TFT Color Infotainment
+                        Display</strong> yang dapat menampilkan navigasi dari Garmin StreetCross. Pengendara tidak perlu
+                    lagi menempelkan HP di stang untuk melihat peta, membuat perjalanan touring semakin aman dan nyaman.
+                </p>
+
+                <div class="baca-juga">
+                    <i class="fas fa-tools text-secondary fs-4"></i>
+                    <div>
+                        <strong data-i18n="read_also">Baca Juga:</strong>
+                        <a href="#" data-i18n="link_read_2">Tips Merawat Motor Matic dengan Teknologi YECVT</a>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h2 style="border:none; padding:0; color:var(--yamaha-blue-dark);" data-i18n="faq_header">Pertanyaan
+                        Sering Diajukan (FAQ)</h2>
+
+                    <details class="faq-item">
+                        <summary data-i18n="faq_1_q">Apakah NMAX Turbo boros bensin?</summary>
+                        <p data-i18n="faq_1_a">Tidak. Justru dengan YECVT, efisiensi bahan bakar lebih terjaga karena
+                            putaran mesin diatur secara elektronik sesuai kebutuhan beban, terutama pada mode T-Mode.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq_2_q">Apakah perawatan YECVT mahal?</summary>
+                        <p data-i18n="faq_2_a">Komponen YECVT dirancang bebas perawatan (maintenance free) untuk jangka
+                            panjang. Tidak ada roller yang perlu diganti secara berkala seperti CVT biasa, sehingga
+                            biaya servis rutin bisa lebih hemat.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq_3_q">Berapa harga OTR Jakarta?</summary>
+                        <p data-i18n="faq_3_a">Harga bervariasi mulai dari Rp 32 jutaan untuk varian Neo hingga Rp 45
+                            jutaan untuk varian Turbo Tech MAX Ultimate (Harga estimasi, cek dealer untuk update).</p>
+                    </details>
+                </div>
+
+                <div class="conclusion-box">
+                    <h2 data-i18n="concl_title">Kesimpulan</h2>
+                    <p data-i18n="concl_text">
+                        Yamaha NMAX "Turbo" bukan sekadar ganti baju. Ini adalah revolusi teknologi skuter matic di
+                        Indonesia. Dengan perpaduan performa YECVT yang responsif, fitur canggih seperti Riding Mode dan
+                        Y-Shift, serta desain yang semakin premium, NMAX Turbo layak menjadi raja jalanan baru. Bagi
+                        Anda pecinta kecepatan dan teknologi, motor ini adalah jawaban yang Anda tunggu.
+                    </p>
+                </div>
+
+                <div class="my-5 text-center">
+                    <a href="produk.html">
+                        <img src="https://media.giphy.com/media/3o6vXVzKWtkOIpyNMc/giphy.gif" alt="Promo Akhir"
+                            style="width:100%; max-width:800px; border-radius:15px;">
+                    </a>
+                </div>
+
+                <div class="post-footer">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                            alt="Budi" style="width:70px; height:70px; border-radius:50%;">
+                        <div>
+                            <h5 class="fw-bold mb-1" style="color: var(--yamaha-blue-dark);" data-i18n="art_author">Budi
+                                Otomotif</h5>
+                            <small class="text-muted" data-i18n="author_role">Senior Editor & Tech Analyst
+                                @YamahaNews</small>
+                        </div>
+                    </div>
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <p class="small text-muted mb-2" data-i18n="share_text">Bagikan artikel ini:</p>
+                        <button class="social-share-btn" onclick="shareSocial('wa')"><i
+                                class="fab fa-whatsapp"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('fb')"><i
+                                class="fab fa-facebook-f"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('tw')"><i
+                                class="fab fa-twitter"></i></button>
+                        <button class="social-share-btn" onclick="shareSocial('li')"><i
+                                class="fab fa-linkedin-in"></i></button>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+
+    <section class="container py-5">
+        <h3 class="fw-bold mb-4 text-center" style="color: var(--yamaha-blue-dark);" data-i18n="related_header">Artikel
+            Terkait</h3>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png"
+                            alt="Hybrid Technology">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_1_title">Bedah Teknologi Blue Core Hybrid</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_1_desc">Bagaimana sistem hybrid Yamaha bekerja
+                            menghemat bahan bakar.</p>
+                        <a href="#" class="btn-read-more"><span data-i18n="btn_read_more">BACA SELENGKAPNYA</span> <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop"
+                            alt="Servis">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_2_title">Tips Merawat Motor Matic Injeksi</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_2_desc">Panduan lengkap agar performa motor
+                            matic tetap prima.</p>
+                        <a href="#" class="btn-read-more"><span data-i18n="btn_read_more">BACA SELENGKAPNYA</span> <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=80&w=800&auto=format&fit=crop"
+                            alt="Aerox">
+                    </div>
+                    <div class="news-body">
+                        <h5 class="news-title" data-i18n="rel_3_title">Komparasi Aerox vs NMAX</h5>
+                        <p class="small text-muted mb-3" data-i18n="rel_3_desc">Mana yang lebih cocok untuk gaya
+                            berkendara Anda?</p>
+                        <a href="#" class="btn-read-more"><span data-i18n="btn_read_more">BACA SELENGKAPNYA</span> <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
+                        Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
+                        Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h5 data-i18n="footer_menu_help">Bantuan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
+                    <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
+                            Otomotif No. 99, Jakarta Selatan</li>
+                        <li><span class="fa-li"><i class="fas fa-phone-alt text-primary"></i></span>0800-1-YAMAHA (Call
+                            Center)</li>
+                        <li><span class="fa-li"><i class="fab fa-whatsapp text-primary"></i></span>0822-5739-1460 (Chat
+                            Only)</li>
+                        <li><span class="fa-li"><i
+                                    class="fas fa-envelope text-primary"></i></span>care@yamaha-dealer.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- 1. TOC GENERATOR ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocList = document.getElementById('auto-toc-list');
+            const headers = document.querySelectorAll('.article-content h2, .article-content h3');
+
+            if (headers.length > 0) {
+                headers.forEach((header, index) => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+
+                    if (!header.id) header.id = 'section-' + index;
+                    a.href = '#' + header.id;
+                    a.textContent = header.textContent; // Initial Text
+
+                    // Add dynamic class for translation update targeting if needed
+                    a.setAttribute('data-target-id', header.id);
+
+                    if (header.tagName === 'H3') {
+                        li.style.marginLeft = '20px';
+                        li.style.listStyleType = 'circle';
+                    }
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+            }
+        });
+
+        // --- 2. TOGGLE TOC ---
+        function toggleToc() {
+            const list = document.getElementById('auto-toc-list');
+            const icon = document.getElementById('tocIcon');
+            if (list.style.display === 'none') {
+                list.style.display = 'block';
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                list.style.display = 'none';
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        // --- 3. SHARE SOCIAL ---
+        function shareSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(document.title);
+            let shareUrl = '';
+            if (platform === 'wa') shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+            else if (platform === 'fb') shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            else if (platform === 'tw') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            else if (platform === 'li') shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // --- 4. TRANSLATION LOGIC ---
+        const translations = {
+            // Navbar & Footer (UPDATED WITH KEYS FROM INDEX.HTML)
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+
+            // New Footer Keys
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_help": { id: "Bantuan", en: "Support", jp: "サポート" },
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+
+            // Article Meta
+            "art_title": { id: "Peluncuran NMAX \"TURBO\" Guncang Pasar Otomotif", en: "NMAX \"TURBO\" Launch Shakes the Automotive Market", jp: "NMAX「TURBO」の発売が自動車市場を揺るがす" },
+            "art_author": { id: "Budi Otomotif", en: "Budi Automotive", jp: "ブディ・オートモーティブ" },
+            "art_date": { id: "16 Jan 2026 • 8 Menit Baca", en: "Jan 16, 2026 • 8 Min Read", jp: "2026年1月16日 • 8分読む" },
+            "art_caption_main": { id: "Tampilan garang Yamaha NMAX Turbo terbaru dengan desain yang lebih futuristik.", en: "Fierce look of the latest Yamaha NMAX Turbo with a more futuristic design.", jp: "より未来的なデザインを備えた最新のヤマハNMAXターボの激しい外観。" },
+
+            // TOC & UI Elements
+            "toc_header": { id: "Daftar Isi", en: "Table of Contents", jp: "目次" },
+            "read_also": { id: "Baca Juga:", en: "Read Also:", jp: "また読む:" },
+            "link_read_1": { id: "Perbedaan Varian NMAX Neo dan NMAX Turbo Tech MAX", en: "Differences Between NMAX Neo and NMAX Turbo Tech MAX Variants", jp: "NMAX NeoとNMAX Turbo Tech MAXバリアントの違い" },
+            "link_read_2": { id: "Tips Merawat Motor Matic dengan Teknologi YECVT", en: "Tips for Maintaining Matic Bikes with YECVT Technology", jp: "YECVTテクノロジーを搭載したマチックバイクのメンテナンスのヒント" },
+            "promo_caption": { id: "Rasakan Sensasi Turbo Sekarang di Dealer Terdekat!", en: "Feel the Turbo Sensation Now at Nearest Dealer!", jp: "最寄りのディーラーでターボ感覚を今すぐ感じてください！" },
+            "img_caption_2": { id: "Dashboard TFT Navigasi yang canggih pada varian Tech MAX.", en: "Advanced TFT Navigation Dashboard on Tech MAX variant.", jp: "Tech MAXバリアントの高度なTFTナビゲーションダッシュボード。" },
+            "author_role": { id: "Senior Editor & Tech Analyst @YamahaNews", en: "Senior Editor & Tech Analyst @YamahaNews", jp: "シニアエディター＆テックアナリスト @YamahaNews" },
+            "share_text": { id: "Bagikan artikel ini:", en: "Share this article:", jp: "この記事を共有する:" },
+            "related_header": { id: "Artikel Terkait", en: "Related Articles", jp: "関連記事" },
+            "btn_read_more": { id: "BACA SELENGKAPNYA", en: "READ MORE", jp: "続きを読む" },
+
+            // Main Content Headers
+            "h2_1": { id: "1. Mengenal Teknologi YECVT: Sang \"Turbo\" Elektrik", en: "1. Knowing YECVT Technology: The Electric \"Turbo\"", jp: "1. YECVT技術を知る：電気「ターボ」" },
+            "h2_2": { id: "2. Fitur Riding Mode: T-Mode dan S-Mode", en: "2. Riding Mode Features: T-Mode and S-Mode", jp: "2. ライディングモード機能：TモードとSモード" },
+            "h2_3": { id: "3. Tombol \"Turbo\" Y-Shift", en: "3. Y-Shift \"Turbo\" Button", jp: "3. Y-Shift「ターボ」ボタン" },
+            "h3_1": { id: "Desain dan Kokpit Mewah", en: "Design and Luxury Cockpit", jp: "デザインと高級コックピット" },
+            "faq_header": { id: "Pertanyaan Sering Diajukan (FAQ)", en: "Frequently Asked Questions (FAQ)", jp: "よくある質問 (FAQ)" },
+            "concl_title": { id: "Kesimpulan", en: "Conclusion", jp: "結論" },
+
+            // Paragraphs
+            "p1": {
+                id: "Dunia otomotif Indonesia kembali dibuat gempar. Yamaha Indonesia Motor Manufacturing (YIMM) secara resmi meluncurkan generasi terbaru dari skuter matic bongsor andalannya, NMAX, yang kini menyandang label \"TURBO\". Bukan sekadar gimik pemasaran, label ini mewakili lompatan teknologi terbesar dalam sejarah Maxi Yamaha.",
+                en: "The Indonesian automotive world is shocked again. YIMM officially launched the latest generation of its flagship scooter, NMAX, now bearing the \"TURBO\" label. Not just a marketing gimmick, this label represents the biggest technological leap in Maxi Yamaha history.",
+                jp: "インドネシアの自動車業界は再び衝撃を受けました。YIMMは、主力スクーターであるNMAXの最新世代を正式に発売し、現在は「TURBO」というラベルが付いています。単なるマーケティングの仕掛けではなく、このラベルはMaxi Yamahaの歴史における最大の技術的飛躍を表しています。"
+            },
+            "p2": {
+                id: "Peluncuran ini sekaligus menjawab rasa penasaran publik yang selama ini hanya mendengar rumor. Dengan tagline \"Semakin Di Depan\", NMAX Turbo hadir untuk mendefinisikan ulang standar performa skuter matic 155cc.",
+                en: "This launch answers the public curiosity that has only heard rumors. With the tagline \"Revs Your Heart\", NMAX Turbo is here to redefine the performance standards of 155cc automatic scooters.",
+                jp: "この打ち上げは、噂しか聞いていない大衆の好奇心に答えます。「Revs Your Heart」というタグラインで、NMAX Turboは155ccオートマチックスクーターのパフォーマンス基準を再定義するためにここにあります。"
+            },
+            "p3": {
+                id: "Inti dari kehebohan ini bukanlah turbocharger konvensional yang menggunakan gas buang seperti pada mobil balap, melainkan teknologi revolusioner bernama Yamaha Electric CVT (YECVT). Teknologi ini menggantikan peran roller konvensional pada sistem transmisi CVT dengan motor penggerak elektrik yang presisi.",
+                en: "The core of this excitement is not a conventional turbocharger using exhaust gas like in racing cars, but a revolutionary technology called Yamaha Electric CVT (YECVT). This technology replaces conventional rollers with a precise electric drive motor.",
+                jp: "この興奮の核心は、レーシングカーのような排気ガスを使用する従来のターボチャージャーではなく、ヤマハエレクトリックCVT（YECVT）と呼ばれる革新的な技術です。この技術は、従来のローラーを精密な電気駆動モーターに置き換えます。"
+            },
+            "p4": {
+                id: "Dengan YECVT, puli depan (primary sheave) digerakkan secara elektrik, memungkinkan rasio transmisi berubah jauh lebih cepat dan akurat. Hasilnya? Akselerasi instan yang terasa seperti dorongan turbo saat tuas gas diputar.",
+                en: "With YECVT, the primary sheave is electrically driven, allowing the transmission ratio to change much faster and more accurately. The result? Instant acceleration that feels like a turbo boost when the throttle is twisted.",
+                jp: "YECVTを使用すると、プライマリシーブが電気的に駆動され、変速比をはるかに高速かつ正確に変更できます。結果？スロットルをひねったときにターボブーストのように感じる瞬時の加速。"
+            },
+            "quote": {
+                id: "\"Sensasi YECVT memberikan akselerasi instan yang membuat pengendara serasa dijambak. Ini adalah evolusi nyata dari teknologi Blue Core.\"",
+                en: "\"The YECVT sensation provides instant acceleration that makes the rider feel pulled. This is a real evolution of Blue Core technology.\"",
+                jp: "「YECVTの感覚は、ライダーが引っ張られているように感じる瞬時の加速を提供します。これはブルーコア技術の真の進化です。」"
+            },
+            "li_1": {
+                id: "<strong>T-Mode (Town Commuting):</strong> Mode ini dirancang untuk penggunaan harian di dalam kota. Karakter mesin lebih halus, efisien bahan bakar, dan santai.",
+                en: "<strong>T-Mode (Town Commuting):</strong> Designed for daily city use. Smoother engine character, fuel efficient, and relaxed.",
+                jp: "<strong>T-Mode (Town Commuting):</strong> 毎日の都市での使用のために設計されています。よりスムーズなエンジン特性、低燃費、そしてリラックス。"
+            },
+            "li_2": {
+                id: "<strong>S-Mode (Sport Touring):</strong> Inilah mode \"beast\". Saat diaktifkan, putaran mesin akan dijaga lebih tinggi, respon gas menjadi sangat agresif, dan akselerasi maksimal terbuka lebar.",
+                en: "<strong>S-Mode (Sport Touring):</strong> This is \"beast\" mode. When activated, RPM is kept higher, throttle response becomes very aggressive, and max acceleration opens wide.",
+                jp: "<strong>S-Mode (Sport Touring):</strong> これは「ビースト」モードです。アクティブにすると、RPMが高く保たれ、スロットル応答が非常にアグレッシブになり、最大加速が大きく開きます。"
+            },
+            "p6": {
+                id: "Salah satu fitur paling menarik adalah adanya tombol Y-Shift. Tombol ini berfungsi memberikan sensasi deselerasi (engine brake) maupun akselerasi instan dengan tiga tingkatan: Low, Medium, dan High.",
+                en: "One of the most interesting features is the Y-Shift button. This button functions to provide deceleration sensation (engine brake) and instant acceleration with three levels: Low, Medium, and High.",
+                jp: "最も興味深い機能の1つは、Y-Shiftボタンです。このボタンは、減速感覚（エンジンブレーキ）と、低、中、高の3つのレベルでの瞬時の加速を提供する機能があります。"
+            },
+            "p7": {
+                id: "Saat memasuki tikungan tajam atau turunan curam, pengendara bisa menekan tombol Y-Shift untuk mendapatkan efek engine brake, membantu pengereman menjadi lebih stabil.",
+                en: "When entering sharp corners or steep descents, riders can press the Y-Shift button to get an engine brake effect, helping braking become more stable.",
+                jp: "急なコーナーや急な下り坂に入るとき、ライダーはY-Shiftボタンを押してエンジンブレーキ効果を得ることができ、ブレーキがより安定するのを助けます。"
+            },
+            "p8": {
+                id: "Secara visual, NMAX Turbo tampil lebih tajam. Lampu depan kini menggunakan LED Projector ganda yang disusun vertikal, memberikan tatapan yang intimidatif.",
+                en: "Visually, NMAX Turbo looks sharper. The headlights now use dual LED Projectors arranged vertically, giving an intimidating gaze.",
+                jp: "視覚的には、NMAX Turboはよりシャープに見えます。ヘッドライトは現在、垂直に配置されたデュアルLEDプロジェクターを使用しており、威圧的な視線を与えています。"
+            },
+            "p9": {
+                id: "Di area kokpit, varian tertinggi (Tech MAX) sudah dibekali layar TFT Color Infotainment Display yang dapat menampilkan navigasi dari Garmin StreetCross.",
+                en: "In the cockpit area, the highest variant (Tech MAX) is equipped with a TFT Color Infotainment Display that can show navigation from Garmin StreetCross.",
+                jp: "コックピットエリアでは、最上位のバリエーション（Tech MAX）に、Garmin StreetCrossからのナビゲーションを表示できるTFTカラーインフォテインメントディスプレイが装備されています。"
+            },
+            "faq_1_q": { id: "Apakah NMAX Turbo boros bensin?", en: "Is NMAX Turbo fuel inefficient?", jp: "NMAXターボは燃費が悪いですか？" },
+            "faq_1_a": { id: "Tidak. Justru dengan YECVT, efisiensi bahan bakar lebih terjaga karena putaran mesin diatur secara elektronik.", en: "No. With YECVT, fuel efficiency is better maintained because engine speed is electronically regulated.", jp: "いいえ。YECVTを使用すると、エンジン速度が電子的に調整されるため、燃費効率が向上します。" },
+            "faq_2_q": { id: "Apakah perawatan YECVT mahal?", en: "Is YECVT maintenance expensive?", jp: "YECVTのメンテナンスは高価ですか？" },
+            "faq_2_a": { id: "Komponen YECVT dirancang bebas perawatan (maintenance free) untuk jangka panjang. Tidak ada roller yang perlu diganti.", en: "YECVT components are designed to be maintenance-free for the long term. No rollers need replacing.", jp: "YECVTコンポーネントは、長期間メンテナンスフリーになるように設計されています。交換が必要なローラーはありません。" },
+            "faq_3_q": { id: "Berapa harga OTR Jakarta?", en: "What is the OTR Jakarta price?", jp: "OTRジャカルタの価格はいくらですか？" },
+            "faq_3_a": { id: "Harga bervariasi mulai dari Rp 32 jutaan hingga Rp 45 jutaan (Estimasi).", en: "Prices vary from IDR 32 million to IDR 45 million (Estimate).", jp: "価格は3200万ルピアから4500万ルピアまでさまざまです（推定）。" },
+            "concl_text": {
+                id: "Yamaha NMAX \"Turbo\" bukan sekadar ganti baju. Ini adalah revolusi teknologi skuter matic di Indonesia. Dengan perpaduan performa YECVT, fitur canggih, dan desain premium, NMAX Turbo layak menjadi raja jalanan baru.",
+                en: "Yamaha NMAX \"Turbo\" is not just a facelift. This is a technological revolution of automatic scooters in Indonesia. With a blend of YECVT performance, advanced features, and premium design, NMAX Turbo deserves to be the new king of the streets.",
+                jp: "ヤマハNMAX「ターボ」は単なるフェイスリフトではありません。これはインドネシアにおけるオートマチックスクーターの技術革命です。YECVTパフォーマンス、高度な機能、プレミアムデザインの融合により、NMAX Turboは新しいストリートキングになるに値します。"
+            },
+
+            // Related Cards
+            "rel_1_title": { id: "Bedah Teknologi Blue Core Hybrid", en: "Dissecting Blue Core Hybrid Tech", jp: "ブルーコアハイブリッド技術の解剖" },
+            "rel_1_desc": { id: "Bagaimana sistem hybrid Yamaha bekerja menghemat bahan bakar.", en: "How Yamaha's hybrid system works to save fuel.", jp: "ヤマハのハイブリッドシステムが燃料を節約する仕組み。" },
+            "rel_2_title": { id: "Tips Merawat Motor Matic Injeksi", en: "Tips for Maintaining Injection Matic Bikes", jp: "インジェクションマチックバイクのメンテナンスのヒント" },
+            "rel_2_desc": { id: "Panduan lengkap agar performa motor matic tetap prima.", en: "Complete guide to keep matic bike performance prime.", jp: "マチックバイクのパフォーマンスを最高に保つための完全ガイド。" },
+            "rel_3_title": { id: "Komparasi Aerox vs NMAX", en: "Comparison Aerox vs NMAX", jp: "エアロックスとNMAXの比較" },
+            "rel_3_desc": { id: "Mana yang lebih cocok untuk gaya berkendara Anda?", en: "Which one suits your riding style better?", jp: "あなたのライディングスタイルに合っているのはどれですか？" }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            if (lang === 'jp') document.body.classList.add('lang-jp');
+            else document.body.classList.remove('lang-jp');
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    if (translations[key][lang].includes('<')) {
+                        element.innerHTML = translations[key][lang];
+                    } else {
+                        element.textContent = translations[key][lang];
+                    }
+                }
+            });
+
+            updateTOC(lang);
+        }
+
+        function updateTOC(lang) {
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            tocLinks.forEach(link => {
+                const targetId = link.getAttribute('data-target-id');
+                let transKey = "";
+                if (targetId === "sec-1") transKey = "h2_1";
+                if (targetId === "sec-2") transKey = "h2_2";
+                if (targetId === "sec-3") transKey = "h2_3";
+                if (targetId === "sec-4") transKey = "h3_1";
+
+                if (transKey && translations[transKey][lang]) {
+                    link.textContent = translations[transKey][lang];
+                }
+            });
+        }
+
+        // Load default language (opsional, jika ingin konsisten dengan halaman sebelumnya)
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(savedLang);
+        });
+
+        /* ==============================================
+   LOGIKA BACK TO TOP
+   ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
+        });
+    </script>
+</body>
+
+</html>

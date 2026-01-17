@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         /* --- COPY STYLE DARI INDEX.HTML (Base Style) --- */
@@ -29,6 +30,20 @@
             overflow-x: hidden;
             background-color: var(--bg-light);
             color: #333;
+        }
+
+        /* Font khusus jika bahasa Jepang aktif */
+        body.lang-jp {
+            font-family: 'Noto Sans JP', sans-serif !important;
+        }
+
+        body.lang-jp h1,
+        body.lang-jp h2,
+        body.lang-jp h3,
+        body.lang-jp h4,
+        body.lang-jp h5 {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            font-weight: 700;
         }
 
         h1,
@@ -70,6 +85,8 @@
             font-size: 14px;
             position: relative;
             transition: color 0.3s;
+            cursor: pointer;
+            /* Tambahan pointer */
         }
 
         .navbar-nav .nav-link::after,
@@ -146,6 +163,7 @@
             color: #555;
             transition: all 0.2s;
             font-size: 14px;
+            cursor: pointer;
         }
 
         .dropdown-item:hover {
@@ -390,6 +408,117 @@
             height: 200px;
             width: 100%;
         }
+
+        /* ========================================================
+   FLOATING BUTTONS (WA & BACK TO TOP)
+   ======================================================== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Jarak antar tombol */
+        }
+
+        /* Tombol Umum */
+        .btn-float {
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: none;
+        }
+
+        .btn-float:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Tombol WhatsApp */
+        .btn-whatsapp {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            font-size: 32px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animasi Pulse untuk WA agar menarik perhatian */
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Tombol Back to Top */
+        .btn-back-to-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--yamaha-blue-dark);
+            /* Mengikuti tema website */
+            font-size: 20px;
+            opacity: 0;
+            /* Tersembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class untuk memunculkan tombol Back to Top */
+        .btn-back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsif Mobile (Layar Kecil) */
+        @media (max-width: 768px) {
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .btn-back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
@@ -397,11 +526,12 @@
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <i class="fas fa-motorcycle me-2 fa-lg"></i>
                 <div>
                     YAMAHA <span
-                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;">Authorized
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized
                         Dealer</span>
                 </div>
             </a>
@@ -410,23 +540,36 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Servis</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lokasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html" data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html" data-i18n="nav_news">Berita</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_contact">
                             Hubungi Kami
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="kontak.html">Kontak Kami</a></li>
-                            <li><a class="dropdown-item" href="tentang.html">Tentang Kami</a></li>
+                            <li><a class="dropdown-item active" href="kontak.html" data-i18n="nav_contact_us">Kontak
+                                    Kami</a></li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -436,8 +579,9 @@
 
     <header class="page-header">
         <div class="container">
-            <h1 data-aos="fade-up">KONTAK KAMI</h1>
-            <p>Kami siap membantu menjawab pertanyaan Anda seputar produk dan layanan Yamaha</p>
+            <h1 data-aos="fade-up" data-i18n="contact_header_title">KONTAK KAMI</h1>
+            <p data-i18n="contact_header_desc">Kami siap membantu menjawab pertanyaan Anda seputar produk dan layanan
+                Yamaha</p>
         </div>
     </header>
 
@@ -445,36 +589,39 @@
         <div class="row g-5">
             <div class="col-lg-5">
                 <div class="contact-info-card">
-                    <h3 class="mb-4" style="font-weight: 800; color: var(--yamaha-black);">INFORMASI DEALER</h3>
+                    <h3 class="mb-4" style="font-weight: 800; color: var(--yamaha-black);" data-i18n="info_title">
+                        INFORMASI DEALER</h3>
 
                     <div class="info-item">
                         <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="info-content">
-                            <h5>Lokasi Showroom</h5>
-                            <p>Jl. Raya Otomotif No. 99<br>Jakarta Selatan, DKI Jakarta 12345</p>
+                            <h5 data-i18n="info_loc_title">Lokasi Showroom</h5>
+                            <p data-i18n="info_loc_desc">Jl. Raya Otomotif No. 99<br>Jakarta Selatan, DKI Jakarta 12345
+                            </p>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <div class="info-icon"><i class="fas fa-headset"></i></div>
                         <div class="info-content">
-                            <h5>Layanan Pelanggan</h5>
-                            <p>Call Center: 0800-1-YAMAHA<br>WhatsApp: 0822-5739-1460</p>
+                            <h5 data-i18n="info_cs_title">Layanan Pelanggan</h5>
+                            <p data-i18n="info_cs_desc">Call Center: 0800-1-YAMAHA<br>WhatsApp: 0822-5739-1460</p>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <div class="info-icon"><i class="fas fa-clock"></i></div>
                         <div class="info-content">
-                            <h5>Jam Operasional</h5>
-                            <p>Senin - Jumat: 08.00 - 17.00 WIB<br>Sabtu - Minggu: 08.00 - 15.00 WIB</p>
+                            <h5 data-i18n="info_hours_title">Jam Operasional</h5>
+                            <p data-i18n="info_hours_desc">Senin - Jumat: 08.00 - 17.00 WIB<br>Sabtu - Minggu: 08.00 -
+                                15.00 WIB</p>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <div class="info-icon"><i class="fas fa-envelope"></i></div>
                         <div class="info-content">
-                            <h5>Email Resmi</h5>
+                            <h5 data-i18n="info_email_title">Email Resmi</h5>
                             <p>care@yamaha-dealer.co.id<br>sales@yamaha-dealer.co.id</p>
                         </div>
                     </div>
@@ -490,48 +637,53 @@
             <div class="col-lg-7">
                 <div class="contact-form-wrapper">
                     <div class="section-title text-start mb-4">
-                        <h2 style="font-size: 2rem;">KIRIM <span>PESAN</span></h2>
+                        <h2 style="font-size: 2rem;"><span data-i18n="form_title_1">KIRIM</span> <span
+                                data-i18n="form_title_2">PESAN</span></h2>
                         <div class="line" style="margin: 10px 0;"></div>
-                        <p class="text-muted">Isi formulir di bawah ini, tim kami akan segera menghubungi Anda via
-                            WhatsApp.</p>
+                        <p class="text-muted" data-i18n="form_subtitle">Isi formulir di bawah ini, tim kami akan segera
+                            menghubungi Anda via WhatsApp.</p>
                     </div>
 
                     <form id="waForm">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="nama" class="form-label">Nama Lengkap</label>
+                                <label for="nama" class="form-label" data-i18n="label_name">Nama Lengkap</label>
                                 <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda"
-                                    required>
+                                    data-i18n="placeholder_name" required>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="phone" class="form-label">Nomor WhatsApp</label>
+                                <label for="phone" class="form-label" data-i18n="label_phone">Nomor WhatsApp</label>
                                 <input type="number" class="form-control" id="phone" placeholder="Contoh: 08123456789"
-                                    required>
+                                    data-i18n="placeholder_phone" required>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="kategori" class="form-label">Topik Pertanyaan</label>
+                            <label for="kategori" class="form-label" data-i18n="label_topic">Topik Pertanyaan</label>
                             <select class="form-select" id="kategori" required>
-                                <option value="" selected disabled>Pilih Kategori...</option>
-                                <option value="Penjualan Unit (Sales)">Info Pembelian Motor Baru</option>
-                                <option value="Simulasi Kredit">Simulasi Kredit / Angsuran</option>
-                                <option value="Booking Service">Booking Service / Bengkel</option>
-                                <option value="Suku Cadang">Ketersediaan Suku Cadang (Sparepart)</option>
-                                <option value="Keluhan">Keluhan & Saran</option>
-                                <option value="Lainnya">Lainnya</option>
+                                <option value="" selected disabled data-i18n="option_default">Pilih Kategori...</option>
+                                <option value="Penjualan Unit (Sales)" data-i18n="option_sales">Info Pembelian Motor
+                                    Baru</option>
+                                <option value="Simulasi Kredit" data-i18n="option_credit">Simulasi Kredit / Angsuran
+                                </option>
+                                <option value="Booking Service" data-i18n="option_service">Booking Service / Bengkel
+                                </option>
+                                <option value="Suku Cadang" data-i18n="option_parts">Ketersediaan Suku Cadang
+                                    (Sparepart)</option>
+                                <option value="Keluhan" data-i18n="option_complaint">Keluhan & Saran</option>
+                                <option value="Lainnya" data-i18n="option_other">Lainnya</option>
                             </select>
                         </div>
 
                         <div class="mb-4">
-                            <label for="pesan" class="form-label">Isi Pesan</label>
+                            <label for="pesan" class="form-label" data-i18n="label_msg">Isi Pesan</label>
                             <textarea class="form-control" id="pesan"
                                 placeholder="Tuliskan detail pertanyaan atau kebutuhan Anda disini..."
-                                required></textarea>
+                                data-i18n="placeholder_msg" required></textarea>
                         </div>
 
                         <button type="submit" class="btn-send">
-                            <i class="fab fa-whatsapp fa-lg"></i> Kirim Pesan Sekarang
+                            <i class="fab fa-whatsapp fa-lg"></i> <span data-i18n="btn_send">Kirim Pesan Sekarang</span>
                         </button>
                     </form>
                 </div>
@@ -543,8 +695,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h5>Tentang Dealer</h5>
-                    <p style="color: #aaa; line-height: 1.8;">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
                         Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
                         Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
                     </p>
@@ -555,28 +707,26 @@
                         <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
+
                 <div class="col-lg-2 mb-4">
-                    <h5>Produk</h5>
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">MAXI Yamaha</a></li>
-                        <li><a href="#">Classy Yamaha</a></li>
-                        <li><a href="#">Sport Series</a></li>
-                        <li><a href="#">Moped</a></li>
-                        <li><a href="#">Yamaha EV</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 mb-4">
-                    <h5>Layanan</h5>
+                    <h5 data-i18n="footer_menu_support">Dukungan</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Booking Service</a></li>
-                        <li><a href="#">Suku Cadang Asli</a></li>
-                        <li><a href="#">Yamalube</a></li>
-                        <li><a href="#">Simulasi Kredit</a></li>
-                        <li><a href="#">Trade In</a></li>
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <h5>Hubungi Kami</h5>
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
                     <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
                         <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
                             Otomotif No. 99, Jakarta Selatan</li>
@@ -595,9 +745,160 @@
         </div>
     </footer>
 
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // --- 1. SCRIPT LOGIKA TRANSLATE ---
+
+        // Kamus Data (Dictionary)
+        const translations = {
+            // --- Navigation (Sama dengan index) ---
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_service": { id: "Servis", en: "Service", jp: "サービス" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+
+            // --- Page Header ---
+            "contact_header_title": { id: "KONTAK KAMI", en: "CONTACT US", jp: "お問い合わせ" },
+            "contact_header_desc": {
+                id: "Kami siap membantu menjawab pertanyaan Anda seputar produk dan layanan Yamaha",
+                en: "We are ready to help answer your questions about Yamaha products and services",
+                jp: "ヤマハの製品やサービスに関するご質問にお答えします"
+            },
+
+            // --- Info Card ---
+            "info_title": { id: "INFORMASI DEALER", en: "DEALER INFO", jp: "ディーラー情報" },
+            "info_loc_title": { id: "Lokasi Showroom", en: "Showroom Location", jp: "ショールームの場所" },
+            "info_loc_desc": {
+                id: "Jl. Raya Otomotif No. 99<br>Jakarta Selatan, DKI Jakarta 12345",
+                en: "Jl. Raya Otomotif No. 99<br>South Jakarta, DKI Jakarta 12345",
+                jp: "Jl. Raya Otomotif No. 99<br>南ジャカルタ, DKIジャカルタ 12345"
+            },
+            "info_cs_title": { id: "Layanan Pelanggan", en: "Customer Service", jp: "カスタマーサービス" },
+            "info_cs_desc": {
+                id: "Call Center: 0800-1-YAMAHA<br>WhatsApp: 0822-5739-1460",
+                en: "Call Center: 0800-1-YAMAHA<br>WhatsApp: 0822-5739-1460",
+                jp: "コールセンター: 0800-1-YAMAHA<br>WhatsApp: 0822-5739-1460"
+            },
+            "info_hours_title": { id: "Jam Operasional", en: "Opening Hours", jp: "営業時間" },
+            "info_hours_desc": {
+                id: "Senin - Jumat: 08.00 - 17.00 WIB<br>Sabtu - Minggu: 08.00 - 15.00 WIB",
+                en: "Mon - Fri: 08.00 - 17.00 WIB<br>Sat - Sun: 08.00 - 15.00 WIB",
+                jp: "月 - 金: 08.00 - 17.00 WIB<br>土 - 日: 08.00 - 15.00 WIB"
+            },
+            "info_email_title": { id: "Email Resmi", en: "Official Email", jp: "公式メール" },
+
+            // --- Contact Form ---
+            "form_title_1": { id: "KIRIM", en: "SEND", jp: "送信" },
+            "form_title_2": { id: "PESAN", en: "MESSAGE", jp: "メッセージ" },
+            "form_subtitle": {
+                id: "Isi formulir di bawah ini, tim kami akan segera menghubungi Anda via WhatsApp.",
+                en: "Fill out the form below, our team will contact you via WhatsApp shortly.",
+                jp: "以下のフォームにご記入ください。担当者がすぐにWhatsAppでご連絡いたします。"
+            },
+            "label_name": { id: "Nama Lengkap", en: "Full Name", jp: "氏名" },
+            "placeholder_name": { id: "Masukkan nama Anda", en: "Enter your name", jp: "お名前を入力" },
+            "label_phone": { id: "Nomor WhatsApp", en: "WhatsApp Number", jp: "WhatsApp番号" },
+            "placeholder_phone": { id: "Contoh: 08123456789", en: "Ex: 08123456789", jp: "例: 08123456789" },
+            "label_topic": { id: "Topik Pertanyaan", en: "Question Topic", jp: "ご質問の内容" },
+
+            // Select Options
+            "option_default": { id: "Pilih Kategori...", en: "Select Category...", jp: "カテゴリーを選択..." },
+            "option_sales": { id: "Info Pembelian Motor Baru", en: "New Bike Purchase Info", jp: "新車購入について" },
+            "option_credit": { id: "Simulasi Kredit / Angsuran", en: "Credit / Installment Simulation", jp: "ローン・分割払いシミュレーション" },
+            "option_service": { id: "Booking Service / Bengkel", en: "Booking Service / Workshop", jp: "サービス・修理予約" },
+            "option_parts": { id: "Ketersediaan Suku Cadang (Sparepart)", en: "Spare Parts Availability", jp: "部品の在庫確認" },
+            "option_complaint": { id: "Keluhan & Saran", en: "Complaints & Suggestions", jp: "ご意見・ご要望" },
+            "option_other": { id: "Lainnya", en: "Others", jp: "その他" },
+
+            "label_msg": { id: "Isi Pesan", en: "Message Content", jp: "メッセージ内容" },
+            "placeholder_msg": {
+                id: "Tuliskan detail pertanyaan atau kebutuhan Anda disini...",
+                en: "Write your questions or needs details here...",
+                jp: "ご質問やご要望の詳細をこちらにご記入ください..."
+            },
+            "btn_send": { id: "Kirim Pesan Sekarang", en: "Send Message Now", jp: "今すぐメッセージを送る" },
+
+            // --- Footer (Sama dengan index) ---
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+            // UPDATE KEY BARU UNTUK FOOTER MENU UTAMA & DUKUNGAN
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_support": { id: "Dukungan", en: "Support", jp: "サポート" },
+
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "svc_booking": { id: "Booking Service", en: "Booking Service", jp: "サービス予約" },
+            "svc_parts": { id: "Suku Cadang Asli", en: "Genuine Parts", jp: "純正部品" },
+            "svc_credit": { id: "Simulasi Kredit", en: "Credit Simulation", jp: "クレジットシミュレーション" },
+            "svc_tradein": { id: "Trade In", en: "Trade In", jp: "下取り" }
+        };
+
+        function changeLanguage(lang) {
+            // Set html lang attribute
+            document.documentElement.lang = lang;
+
+            // Simpan ke Local Storage
+            localStorage.setItem('selectedLang', lang);
+
+            // Update Teks Dropdown
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            // Handle Font Jepang
+            if (lang === 'jp') {
+                document.body.classList.add('lang-jp');
+            } else {
+                document.body.classList.remove('lang-jp');
+            }
+
+            // Loop semua elemen yang punya atribut 'data-i18n'
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    // Cek apakah elemen input/select (placeholder atau text)
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[key][lang];
+                    } else if (element.tagName === 'OPTION') {
+                        // Untuk option select, kita ubah text-nya saja, value tetap
+                        element.text = translations[key][lang];
+                    } else {
+                        // Ganti HTML text biasa (innerHTML agar tag <br> terbaca)
+                        element.innerHTML = translations[key][lang];
+                    }
+                }
+            });
+        }
+
+        // Jalankan saat halaman dimuat (Load saved language)
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'id'; // Default ID
+            changeLanguage(savedLang);
+        });
+
+
+        // --- 2. SCRIPT WHATSAPP FORM ---
         document.getElementById('waForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -607,21 +908,43 @@
             const kategori = document.getElementById('kategori').value;
             const pesan = document.getElementById('pesan').value;
 
-            // 2. Nomor Tujuan (Sesuai request)
-            const targetPhone = "6282257391460"; // Format internasional tanpa '+'
+            // 2. Nomor Tujuan
+            const targetPhone = "6282257391460";
 
-            // 3. Format Pesan WhatsApp (Line break pakai %0a)
+            // 3. Format Pesan WhatsApp
             const textMessage = `*Halo Admin Yamaha Dealer,*%0a%0aSaya ingin bertanya melalui website.%0a%0a--------------------------------%0a*Data Diri:*%0a👤 Nama: ${nama}%0a📱 No HP: ${phone}%0a📂 Kategori: ${kategori}%0a--------------------------------%0a%0a*Isi Pesan:*%0a${pesan}%0a%0aMohon informasinya, Terima kasih.`;
 
             // 4. Buat URL WhatsApp
-            // Deteksi mobile untuk menggunakan api.whatsapp.com atau web.whatsapp.com (opsional, biasanya wa.me cukup pintar)
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             const baseUrl = isMobile ? "https://api.whatsapp.com/send" : "https://web.whatsapp.com/send";
-
             const finalUrl = `${baseUrl}?phone=${targetPhone}&text=${textMessage}`;
 
             // 5. Buka di Tab Baru
             window.open(finalUrl, '_blank');
+        });
+
+        /* ==============================================
+   LOGIKA BACK TO TOP
+   ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
         });
     </script>
 

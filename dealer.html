@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Katalog Produk Motor Yamaha Terlengkap - MAXI, Classy, Sport, Moped">
-    <title>Produk Kami - Yamaha Motor Indonesia</title>
+    <meta name="description" content="Cari Dealer Resmi Yamaha Terdekat - Layanan 3S">
+    <title>Cari Dealer - Yamaha Motor Indonesia</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 
     <style>
         /* =========================================
-           GLOBAL STYLE (DIAMBIL DARI INDEX.HTML)
+           GLOBAL STYLE (SAMA DENGAN INDEX.HTML)
            ========================================= */
         :root {
             --yamaha-blue-main: #0057B8;
@@ -37,18 +37,9 @@
             min-height: 100vh;
         }
 
-        /* Font khusus jika bahasa Jepang aktif */
+        /* Font khusus bahasa Jepang */
         body.lang-jp {
             font-family: 'Noto Sans JP', sans-serif !important;
-        }
-
-        body.lang-jp h1,
-        body.lang-jp h2,
-        body.lang-jp h3,
-        body.lang-jp h4,
-        body.lang-jp h5 {
-            font-family: 'Noto Sans JP', sans-serif !important;
-            font-weight: 700;
         }
 
         h1,
@@ -60,7 +51,7 @@
             font-family: 'Exo 2', sans-serif;
         }
 
-        /* Navbar Styling */
+        /* --- Navbar --- */
         .navbar {
             box-shadow: 0 4px 20px rgba(0, 87, 184, 0.1);
             background: rgba(255, 255, 255, 0.95);
@@ -118,7 +109,6 @@
             color: var(--yamaha-blue-main) !important;
         }
 
-        /* Dropdown */
         .dropdown-menu {
             border: none;
             border-radius: 15px;
@@ -132,7 +122,6 @@
             font-weight: 500;
             color: #555;
             font-size: 14px;
-            cursor: pointer;
         }
 
         .dropdown-item:hover {
@@ -141,236 +130,243 @@
         }
 
         /* =========================================
-           PAGE SPECIFIC STYLES (PRODUK)
+           PAGE SPECIFIC STYLES (DEALER)
            ========================================= */
 
-        /* Header Banner */
+        /* Header Banner Simple */
         .page-header {
             background: linear-gradient(135deg, var(--yamaha-blue-dark), var(--yamaha-blue-main));
-            padding: 60px 0 40px;
+            padding: 50px 0;
             color: white;
             text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-header::after {
-            content: '';
-            position: absolute;
-            bottom: -50%;
-            right: -10%;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+            margin-bottom: 0;
+            /* Margin 0 karena search box akan menempel/overlap sedikit jika diinginkan, 
+               tapi di desain ini kita buat clean stack */
         }
 
         .page-header h1 {
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        /* Filter Controls */
-        .filter-container {
-            margin-bottom: 40px;
-        }
-
-        .filter-btn-group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .btn-filter {
-            border: 2px solid #e0e0e0;
-            background: white;
-            color: #666;
-            border-radius: 50px;
-            padding: 10px 25px;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .btn-filter:hover {
-            border-color: var(--yamaha-blue-main);
-            color: var(--yamaha-blue-main);
-            transform: translateY(-2px);
-        }
-
-        .btn-filter.active {
-            background: var(--yamaha-blue-main);
-            border-color: var(--yamaha-blue-main);
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 87, 184, 0.3);
-        }
-
-        .search-wrapper {
-            max-width: 400px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .search-input {
-            border-radius: 50px;
-            padding: 12px 25px;
-            border: 2px solid #e0e0e0;
-            padding-right: 50px;
-            transition: border-color 0.3s;
-        }
-
-        .search-input:focus {
-            border-color: var(--yamaha-blue-main);
-            box-shadow: none;
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #aaa;
-        }
-
-        /* Product Card Grid */
-        .product-card-wrapper {
-            margin-bottom: 30px;
-        }
-
-        .product-card {
-            border: none;
-            border-radius: 15px;
-            background: #fff;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.15);
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--yamaha-blue-main);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            transform-origin: left;
-        }
-
-        .product-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .pc-img-box {
-            background: radial-gradient(circle, #f8f9fa 0%, #ececec 100%);
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        .pc-img-box img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            transition: transform 0.4s ease;
-            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
-        }
-
-        .product-card:hover .pc-img-box img {
-            transform: scale(1.1) rotate(-3deg);
-        }
-
-        .pc-content {
-            padding: 20px;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .pc-category {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--text-grey);
-            text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 5px;
         }
 
-        .pc-title {
+        /* --- Filter Search Box --- */
+        .dealer-search-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-top: -30px;
+            /* Overlap effect */
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .form-select-dealer {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            color: #555;
+            background-color: #fcfcfc;
+            transition: all 0.3s;
+        }
+
+        .form-select-dealer:focus {
+            border-color: var(--yamaha-blue-main);
+            box-shadow: 0 0 0 0.2rem rgba(0, 87, 184, 0.15);
+        }
+
+        .btn-cari-dealer {
+            width: 100%;
+            background-color: var(--yamaha-red);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .btn-cari-dealer:hover {
+            background-color: #c41219;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(236, 28, 36, 0.3);
+        }
+
+        /* --- Dealer Card Style (Mirip Gambar Referensi) --- */
+        .dealer-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .dealer-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.1);
+            transform: translateY(-5px);
+            border-color: rgba(0, 87, 184, 0.2);
+        }
+
+        .dealer-name {
             font-family: 'Exo 2', sans-serif;
             font-weight: 700;
             font-size: 18px;
             color: var(--yamaha-black);
             margin-bottom: 10px;
+            border-bottom: 2px solid var(--yamaha-black);
+            padding-bottom: 10px;
+            display: inline-block;
+            width: 100%;
         }
 
-        .pc-price {
-            color: var(--yamaha-blue-main);
-            font-weight: 800;
-            font-size: 16px;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        /* Tombol Visual */
-        .pc-btn {
-            background: transparent;
-            border: 2px solid var(--yamaha-black);
-            color: var(--yamaha-black);
+        .dealer-type {
             font-size: 13px;
-            font-weight: 700;
-            padding: 8px 20px;
-            border-radius: 50px;
+            color: var(--text-grey);
+            font-weight: 500;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            transition: all 0.3s;
-            text-decoration: none;
         }
 
-        .product-card:hover .pc-btn {
-            background: var(--yamaha-black);
+        .dealer-address-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-grow: 1;
+            /* Agar tombol selalu di bawah */
+            margin-bottom: 20px;
+        }
+
+        .dealer-address {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #444;
+            padding-right: 15px;
+        }
+
+        .dealer-map-icon {
+            background-color: var(--yamaha-red);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50% 50% 0 50%;
+            /* Bentuk pin unik */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(0deg);
+            flex-shrink: 0;
+            box-shadow: 0 5px 10px rgba(236, 28, 36, 0.2);
+        }
+
+        .btn-hubungi {
+            background-color: var(--yamaha-red);
+            color: white;
+            width: 100%;
+            padding: 12px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .btn-hubungi:hover {
+            background-color: #c41219;
+            /* Warna hover merah lebih gelap */
+            color: white;
+            box-shadow: 0 5px 15px rgba(236, 28, 36, 0.3);
+        }
+
+        /* --- CTA Section (Dari Produk) --- */
+        .cta-wrapper {
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, var(--yamaha-blue-dark) 0%, var(--yamaha-blue-main) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.2);
             color: white;
         }
 
-        /* Animation for Filter */
-        .fade-in-up {
-            animation: fadeInUp 0.5s ease forwards;
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .cta-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            border: 20px solid rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
         }
 
-        /* Footer */
+        .cta-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .cta-desc {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 0;
+            font-weight: 300;
+        }
+
+        .btn-cta-wa {
+            background-color: white;
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid white;
+            text-decoration: none;
+        }
+
+        .btn-cta-wa:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- Footer --- */
         footer {
             background: linear-gradient(to right, #0e0e0e, #1a1a1a);
             color: white;
@@ -426,138 +422,37 @@
             color: #666;
         }
 
-        /* Responsive Fixes */
-        @media (max-width: 991px) {
-            .navbar-collapse {
-                background: white;
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                margin-top: 10px;
-            }
+        /* Animation */
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
 
-            .navbar-nav .nav-link::after {
-                display: none;
-            }
-
-            .navbar-nav .nav-link {
-                padding: 10px 0;
-                border-bottom: 1px solid #eee;
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        @media (max-width: 576px) {
-            .btn-filter {
-                padding: 8px 15px;
-                font-size: 12px;
-            }
-
-            /* Memperbesar sedikit tinggi gambar karena kartu sekarang full width */
-            .pc-img-box {
-                height: 180px;
-            }
-
-            .pc-title {
-                font-size: 18px;
-            }
-
-            .pc-price {
-                font-size: 15px;
-            }
-
-            .pc-content {
-                padding: 20px;
-            }
-
-            .pc-btn {
-                padding: 8px 20px;
-                font-size: 12px;
-            }
-        }
-
-        /* =========================================
-           SECTION CTA (BARU)
-           ========================================= */
-        .cta-wrapper {
-            padding-bottom: 60px;
-        }
-
-        .cta-card {
-            background: linear-gradient(135deg, var(--yamaha-blue-dark) 0%, var(--yamaha-blue-main) 100%);
-            border-radius: 20px;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.2);
-            color: white;
-        }
-
-        /* Elemen dekoratif background */
-        .cta-card::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-
-        .cta-card::after {
-            content: '';
-            position: absolute;
-            bottom: -30px;
-            left: -30px;
-            width: 150px;
-            height: 150px;
-            border: 20px solid rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-        }
-
-        .cta-title {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 800;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .cta-desc {
-            font-size: 16px;
-            opacity: 0.9;
-            margin-bottom: 0;
-            font-weight: 300;
-        }
-
-        .btn-cta-wa {
-            background-color: white;
-            color: var(--yamaha-blue-dark);
-            font-weight: 700;
-            border-radius: 50px;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: 2px solid white;
-        }
-
-        .btn-cta-wa:hover {
-            background-color: transparent;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Responsive adjustment */
+        /* Responsive Overrides */
         @media (max-width: 991px) {
             .cta-card {
                 text-align: center;
                 padding: 30px 20px;
             }
 
-            .cta-content {
-                margin-bottom: 25px;
+            .dealer-search-section {
+                padding: 20px;
+            }
+
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
             }
         }
 
@@ -683,8 +578,7 @@
                 <div>
                     YAMAHA <span
                         style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
-                        data-i18n="dealer_auth">Authorized
-                        Dealer</span>
+                        data-i18n="dealer_auth">Authorized Dealer</span>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -693,9 +587,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="produk.html"
-                            data-i18n="nav_product">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html" data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dealer.html"
+                            data-i18n="nav_location">Dealer</a></li>
                     <li class="nav-item"><a class="nav-link" href="berita.html" data-i18n="nav_news">Berita</a></li>
 
                     <li class="nav-item dropdown">
@@ -732,46 +626,46 @@
     </nav>
 
     <header class="page-header">
-        <div class="container position-relative" style="z-index: 2;">
-            <h1 data-i18n="page_title">Semua Produk Yamaha</h1>
-            <p class="mb-0 opacity-75" data-i18n="page_subtitle">Temukan Motor Impian Yamaha Sesuai Gaya Berkendaramu
+        <div class="container">
+            <h1 data-i18n="page_title">CARI DEALER</h1>
+            <p class="mb-0 opacity-75" data-i18n="page_subtitle">Temukan jaringan dealer resmi 3S terdekat di kota Anda
             </p>
         </div>
     </header>
 
-    <section class="container pb-5">
+    <section class="container mb-5">
 
-        <div class="filter-container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-md-6">
-                    <div class="search-wrapper">
-                        <input type="text" class="form-control search-input" id="searchInput"
-                            placeholder="Cari nama motor (Contoh: NMAX)..." data-i18n="search_placeholder">
-                        <i class="fas fa-search search-icon"></i>
-                    </div>
+        <div class="dealer-search-section">
+            <div class="row g-3">
+                <div class="col-md-5">
+                    <label class="form-label small text-muted fw-bold" data-i18n="label_province">Pilih Provinsi</label>
+                    <select class="form-select form-select-dealer" id="provinceSelect">
+                        <option value="all" selected data-i18n="select_province">Semua Provinsi</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label small text-muted fw-bold" data-i18n="label_city">Pilih Kota /
+                        Kabupaten</label>
+                    <select class="form-select form-select-dealer" id="citySelect" disabled>
+                        <option value="all" selected data-i18n="select_city">Semua Kota</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button class="btn btn-cari-dealer" id="btnFilter">
+                        <span data-i18n="btn_search">Cari</span> <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
                 </div>
             </div>
-
-            <div class="filter-btn-group" id="categoryFilters">
-                <button class="btn btn-filter active" data-filter="all" data-i18n="filter_all">Semua</button>
-                <button class="btn btn-filter" data-filter="maxi">MAXI Yamaha</button>
-                <button class="btn btn-filter" data-filter="classy">Classy</button>
-                <button class="btn btn-filter" data-filter="sport">Sport</button>
-                <button class="btn btn-filter" data-filter="moped">Moped / Bebek</button>
-            </div>
-
-            <hr class="text-muted opacity-25 my-4">
         </div>
 
-        <div class="row" id="productGrid">
+        <div class="row g-4" id="dealerGrid">
         </div>
 
         <div id="emptyState" class="text-center py-5 d-none">
-            <i class="fas fa-search fa-3x text-muted mb-3"></i>
-            <h4 class="text-muted" data-i18n="empty_title">Motor tidak ditemukan</h4>
-            <p class="text-muted" data-i18n="empty_desc">Coba kata kunci lain atau pilih kategori berbeda.</p>
+            <i class="fas fa-map-marked-alt fa-3x text-muted mb-3"></i>
+            <h4 class="text-muted" data-i18n="empty_title">Dealer tidak ditemukan</h4>
+            <p class="text-muted" data-i18n="empty_desc">Silakan pilih lokasi lain.</p>
         </div>
-
     </section>
 
     <section class="cta-wrapper container">
@@ -785,7 +679,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
-                    <a href="https://wa.me/6282257391460" target="_blank" class="btn btn-cta-wa">
+                    <a href="https://wa.me/628225739140" target="_blank" class="btn btn-cta-wa">
                         <i class="fab fa-whatsapp fa-lg"></i> <span data-i18n="btn_cta">Hubungi via WhatsApp</span>
                     </a>
                 </div>
@@ -821,10 +715,10 @@
                 </div>
 
                 <div class="col-lg-2 mb-4">
-                    <h5 data-i18n="footer_menu_support">Bantuan</h5>
+                    <h5 data-i18n="footer_menu_help">Bantuan</h5>
                     <ul class="list-unstyled">
-                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
                         <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
@@ -863,120 +757,219 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Data Produk
-        const products = [
+        // --- DATA DEALER (Dummy Data 9 Cards) ---
+        const dealers = [
             {
-                id: 1,
-                name: 'NMAX "TURBO"',
-                category: 'maxi',
-                price: 'Rp 32.850.000',
-                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-nmax.png',
-                link: 'nmax.html'
+                name: "Yamaha Sumber Baru Rejeki",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. Raya Darmo No. 12, Wonokromo, Kota Surabaya, Jawa Timur 60241",
+                city: "Surabaya",
+                province: "Jawa Timur",
+                phone: "628225739140"
             },
             {
-                id: 2,
-                name: 'Aerox 155 Connected',
-                category: 'maxi',
-                price: 'Rp 28.500.000',
-                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-aerox.png',
-                link: 'aerox.html'
+                name: "Yamaha Dupak Mas Motor",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. Dupak No. 45, Gundih, Bubutan, Kota Surabaya, Jawa Timur 60172",
+                city: "Surabaya",
+                province: "Jawa Timur",
+                phone: "628225739140"
             },
             {
-                id: 3,
-                name: 'XMAX 250 Tech MAX',
-                category: 'maxi',
-                price: 'Rp 66.000.000',
-                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305050853509156V67794.png',
-                link: 'xmax.html'
+                name: "Yamaha Sentral Malang",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. Basuki Rahmat No. 99, Klojen, Kota Malang, Jawa Timur 65119",
+                city: "Malang",
+                province: "Jawa Timur",
+                phone: "628225739140"
             },
             {
-                id: 4,
-                name: 'Grand Filano Hybrid',
-                category: 'classy',
-                price: 'Rp 27.500.000',
-                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png',
-                link: 'filano.html'
+                name: "Yamaha Deta Cempaka Putih",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. Letjen Suprapto No. 65, Cempaka Putih, Jakarta Pusat 10520",
+                city: "Jakarta Pusat",
+                province: "DKI Jakarta",
+                phone: "628225739140"
             },
             {
-                id: 5,
-                name: 'Fazzio Hybrid',
-                category: 'classy',
-                price: 'Rp 23.250.000',
-                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-fazzio.png',
-                link: 'fazzio.html'
+                name: "Yamaha Pelita Motor",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. Saharjo No. 321, Tebet, Jakarta Selatan 12810",
+                city: "Jakarta Selatan",
+                province: "DKI Jakarta",
+                phone: "628225739140"
             },
             {
-                id: 6,
-                name: 'Yamaha R15 Connected',
-                category: 'sport',
-                price: 'Rp 39.875.000',
-                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202112011400277344Y96472.png',
-                link: 'r15.html'
+                name: "Yamaha Mustika Jatinegara",
+                type: "Sales & Service",
+                address: "Jl. Jatinegara Timur No. 55, Balimester, Jakarta Timur 13310",
+                city: "Jakarta Timur",
+                province: "DKI Jakarta",
+                phone: "628225739140"
             },
             {
-                id: 7,
-                name: 'Yamaha XSR 155',
-                category: 'sport',
-                price: 'Rp 38.125.000',
-                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202305051052317676O48589.png',
-                link: 'xsr155.html'
+                name: "Yamaha JG Motor Bandung",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. BKR No. 15, Cijagra, Lengkong, Kota Bandung, Jawa Barat 40265",
+                city: "Bandung",
+                province: "Jawa Barat",
+                phone: "628225739140"
             },
             {
-                id: 8,
-                name: 'Vega Force',
-                category: 'moped',
-                price: 'Rp 18.430.000',
-                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202306061122119957J66427.png',
-                link: 'vega-force.html'
+                name: "Yamaha Berlian Merdeka",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. Merdeka No. 50, Babakan Ciamis, Kota Bandung, Jawa Barat 40117",
+                city: "Bandung",
+                province: "Jawa Barat",
+                phone: "628225739140"
             },
             {
-                id: 9,
-                name: 'Jupiter Z1',
-                category: 'moped',
-                price: 'Rp 20.090.000',
-                image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202410070940384102W22588.png',
-                link: 'jupiter-z1.html'
+                name: "Yamaha Harapan Motor Depok",
+                type: "3S (Sales, Service, Sparepart)",
+                address: "Jl. Margonda Raya No. 300, Kemiri Muka, Kota Depok, Jawa Barat 16423",
+                city: "Depok",
+                province: "Jawa Barat",
+                phone: "628225739140"
             }
         ];
 
-        const productGrid = document.getElementById('productGrid');
+        // --- DOM ELEMENTS ---
+        const provinceSelect = document.getElementById('provinceSelect');
+        const citySelect = document.getElementById('citySelect');
+        const dealerGrid = document.getElementById('dealerGrid');
         const emptyState = document.getElementById('emptyState');
-        const filterButtons = document.querySelectorAll('.btn-filter');
-        const searchInput = document.getElementById('searchInput');
+        const btnFilter = document.getElementById('btnFilter');
 
-        // --- LOGIKA TRANSLATE ---
+        // --- LOGIC ---
 
+        // 1. Populate Filter Dropdowns
+        function populateFilters() {
+            // Get Unique Provinces
+            const provinces = [...new Set(dealers.map(d => d.province))].sort();
+            provinces.forEach(prov => {
+                const option = document.createElement('option');
+                option.value = prov;
+                option.textContent = prov;
+                provinceSelect.appendChild(option);
+            });
+        }
+
+        // 2. Update City Dropdown based on Province
+        provinceSelect.addEventListener('change', () => {
+            const selectedProv = provinceSelect.value;
+            citySelect.innerHTML = '<option value="all" selected data-i18n="select_city">Semua Kota</option>';
+
+            if (selectedProv === 'all') {
+                citySelect.disabled = true;
+            } else {
+                citySelect.disabled = false;
+                // Filter cities belonging to this province
+                const cities = [...new Set(dealers
+                    .filter(d => d.province === selectedProv)
+                    .map(d => d.city)
+                )].sort();
+
+                cities.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);
+                });
+            }
+
+            // Re-translate new options
+            const currentLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(currentLang);
+        });
+
+        // 3. Render Dealers Card
+        function renderDealers(data) {
+            dealerGrid.innerHTML = '';
+
+            if (data.length === 0) {
+                emptyState.classList.remove('d-none');
+            } else {
+                emptyState.classList.add('d-none');
+
+                data.forEach((dealer, index) => {
+                    const col = document.createElement('div');
+                    col.className = 'col-lg-4 col-md-6 fade-in-up';
+                    col.style.animationDelay = `${index * 0.1}s`;
+
+                    col.innerHTML = `
+                        <div class="dealer-card">
+                            <div>
+                                <h5 class="dealer-name">${dealer.name}</h5>
+                                <div class="dealer-type">Jenis Dealer: ${dealer.type}</div>
+                                <div class="dealer-address-row">
+                                    <div class="dealer-address">
+                                        ${dealer.address}
+                                    </div>
+                                    <div class="dealer-map-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://wa.me/${dealer.phone}?text=Halo, saya ingin bertanya mengenai ketersediaan unit motor Yamaha di ${dealer.name}." target="_blank" class="btn-hubungi">
+                                    <span data-i18n="btn_contact_card">Hubungi Kami Sekarang</span> <i class="fas fa-phone-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    dealerGrid.appendChild(col);
+                });
+            }
+            // Apply translation to new elements
+            const currentLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(currentLang);
+        }
+
+        // 4. Filter Action
+        btnFilter.addEventListener('click', () => {
+            const selectedProv = provinceSelect.value;
+            const selectedCity = citySelect.value;
+
+            const filtered = dealers.filter(d => {
+                const matchProv = selectedProv === 'all' || d.province === selectedProv;
+                const matchCity = selectedCity === 'all' || d.city === selectedCity;
+                return matchProv && matchCity;
+            });
+
+            renderDealers(filtered);
+        });
+
+        // --- TRANSLATION LOGIC (Extended) ---
         const translations = {
-            // --- Navigation ---
+            // ... (Copy from previous + Add new keys)
             "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
             "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
             "nav_product": { id: "Produk", en: "Products", jp: "製品" },
-            "nav_service": { id: "Servis", en: "Service", jp: "サービス" },
-            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "ディーラー" },
             "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
             "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
             "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
             "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
 
-            // --- Page Content ---
-            "page_title": { id: "Semua Produk Yamaha", en: "All Yamaha Products", jp: "ヤマハ全製品" },
+            "page_title": { id: "CARI DEALER", en: "FIND DEALER", jp: "ディーラー検索" },
             "page_subtitle": {
-                id: "Temukan Motor Impian Yamaha Sesuai Gaya Berkendaramu",
-                en: "Find Your Dream Yamaha Bike According to Your Riding Style",
-                jp: "あなたのライディングスタイルに合ったヤマハの夢のバイクを見つけよう"
+                id: "Temukan jaringan dealer resmi 3S terdekat di kota Anda",
+                en: "Find the nearest official 3S dealer network in your city",
+                jp: "あなたの街の最寄りの公式3Sディーラーネットワークを見つけてください"
             },
-            "search_placeholder": { id: "Cari nama motor (Contoh: NMAX)...", en: "Search bike name (e.g. NMAX)...", jp: "バイク名を検索 (例: NMAX)..." },
-            "filter_all": { id: "Semua", en: "All", jp: "すべて" },
 
-            // --- Product Card (Dynamic) ---
-            "price_start": { id: "Mulai", en: "Starts from", jp: "から" },
-            "btn_detail": { id: "Lihat Detail", en: "View Details", jp: "詳細を見る" },
+            "label_province": { id: "Pilih Provinsi", en: "Select Province", jp: "州を選択" },
+            "select_province": { id: "Semua Provinsi", en: "All Provinces", jp: "すべての州" },
+            "label_city": { id: "Pilih Kota / Kabupaten", en: "Select City / District", jp: "市区町村を選択" },
+            "select_city": { id: "Semua Kota", en: "All Cities", jp: "すべての都市" },
+            "btn_search": { id: "Cari", en: "Search", jp: "検索" },
 
-            // --- Empty State ---
-            "empty_title": { id: "Motor tidak ditemukan", en: "Motorcycle not found", jp: "バイクが見つかりません" },
-            "empty_desc": { id: "Coba kata kunci lain atau pilih kategori berbeda.", en: "Try other keywords or select a different category.", jp: "他のキーワードを試すか、別のカテゴリを選択してください。" },
+            "btn_contact_card": { id: "Hubungi Kami Sekarang", en: "Contact Us Now", jp: "今すぐお問い合わせ" },
 
-            // --- CTA Section ---
+            "empty_title": { id: "Dealer tidak ditemukan", en: "Dealer not found", jp: "ディーラーが見つかりません" },
+            "empty_desc": { id: "Silakan pilih lokasi lain.", en: "Please select another location.", jp: "別の場所を選択してください。" },
+
+            // CTA & Footer
             "cta_title": { id: "Belum Menemukan Motor Impian?", en: "Haven't Found Your Dream Bike?", jp: "夢のバイクが見つかりませんか？" },
             "cta_desc": {
                 id: "Konsultasikan kebutuhan berkendara Anda dengan Sales Executive kami. Dapatkan penawaran DP ringan, angsuran terjangkau, dan promo spesial bulan ini!",
@@ -985,118 +978,64 @@
             },
             "btn_cta": { id: "Hubungi via WhatsApp", en: "Contact via WhatsApp", jp: "WhatsAppで連絡する" },
 
-            // --- Footer ---
             "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
             "footer_about_desc": {
                 id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
                 en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
                 jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
             },
-            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
 
-            // --- Footer Menus (Updated) ---
+            // --- NEW FOOTER KEYS ---
             "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
-            "footer_menu_support": { id: "Bantuan", en: "Support", jp: "サポート" }
+            "footer_menu_help": { id: "Bantuan", en: "Support", jp: "サポート" },
+            // -----------------------
+
+            "footer_products": { id: "Produk", en: "Products", jp: "製品" },
+            "footer_services": { id: "Layanan", en: "Services", jp: "サービス" },
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "svc_booking": { id: "Booking Service", en: "Booking Service", jp: "サービス予約" },
+            "svc_parts": { id: "Suku Cadang Asli", en: "Genuine Parts", jp: "純正部品" },
+            "svc_credit": { id: "Simulasi Kredit", en: "Credit Simulation", jp: "クレジットシミュレーション" },
+            "svc_tradein": { id: "Trade In", en: "Trade In", jp: "下取り" }
         };
 
         function changeLanguage(lang) {
-            // Set html lang attribute
             document.documentElement.lang = lang;
             localStorage.setItem('selectedLang', lang);
 
-            // Update Navbar Display
             const langDisplay = document.getElementById('currentLangDisplay');
             if (lang === 'id') langDisplay.textContent = 'ID';
             else if (lang === 'en') langDisplay.textContent = 'EN';
             else if (lang === 'jp') langDisplay.textContent = 'JP';
 
-            // Handle Font Jepang
             if (lang === 'jp') document.body.classList.add('lang-jp');
             else document.body.classList.remove('lang-jp');
 
-            // Translate Elements
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[key] && translations[key][lang]) {
-                    if (element.tagName === 'INPUT') {
+                    // Cek elemen select option yang dinamis (first child)
+                    if (element.tagName === 'OPTION') {
+                        element.textContent = translations[key][lang];
+                    } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                         element.placeholder = translations[key][lang];
                     } else {
                         element.innerHTML = translations[key][lang];
                     }
                 }
             });
-        }
 
-
-        // Function untuk Render Produk (Updated with Translation Support)
-        function renderProducts(filterCategory = 'all', searchQuery = '') {
-            productGrid.innerHTML = '';
-
-            const filteredProducts = products.filter(product => {
-                const matchCategory = filterCategory === 'all' || product.category === filterCategory;
-                const matchSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
-                return matchCategory && matchSearch;
-            });
-
-            if (filteredProducts.length === 0) {
-                emptyState.classList.remove('d-none');
-            } else {
-                emptyState.classList.add('d-none');
-
-                filteredProducts.forEach((product, index) => {
-                    const col = document.createElement('div');
-                    col.className = 'col-12 col-md-4 col-lg-3 mb-4 fade-in-up';
-                    col.style.animationDelay = `${index * 0.05}s`;
-
-                    // Note: Kita menambahkan atribut data-i18n pada elemen teks dinamis (Harga & Tombol)
-                    col.innerHTML = `
-                        <div class="product-card">
-                            <div class="pc-img-box">
-                                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/300x200?text=Yamaha'">
-                            </div>
-                            <div class="pc-content">
-                                <div>
-                                    <div class="pc-category">${product.category.toUpperCase()} YAMAHA</div>
-                                    <h3 class="pc-title">${product.name}</h3>
-                                </div>
-                                <div>
-                                    <span class="pc-price"><span data-i18n="price_start">Mulai</span> ${product.price}</span>
-                                    <a href="${product.link}" class="pc-btn stretched-link" data-i18n="btn_detail">Lihat Detail</a>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    productGrid.appendChild(col);
-                });
+            // Fix text node replacement bug in button with icon
+            const btnSearch = document.querySelector('#btnFilter');
+            if (btnSearch) {
+                btnSearch.innerHTML = `<span data-i18n="btn_search">${translations['btn_search'][lang]}</span> <i class="fas fa-arrow-right ms-2"></i>`;
             }
-
-            // PENTING: Panggil fungsi translate ulang setelah produk dirender
-            // agar elemen baru mendapatkan teks sesuai bahasa yang dipilih
-            const currentLang = localStorage.getItem('selectedLang') || 'id';
-            changeLanguage(currentLang);
         }
 
-        // Event Listener untuk Filter Kategori
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                renderProducts(btn.getAttribute('data-filter'), searchInput.value);
-            });
-        });
-
-        // Event Listener untuk Search
-        searchInput.addEventListener('input', (e) => {
-            const activeCategory = document.querySelector('.btn-filter.active').getAttribute('data-filter');
-            renderProducts(activeCategory, e.target.value);
-        });
-
-        // Jalankan saat halaman dimuat
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Render produk dulu
-            renderProducts();
-
-            // Lalu set bahasa yang tersimpan
+            populateFilters();
+            renderDealers(dealers);
             const savedLang = localStorage.getItem('selectedLang') || 'id';
             changeLanguage(savedLang);
         });

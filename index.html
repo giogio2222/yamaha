@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -29,6 +30,19 @@
             overflow-x: hidden;
             background-color: var(--bg-light);
             color: #333;
+        }
+
+        /* Font khusus jika bahasa Jepang aktif */
+        body.lang-jp {
+            font-family: 'Noto Sans JP', sans-serif !important;
+        }
+
+        body.lang-jp h1,
+        body.lang-jp h2,
+        body.lang-jp h3,
+        body.lang-jp h4 {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            font-weight: 700;
         }
 
         h1,
@@ -71,6 +85,7 @@
             font-size: 14px;
             position: relative;
             transition: color 0.3s;
+            cursor: pointer;
         }
 
         .navbar-nav .nav-link::after,
@@ -147,6 +162,7 @@
             color: #555;
             transition: all 0.2s;
             font-size: 14px;
+            cursor: pointer;
         }
 
         .dropdown-item:hover {
@@ -775,6 +791,127 @@
                 text-align: center;
             }
         }
+
+        /* Language Selector Styles */
+        .lang-flag {
+            font-size: 1.1em;
+            margin-right: 5px;
+        }
+
+        .lang-text {
+            vertical-align: middle;
+        }
+
+        /* ========================================================
+   FLOATING BUTTONS (WA & BACK TO TOP)
+   ======================================================== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Jarak antar tombol */
+        }
+
+        /* Tombol Umum */
+        .btn-float {
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: none;
+        }
+
+        .btn-float:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Tombol WhatsApp */
+        .btn-whatsapp {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            font-size: 32px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animasi Pulse untuk WA agar menarik perhatian */
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Tombol Back to Top */
+        .btn-back-to-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--yamaha-blue-dark);
+            /* Mengikuti tema website */
+            font-size: 20px;
+            opacity: 0;
+            /* Tersembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class untuk memunculkan tombol Back to Top */
+        .btn-back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsif Mobile (Layar Kecil) */
+        @media (max-width: 768px) {
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .btn-back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
@@ -782,11 +919,12 @@
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <i class="fas fa-motorcycle me-2 fa-lg"></i>
                 <div>
                     YAMAHA <span
-                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;">Authorized
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized
                         Dealer</span>
                 </div>
             </a>
@@ -795,23 +933,38 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Servis</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lokasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html" data-i18n="nav_home">Beranda</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html" data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html" data-i18n="nav_news">Berita</a></li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_contact">
                             Hubungi Kami
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="kontak.html">Kontak Kami</a></li>
-                            <li><a class="dropdown-item" href="tentang.html">Tentang Kami</a></li>
+                            <li><a class="dropdown-item" href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a>
+                            </li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -823,14 +976,16 @@
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active"
-                    style="background-image: url('https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=80&w=1920&auto=format&fit=crop');">
+                    style="background-image: url('img/motor/nmax-elixir-dark-silver.webp');">
                     <div class="carousel-overlay">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8 hero-text">
-                                    <h1>NMAX "TURBO"</h1>
-                                    <p>Teknologi YECVT terbaru untuk performa akselerasi maksimal.</p>
-                                    <a href="#" class="btn-hero"><i class="fas fa-bolt me-2"></i> Lihat Detail</a>
+                                    <h1 data-i18n="hero1_title">NMAX "TURBO"</h1>
+                                    <p data-i18n="hero1_desc">Teknologi YECVT terbaru untuk performa akselerasi
+                                        maksimal.</p>
+                                    <a href="nmax.html" class="btn-hero"><i class="fas fa-bolt me-2"></i> <span
+                                            data-i18n="btn_detail">Lihat Detail</span></a>
                                 </div>
                             </div>
                         </div>
@@ -842,10 +997,10 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8 hero-text">
-                                    <h1>R-SERIES DNA</h1>
-                                    <p>Rasakan sensasi balap sejati di jalanan kota Anda.</p>
-                                    <a href="#" class="btn-hero"><i class="fas fa-flag-checkered me-2"></i> Cek
-                                        Spesifikasi</a>
+                                    <h1 data-i18n="hero2_title">R-SERIES DNA</h1>
+                                    <p data-i18n="hero2_desc">Rasakan sensasi balap sejati di jalanan kota Anda.</p>
+                                    <a href="#" class="btn-hero"><i class="fas fa-flag-checkered me-2"></i> <span
+                                            data-i18n="btn_spec">Cek Spesifikasi</span></a>
                                 </div>
                             </div>
                         </div>
@@ -865,12 +1020,13 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="search-widget">
-                    <h4><i class="fas fa-search me-2 text-primary"></i> Cari Motor Impian</h4>
+                    <h4><i class="fas fa-search me-2 text-primary"></i> <span data-i18n="search_title">Cari Motor
+                            Impian</span></h4>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <select class="form-select form-select-lg" aria-label="Kategori">
-                                    <option selected>Pilih Kategori</option>
+                                    <option selected data-i18n="select_category">Pilih Kategori</option>
                                     <option value="matic">MAXI Yamaha</option>
                                     <option value="sport">Sport</option>
                                     <option value="moped">Moped / Bebek</option>
@@ -878,8 +1034,8 @@
                                 </select>
                             </div>
                             <div class="col-md-5">
-                                <select class="form-select form-select-lg" aria-label="Model">
-                                    <option selected>Pilih Model</option>
+                                <select class="form-select form-select-lg" aria-label="Model" id="modelSelect">
+                                    <option selected data-i18n="select_model" value="">Pilih Model</option>
                                     <option value="nmax">NMAX Turbo</option>
                                     <option value="aerox">Aerox 155 Connected</option>
                                     <option value="filano">Grand Filano Hybrid</option>
@@ -887,8 +1043,8 @@
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <button type="button" class="btn btn-search">
-                                    CARI <i class="fas fa-arrow-right ms-2"></i>
+                                <button type="button" class="btn btn-search" id="btnSearchWidget">
+                                    <span data-i18n="btn_search">CARI</span> <i class="fas fa-arrow-right ms-2"></i>
                                 </button>
                             </div>
                         </div>
@@ -897,18 +1053,19 @@
             </div>
         </div>
     </div>
-
     <section class="container pt-4 pb-5">
         <div class="section-title">
-            <h2>Koleksi <span>Terbaru</span></h2>
+            <h2><span data-i18n="collection_title_1">Koleksi</span> <span data-i18n="collection_title_2">Terbaru</span>
+            </h2>
             <div class="line"></div>
-            <p class="text-muted">Inovasi teknologi Blue Core untuk pengalaman berkendara terbaik</p>
+            <p class="text-muted" data-i18n="collection_subtitle">Inovasi teknologi Blue Core untuk pengalaman
+                berkendara terbaik</p>
         </div>
 
         <ul class="nav nav-pills category-tabs mb-5" id="pills-tab" role="tablist">
             <li class="nav-item">
                 <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
-                    type="button">SEMUA</button>
+                    type="button" data-i18n="tab_all">SEMUA</button>
             </li>
             <li class="nav-item">
                 <button class="nav-link" id="pills-maxi-tab" data-bs-toggle="pill" data-bs-target="#pills-maxi"
@@ -926,53 +1083,53 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-nmax.png"
+                                <img src="img/motor/nmax-elixir-dark-silver.webp"
                                     alt="NMAX Turbo" onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">NMAX "TURBO"</h5>
-                                <span class="price">Mulai Rp 32.850.000</span>
-                                <a href="#" class="btn-detail">Lihat Detail</a>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 32.850.000</span>
+                                <a href="nmax.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-aerox.png"
+                                <img src="img/motor/aerox-cybercity.webp"
                                     alt="Aerox" onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Aerox 155</h5>
-                                <span class="price">Mulai Rp 28.500.000</span>
-                                <a href="#" class="btn-detail">Lihat Detail</a>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 28.500.000</span>
+                                <a href="aerox.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-filano.png"
+                                <img src="img/motor/filano-white-pearl.webp"
                                     alt="Grand Filano"
                                     onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Grand Filano</h5>
-                                <span class="price">Mulai Rp 27.500.000</span>
-                                <a href="#" class="btn-detail">Lihat Detail</a>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 27.500.000</span>
+                                <a href="filano.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-fazzio.png"
+                                <img src="img/motor/filano-dull-blue.webp"
                                     alt="Fazzio" onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Fazzio Hybrid</h5>
-                                <span class="price">Mulai Rp 23.250.000</span>
-                                <a href="#" class="btn-detail">Lihat Detail</a>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 23.250.000</span>
+                                <a href="fazzio.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
@@ -987,17 +1144,20 @@
         </div>
 
         <div class="text-center mt-5">
-            <a href="#" class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold" style="border-width: 2px;">LIHAT
-                SEMUA PRODUK <i class="fas fa-arrow-right ms-2"></i></a>
+            <a href="produk.html" class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold"
+                style="border-width: 2px;">
+                <span data-i18n="btn_view_all">LIHAT SEMUA PRODUK</span> <i class="fas fa-arrow-right ms-2"></i>
+            </a>
         </div>
     </section>
 
     <section class="map-section">
         <div class="container">
             <div class="section-title">
-                <h2>LOKASI <span>DEALER</span></h2>
+                <h2><span data-i18n="location_title_1">LOKASI</span> <span data-i18n="location_title_2">DEALER</span>
+                </h2>
                 <div class="line"></div>
-                <p class="text-muted">Kunjungi dealer resmi kami terdekat di kota Anda</p>
+                <p class="text-muted" data-i18n="location_subtitle">Kunjungi dealer resmi kami terdekat di kota Anda</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -1015,7 +1175,7 @@
     <section class="news-slider-section">
         <div class="container">
             <div class="section-header-news">
-                <h2>BERITA TERBARU</h2>
+                <h2 data-i18n="news_header">BERITA TERBARU</h2>
             </div>
 
             <div id="newsCarouselSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
@@ -1028,16 +1188,18 @@
                                     alt="News 1">
                             </div>
                             <div class="news-slide-content">
-                                <h3 class="news-slide-title">YAMAHA ROLLING CITY: LAYANAN SIAGA YANG MAKIN DEKAT</h3>
-                                <span class="news-slide-date">Surabaya, 16 Januari 2026</span>
-                                <p class="news-slide-desc">
+                                <h3 class="news-slide-title" data-i18n="news1_title">YAMAHA ROLLING CITY: LAYANAN SIAGA
+                                    YANG MAKIN DEKAT</h3>
+                                <span class="news-slide-date" data-i18n="news1_date">Surabaya, 16 Januari 2026</span>
+                                <p class="news-slide-desc" data-i18n="news1_desc">
                                     Memasuki musim hujan, Dealer Yamaha Jawa Timur menggelar kegiatan City Rolling
                                     sebagai upaya memperkenalkan layanan darurat Yamaha Customer Assistance Road
                                     Emergency. Kami memastikan teknisi tersertifikasi siap memberikan layanan terbaik
                                     kapanpun Anda butuhkan di jalan raya.
                                 </p>
                                 <a href="#" class="btn-news-outline">
-                                    BERITA SELENGKAPNYA <i class="fas fa-arrow-right ms-2"></i>
+                                    <span data-i18n="btn_read_more">BERITA SELENGKAPNYA</span> <i
+                                        class="fas fa-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
@@ -1050,15 +1212,17 @@
                                     alt="News 2">
                             </div>
                             <div class="news-slide-content">
-                                <h3 class="news-slide-title">PROMO AWAL TAHUN: SPESIAL POTONGAN ANGSURAN</h3>
-                                <span class="news-slide-date">Jakarta, 10 Januari 2026</span>
-                                <p class="news-slide-desc">
+                                <h3 class="news-slide-title" data-i18n="news2_title">PROMO AWAL TAHUN: SPESIAL POTONGAN
+                                    ANGSURAN</h3>
+                                <span class="news-slide-date" data-i18n="news2_date">Jakarta, 10 Januari 2026</span>
+                                <p class="news-slide-desc" data-i18n="news2_desc">
                                     Dapatkan kesempatan emas memiliki motor impian Anda di awal tahun ini. Nikmati
                                     potongan angsuran hingga 3 bulan untuk setiap pembelian unit NMAX Turbo dan Aerox
                                     Connected secara kredit. Promo berlaku di seluruh dealer resmi bertanda khusus.
                                 </p>
                                 <a href="#" class="btn-news-outline">
-                                    BERITA SELENGKAPNYA <i class="fas fa-arrow-right ms-2"></i>
+                                    <span data-i18n="btn_read_more">BERITA SELENGKAPNYA</span> <i
+                                        class="fas fa-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
@@ -1071,15 +1235,17 @@
                                     alt="News 3">
                             </div>
                             <div class="news-slide-content">
-                                <h3 class="news-slide-title">TIPS MERAWAT CVT AGAR PERFORMA TETAP PRIMA</h3>
-                                <span class="news-slide-date">Bandung, 05 Januari 2026</span>
-                                <p class="news-slide-desc">
+                                <h3 class="news-slide-title" data-i18n="news3_title">TIPS MERAWAT CVT AGAR PERFORMA
+                                    TETAP PRIMA</h3>
+                                <span class="news-slide-date" data-i18n="news3_date">Bandung, 05 Januari 2026</span>
+                                <p class="news-slide-desc" data-i18n="news3_desc">
                                     Pengguna motor matic wajib tahu! Simak tips ringan dari kepala mekanik kami tentang
                                     bagaimana menjaga kebersihan area CVT agar tarikan motor tetap responsif dan bebas
                                     getar. Perawatan berkala adalah kunci keawetan komponen motor Anda.
                                 </p>
                                 <a href="#" class="btn-news-outline">
-                                    BERITA SELENGKAPNYA <i class="fas fa-arrow-right ms-2"></i>
+                                    <span data-i18n="btn_read_more">BERITA SELENGKAPNYA</span> <i
+                                        class="fas fa-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
@@ -1110,8 +1276,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h5>Tentang Dealer</h5>
-                    <p style="color: #aaa; line-height: 1.8;">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
                         Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
                         Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
                     </p>
@@ -1122,28 +1288,28 @@
                         <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
+
                 <div class="col-lg-2 mb-4">
-                    <h5>Produk</h5>
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">MAXI Yamaha</a></li>
-                        <li><a href="#">Classy Yamaha</a></li>
-                        <li><a href="#">Sport Series</a></li>
-                        <li><a href="#">Moped</a></li>
-                        <li><a href="#">Yamaha EV</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
                     </ul>
                 </div>
+
                 <div class="col-lg-2 mb-4">
-                    <h5>Layanan</h5>
+                    <h5 data-i18n="footer_menu_help">Bantuan</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Booking Service</a></li>
-                        <li><a href="#">Suku Cadang Asli</a></li>
-                        <li><a href="#">Yamalube</a></li>
-                        <li><a href="#">Simulasi Kredit</a></li>
-                        <li><a href="#">Trade In</a></li>
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
+
                 <div class="col-lg-4 mb-4">
-                    <h5>Hubungi Kami</h5>
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
                     <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
                         <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
                             Otomotif No. 99, Jakarta Selatan</li>
@@ -1157,10 +1323,21 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
+                <p>© 2026 Yamaha Authorized Dealer. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -1168,7 +1345,7 @@
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                if (this.classList.contains('dropdown-toggle') || this.classList.contains('carousel-control-prev') || this.classList.contains('carousel-control-next')) return;
+                if (this.classList.contains('dropdown-toggle') || this.classList.contains('carousel-control-prev') || this.classList.contains('carousel-control-next') || this.hasAttribute('onclick')) return;
 
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
@@ -1179,6 +1356,211 @@
                 }
             });
         });
+
+        /* ==============================================
+           LOGIKA TRANSLATE / MULTI-BAHASA
+           ============================================== */
+
+        // 1. Kamus Data (Dictionary)
+        const translations = {
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_service": { id: "Servis", en: "Service", jp: "サービス" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+
+            "hero1_title": { id: 'NMAX "TURBO"', en: 'NMAX "TURBO"', jp: 'NMAX "TURBO"' },
+            "hero1_desc": {
+                id: "Teknologi YECVT terbaru untuk performa akselerasi maksimal.",
+                en: "Latest YECVT technology for maximum acceleration performance.",
+                jp: "最新のYECVT技術による最高の加速性能。"
+            },
+            "hero2_title": { id: "R-SERIES DNA", en: "R-SERIES DNA", jp: "R-シリーズ DNA" },
+            "hero2_desc": {
+                id: "Rasakan sensasi balap sejati di jalanan kota Anda.",
+                en: "Feel the true racing sensation on your city streets.",
+                jp: "街中で真のレーシング感覚を体験してください。"
+            },
+            "btn_detail": { id: "Lihat Detail", en: "View Details", jp: "詳細を見る" },
+            "btn_spec": { id: "Cek Spesifikasi", en: "Check Specs", jp: "スペック確認" },
+
+            "search_title": { id: "Cari Motor Impian", en: "Find Your Dream Bike", jp: "理想のバイクを探す" },
+            "select_category": { id: "Pilih Kategori", en: "Select Category", jp: "カテゴリー選択" },
+            "select_model": { id: "Pilih Model", en: "Select Model", jp: "モデル選択" },
+            "btn_search": { id: "CARI", en: "SEARCH", jp: "検索" },
+
+            "collection_title_1": { id: "Koleksi", en: "Latest", jp: "最新" },
+            "collection_title_2": { id: "Terbaru", en: "Collection", jp: "コレクション" },
+            "collection_subtitle": {
+                id: "Inovasi teknologi Blue Core untuk pengalaman berkendara terbaik",
+                en: "Blue Core technology innovation for the best riding experience",
+                jp: "最高のライディング体験のためのブルーコア技術革新"
+            },
+            "tab_all": { id: "SEMUA", en: "ALL", jp: "すべて" },
+            "price_start": { id: "Mulai", en: "Starts from", jp: "から" },
+            "btn_view_all": { id: "LIHAT SEMUA PRODUK", en: "VIEW ALL PRODUCTS", jp: "すべての製品を見る" },
+
+            "location_title_1": { id: "LOKASI", en: "DEALER", jp: "ディーラー" },
+            "location_title_2": { id: "DEALER", en: "LOCATION", jp: "所在地" },
+            "location_subtitle": {
+                id: "Kunjungi dealer resmi kami terdekat di kota Anda",
+                en: "Visit our nearest authorized dealer in your city",
+                jp: "お近くの正規販売店へお越しください"
+            },
+
+            "news_header": { id: "BERITA TERBARU", en: "LATEST NEWS", jp: "最新ニュース" },
+            "btn_read_more": { id: "BERITA SELENGKAPNYA", en: "READ MORE", jp: "続きを読む" },
+
+            // News Titles & Descs (Simulated)
+            "news1_title": { id: "YAMAHA ROLLING CITY: LAYANAN SIAGA", en: "YAMAHA ROLLING CITY: EMERGENCY SERVICE", jp: "ヤマハ・ローリングシティ：緊急サービス" },
+            "news1_date": { id: "Surabaya, 16 Januari 2026", en: "Surabaya, January 16, 2026", jp: "スラバヤ、2026年1月16日" },
+            "news1_desc": {
+                id: "Memasuki musim hujan, Dealer Yamaha Jawa Timur menggelar kegiatan City Rolling sebagai upaya memperkenalkan layanan darurat Yamaha Customer Assistance Road Emergency.",
+                en: "Entering the rainy season, Yamaha East Java Dealers hold City Rolling activities to introduce the Yamaha Customer Assistance Road Emergency service.",
+                jp: "雨季に入り、ヤマハ東ジャワディーラーは、ヤマハカスタマーアシスタンスロードエマージェンシーサービスを紹介するためにシティローリング活動を開催します。"
+            },
+
+            "news2_title": { id: "PROMO AWAL TAHUN", en: "EARLY YEAR PROMO", jp: "新年プロモーション" },
+            "news2_date": { id: "Jakarta, 10 Januari 2026", en: "Jakarta, January 10, 2026", jp: "ジャカルタ、2026年1月10日" },
+            "news2_desc": {
+                id: "Dapatkan kesempatan emas memiliki motor impian Anda di awal tahun ini. Nikmati potongan angsuran hingga 3 bulan.",
+                en: "Get a golden opportunity to own your dream bike early this year. Enjoy installment discounts of up to 3 months.",
+                jp: "今年の初めに夢のバイクを手に入れる絶好のチャンス。最大3ヶ月の分割払い割引をお楽しみください。"
+            },
+
+            "news3_title": { id: "TIPS MERAWAT CVT", en: "CVT MAINTENANCE TIPS", jp: "CVTメンテナンスのヒント" },
+            "news3_date": { id: "Bandung, 05 Januari 2026", en: "Bandung, January 05, 2026", jp: "バンドン、2026年1月05日" },
+            "news3_desc": {
+                id: "Pengguna motor matic wajib tahu! Simak tips ringan dari kepala mekanik kami tentang bagaimana menjaga kebersihan area CVT.",
+                en: "Matic bike users must know! Check out light tips from our head mechanic on how to keep the CVT area clean.",
+                jp: "オートバイユーザー必見！CVTエリアを清潔に保つ方法について、チーフメカニックからのヒントをご覧ください。"
+            },
+
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+
+            // --- NEW FOOTER KEYS ---
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_help": { id: "Bantuan", en: "Support", jp: "サポート" },
+            // -----------------------
+
+            "footer_products": { id: "Produk", en: "Products", jp: "製品" },
+            "footer_services": { id: "Layanan", en: "Services", jp: "サービス" },
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+
+            "svc_booking": { id: "Booking Service", en: "Booking Service", jp: "サービス予約" },
+            "svc_parts": { id: "Suku Cadang Asli", en: "Genuine Parts", jp: "純正部品" },
+            "svc_credit": { id: "Simulasi Kredit", en: "Credit Simulation", jp: "クレジットシミュレーション" },
+            "svc_tradein": { id: "Trade In", en: "Trade In", jp: "下取り" }
+        };
+
+        // 2. Fungsi untuk Mengubah Bahasa
+        function changeLanguage(lang) {
+            // Set html lang attribute
+            document.documentElement.lang = lang;
+
+            // Simpan ke Local Storage agar browser ingat
+            localStorage.setItem('selectedLang', lang);
+
+            // Update Teks Dropdown
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            // Handle Font Jepang (Opsional agar lebih rapi)
+            if (lang === 'jp') {
+                document.body.classList.add('lang-jp');
+            } else {
+                document.body.classList.remove('lang-jp');
+            }
+
+            // Loop semua elemen yang punya atribut 'data-i18n'
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    // Cek apakah elemen input/select (placeholder atau text)
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[key][lang];
+                    } else if (element.tagName === 'OPTION') {
+                        element.text = translations[key][lang];
+                    } else {
+                        // Ganti HTML text biasa
+                        element.textContent = translations[key][lang];
+                    }
+                }
+            });
+        }
+
+        // 3. Jalankan saat halaman dimuat (Load saved language)
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'id'; // Default ID
+            changeLanguage(savedLang);
+        });
+
+        /* ==============================================
+           LOGIKA BACK TO TOP
+           ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
+            });
+        });
+
+
+        /* ==============================================
+           LOGIKA SEARCH WIDGET (PENCARIAN MOTOR)
+           ============================================== */
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchBtn = document.getElementById('btnSearchWidget');
+            const modelSelect = document.getElementById('modelSelect');
+
+            if (searchBtn && modelSelect) {
+                searchBtn.addEventListener('click', function () {
+                    const selectedValue = modelSelect.value;
+
+                    // MAPPING HALAMAN: Sesuaikan nama file di kanan dengan file Anda
+                    const modelLinks = {
+                        'nmax': 'nmax.html',       // Ganti dengan file detail nmax
+                        'aerox': 'aerox.html',     // Ganti dengan file detail aerox
+                        'filano': 'filano.html',   // Ganti dengan file detail filano
+                        'fazzio': 'fazzio.html'    // Ganti dengan file detail fazzio
+                    };
+
+                    if (selectedValue && modelLinks[selectedValue]) {
+                        // Redirect ke halaman detail
+                        window.location.href = modelLinks[selectedValue];
+                    } else {
+                        // Jika belum memilih model
+                        alert("Silakan pilih model motor terlebih dahulu untuk melihat detail.");
+                    }
+                });
+            }
+        });
+
     </script>
 </body>
 

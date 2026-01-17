@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         /* --- BASE STYLE DARI INDEX.HTML --- */
@@ -29,6 +30,22 @@
             overflow-x: hidden;
             background-color: var(--bg-light);
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Font khusus jika bahasa Jepang aktif */
+        body.lang-jp {
+            font-family: 'Noto Sans JP', sans-serif !important;
+        }
+
+        body.lang-jp h1,
+        body.lang-jp h2,
+        body.lang-jp h3,
+        body.lang-jp h4 {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            font-weight: 700;
         }
 
         h1,
@@ -162,6 +179,7 @@
             padding: 80px 0 30px;
             font-size: 14px;
             border-top: 5px solid var(--yamaha-blue-main);
+            margin-top: auto;
         }
 
         footer h5 {
@@ -340,47 +358,224 @@
             margin-bottom: 0;
         }
 
-        /* CTA WhatsApp Section */
-        .cta-wa-section {
-            background: linear-gradient(to right, #f9f9f9, #ffffff);
-            border-top: 1px solid #eee;
-            padding: 80px 0;
+        /* =========================================
+           SECTION CTA
+           ========================================= */
+        .cta-wrapper {
+            padding-bottom: 60px;
             margin-top: 60px;
-            text-align: center;
         }
 
-        .cta-box {
-            background: white;
+        .cta-card {
+            background: linear-gradient(135deg, var(--yamaha-blue-dark) 0%, var(--yamaha-blue-main) 100%);
             border-radius: 20px;
-            padding: 50px 30px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-            border-top: 5px solid var(--yamaha-red);
-            display: inline-block;
-            max-width: 800px;
-            width: 100%;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.2);
+            color: white;
+            display: block;
         }
 
-        .btn-wa-large {
-            background-color: #25D366;
-            color: white;
+        /* Elemen dekoratif background */
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .cta-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            border: 20px solid rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .cta-title {
+            font-family: 'Exo 2', sans-serif;
             font-weight: 800;
-            padding: 18px 45px;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .cta-desc {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 0;
+            font-weight: 300;
+            color: white;
+        }
+
+        .btn-cta-wa {
+            background-color: white;
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
             border-radius: 50px;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            text-decoration: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            margin-top: 25px;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
-            transition: all 0.3s;
+            gap: 10px;
+            border: 2px solid white;
+            text-decoration: none;
         }
 
-        .btn-wa-large:hover {
-            background-color: #128C7E;
+        .btn-cta-wa:hover {
+            background-color: transparent;
             color: white;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animation */
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustment */
+        @media (max-width: 991px) {
+            .cta-card {
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .cta-content {
+                margin-bottom: 25px;
+            }
+        }
+
+        /* ========================================================
+   FLOATING BUTTONS (WA & BACK TO TOP)
+   ======================================================== */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Jarak antar tombol */
+        }
+
+        /* Tombol Umum */
+        .btn-float {
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: none;
+        }
+
+        .btn-float:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Tombol WhatsApp */
+        .btn-whatsapp {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            font-size: 32px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animasi Pulse untuk WA agar menarik perhatian */
+        .btn-whatsapp::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Tombol Back to Top */
+        .btn-back-to-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--yamaha-blue-dark);
+            /* Mengikuti tema website */
+            font-size: 20px;
+            opacity: 0;
+            /* Tersembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class untuk memunculkan tombol Back to Top */
+        .btn-back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsif Mobile (Layar Kecil) */
+        @media (max-width: 768px) {
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .btn-back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -389,11 +584,12 @@
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <i class="fas fa-motorcycle me-2 fa-lg"></i>
                 <div>
                     YAMAHA <span
-                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;">Authorized
+                        style="font-family: 'Roboto'; color: #666; font-size:12px; font-weight:500; display:block; line-height:1; letter-spacing: 0;"
+                        data-i18n="dealer_auth">Authorized
                         Dealer</span>
                 </div>
             </a>
@@ -402,23 +598,37 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Servis</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lokasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html" data-i18n="nav_product">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html" data-i18n="nav_news">Berita</a></li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_contact">
                             Hubungi Kami
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="kontak.html">Kontak Kami</a></li>
-                            <li><a class="dropdown-item" href="tentang.html">Tentang Kami</a></li>
+                            <li><a class="dropdown-item" href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a>
+                            </li>
+                            <li><a class="dropdown-item" href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item active" href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> <span id="currentLangDisplay">ID</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('id')">🇮🇩 Indonesia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('jp')">🇯🇵 日本語</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -428,13 +638,15 @@
 
     <header class="faq-header">
         <div class="container">
-            <h1 data-aos="fade-up">PERTANYAAN UMUM (FAQ)</h1>
-            <p class="mb-4 text-white-50">Cari jawaban cepat seputar produk, servis, dan layanan kami.</p>
+            <h1 data-aos="fade-up" data-i18n="faq_title">PERTANYAAN UMUM (FAQ)</h1>
+            <p class="mb-4 text-white-50" data-i18n="faq_subtitle">Cari jawaban cepat seputar produk, servis, dan
+                layanan kami.</p>
 
             <div class="faq-search-box">
                 <i class="fas fa-search faq-search-icon"></i>
                 <input type="text" class="faq-search-input" id="searchInput"
-                    placeholder="Cari pertanyaan Anda disini (cth: kredit, servis, garansi)...">
+                    placeholder="Cari pertanyaan Anda disini (cth: kredit, servis, garansi)..."
+                    data-i18n="faq_search_placeholder">
             </div>
         </div>
     </header>
@@ -447,12 +659,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq1">
+                                data-bs-target="#faq1" data-i18n="faq_q1">
                                 Dimana lokasi dealer resmi Yamaha ini?
                             </button>
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a1">
                                 Dealer kami berlokasi di <strong>Jl. Raya Otomotif No. 99, Jakarta Selatan</strong>.
                                 Lokasi kami sangat strategis di pinggir jalan utama. Anda bisa melihat peta detail dan
                                 petunjuk arah di halaman <a href="kontak.html">Kontak Kami</a>.
@@ -463,12 +675,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq2">
+                                data-bs-target="#faq2" data-i18n="faq_q2">
                                 Kapan jam operasional dealer dan bengkel?
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a2">
                                 Kami buka setiap hari untuk melayani Anda:
                                 <ul class="mt-2">
                                     <li><strong>Senin - Jumat:</strong> 08.00 - 17.00 WIB</li>
@@ -482,12 +694,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq3">
+                                data-bs-target="#faq3" data-i18n="faq_q3">
                                 Apa saja syarat dokumen untuk pengajuan kredit motor?
                             </button>
                         </h2>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a3">
                                 Syarat pengajuan kredit sangat mudah. Anda cukup menyiapkan:
                                 <ol class="mt-2">
                                     <li>Fotokopi e-KTP (Suami & Istri jika sudah menikah)</li>
@@ -503,12 +715,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq4">
+                                data-bs-target="#faq4" data-i18n="faq_q4">
                                 Apakah bisa membeli motor menggunakan KTP daerah (luar kota)?
                             </button>
                         </h2>
                         <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a4">
                                 <strong>Bisa.</strong> Kami melayani pembelian dengan KTP daerah asalkan Anda memiliki
                                 domisili (tempat tinggal) yang jelas di area jangkauan dealer kami. Mohon lampirkan
                                 Surat Keterangan Domisili dari RT/RW setempat jika diperlukan oleh pihak leasing.
@@ -519,12 +731,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq5">
+                                data-bs-target="#faq5" data-i18n="faq_q5">
                                 Berapa lama proses indent untuk NMAX Turbo atau Fazzio?
                             </button>
                         </h2>
                         <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a5">
                                 Estimasi indent bervariasi tergantung tipe dan warna. Untuk <strong>NMAX
                                     "TURBO"</strong> saat ini estimasi 1-2 minggu. Untuk Fazzio dan unit lainnya
                                 sebagian besar <i>Ready Stock</i>. Silakan hubungi admin via WhatsApp untuk cek stok
@@ -536,12 +748,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq6">
+                                data-bs-target="#faq6" data-i18n="faq_q6">
                                 Apakah dealer menerima Tukar Tambah (Trade-In)?
                             </button>
                         </h2>
                         <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a6">
                                 Ya, kami menerima program <strong>Tukar Tambah</strong>. Kami menerima motor lama Anda
                                 (semua merk dan tipe) dengan harga taksiran yang kompetitif. Nilai motor lama Anda bisa
                                 langsung dijadikan sebagai DP (Uang Muka) untuk motor Yamaha baru.
@@ -552,12 +764,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq7">
+                                data-bs-target="#faq7" data-i18n="faq_q7">
                                 Berapa lama masa garansi motor Yamaha?
                             </button>
                         </h2>
                         <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a7">
                                 Yamaha memberikan jaminan kualitas terbaik dengan garansi:
                                 <ul class="mt-2">
                                     <li><strong>Garansi Rangka:</strong> 5 Tahun (Untuk motor Matic Yamaha terbaru)</li>
@@ -573,12 +785,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq8">
+                                data-bs-target="#faq8" data-i18n="faq_q8">
                                 Bagaimana cara Booking Service agar tidak antri?
                             </button>
                         </h2>
                         <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a8">
                                 Anda dapat melakukan Booking Service minimal H-1 melalui:
                                 1. Aplikasi <strong>My Yamaha Motor</strong> (Download di PlayStore/AppStore).
                                 2. Chat WhatsApp admin kami.
@@ -591,12 +803,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq9">
+                                data-bs-target="#faq9" data-i18n="faq_q9">
                                 Apakah suku cadang yang dijual dijamin asli?
                             </button>
                         </h2>
                         <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a9">
                                 Tentu saja. Sebagai Dealer Resmi, kami <strong>hanya menjual Yamaha Genuine Parts
                                     (YGP)</strong> dan oli Yamalube 100% Asli. Penggunaan suku cadang asli sangat
                                 disarankan untuk menjaga performa mesin dan agar garansi motor tidak hangus.
@@ -607,12 +819,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq10">
+                                data-bs-target="#faq10" data-i18n="faq_q10">
                                 Motor saya mogok di jalan, apakah ada layanan jemput?
                             </button>
                         </h2>
                         <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
+                            <div class="accordion-body" data-i18n="faq_a10">
                                 Kami menyediakan layanan <strong>SKY (Service Kunjung Yamaha)</strong> untuk area
                                 sekitar dealer. Jika motor Anda mogok atau tidak sempat ke bengkel, mekanik kami bisa
                                 datang ke rumah atau lokasi Anda. Silakan hubungi nomor darurat kami untuk konfirmasi
@@ -626,20 +838,21 @@
         </div>
     </section>
 
-    <section class="cta-wa-section">
-        <div class="container">
-            <div class="cta-box">
-                <h2 style="font-weight: 800; color: var(--yamaha-black);">MASIH PUNYA PERTANYAAN LAIN?</h2>
-                <div style="width: 60px; height: 4px; background: var(--yamaha-blue-main); margin: 15px auto;"></div>
-                <p class="text-muted mb-4">
-                    Jika jawaban yang Anda cari tidak tersedia di atas, jangan ragu untuk menghubungi tim kami.<br>
-                    Kami siap membantu Anda dengan respon cepat melalui WhatsApp.
-                </p>
-
-                <a href="#" onclick="openWhatsApp()" class="btn-wa-large">
-                    <i class="fab fa-whatsapp fa-lg me-2"></i> CHAT WHATSAPP SEKARANG
-                </a>
-                <p class="mt-3 text-muted small">Online pada jam kerja (08.00 - 17.00 WIB)</p>
+    <section class="cta-wrapper container">
+        <div class="cta-card fade-in-up" style="animation-delay: 0.2s;">
+            <div class="row align-items-center">
+                <div class="col-lg-8 cta-content">
+                    <h2 class="cta-title" data-i18n="cta_title">Masih Punya Pertanyaan Lain?</h2>
+                    <p class="cta-desc" data-i18n="cta_desc">
+                        Jika jawaban yang Anda cari tidak tersedia di atas, jangan ragu untuk menghubungi tim kami.
+                        Kami siap membantu menjawab kebutuhan informasi Anda dengan respon cepat.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="https://wa.me/6282257391460" target="_blank" class="btn btn-cta-wa">
+                        <i class="fab fa-whatsapp fa-lg"></i> <span data-i18n="cta_btn">Chat WhatsApp Sekarang</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -648,8 +861,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h5>Tentang Dealer</h5>
-                    <p style="color: #aaa; line-height: 1.8;">
+                    <h5 data-i18n="footer_about_title">Tentang Dealer</h5>
+                    <p style="color: #aaa; line-height: 1.8;" data-i18n="footer_about_desc">
                         Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart).
                         Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
                     </p>
@@ -660,28 +873,26 @@
                         <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
+
                 <div class="col-lg-2 mb-4">
-                    <h5>Produk</h5>
+                    <h5 data-i18n="footer_menu_main">Menu Utama</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">MAXI Yamaha</a></li>
-                        <li><a href="#">Classy Yamaha</a></li>
-                        <li><a href="#">Sport Series</a></li>
-                        <li><a href="#">Moped</a></li>
-                        <li><a href="#">Yamaha EV</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+                        <li><a href="produk.html" data-i18n="nav_product">Produk</a></li>
+                        <li><a href="dealer.html" data-i18n="nav_location">Dealer</a></li>
+                        <li><a href="berita.html" data-i18n="nav_news">Berita</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 mb-4">
-                    <h5>Layanan</h5>
+                    <h5 data-i18n="footer_menu_support">Dukungan</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Booking Service</a></li>
-                        <li><a href="#">Suku Cadang Asli</a></li>
-                        <li><a href="#">Yamalube</a></li>
-                        <li><a href="#">Simulasi Kredit</a></li>
-                        <li><a href="#">Trade In</a></li>
+                        <li><a href="kontak.html" data-i18n="nav_contact_us">Kontak Kami</a></li>
+                        <li><a href="tentang.html" data-i18n="nav_about_us">Tentang Kami</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <h5>Hubungi Kami</h5>
+                    <h5 data-i18n="footer_contact">Hubungi Kami</h5>
                     <ul class="fa-ul text-light" style="margin-left: 1.5em; line-height: 2;">
                         <li><span class="fa-li"><i class="fas fa-map-marker-alt text-primary"></i></span>Jl. Raya
                             Otomotif No. 99, Jakarta Selatan</li>
@@ -700,23 +911,21 @@
         </div>
     </footer>
 
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // 1. Script Tombol WhatsApp
-        function openWhatsApp() {
-            const phone = "6282257391460"; // Nomor tujuan
-            const message = "Halo Admin Yamaha, saya ingin bertanya lebih lanjut setelah melihat halaman FAQ.";
-
-            // Deteksi Mobile vs Desktop
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            const baseUrl = isMobile ? "https://api.whatsapp.com/send" : "https://web.whatsapp.com/send";
-
-            const url = `${baseUrl}?phone=${phone}&text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        }
-
-        // 2. Script Search Filter
+        // --- 1. SCRIPT SEARCH FILTER (EXISTING) ---
         document.getElementById('searchInput').addEventListener('keyup', function () {
             let filter = this.value.toLowerCase();
             let accordionItems = document.querySelectorAll('.accordion-item');
@@ -725,21 +934,205 @@
                 let buttonText = item.querySelector('.accordion-button').textContent.toLowerCase();
                 let bodyText = item.querySelector('.accordion-body').textContent.toLowerCase();
 
-                // Jika cocok di judul (button) ATAU isi (body)
                 if (buttonText.includes(filter) || bodyText.includes(filter)) {
-                    item.style.display = ""; // Tampilkan
-
-                    // Fitur User Experience: Jika user mengetik lebih dari 3 huruf, otomatis buka accordion yang cocok
+                    item.style.display = "";
                     if (filter.length > 3) {
                         const collapseElement = item.querySelector('.collapse');
-                        // Hanya buka jika belum terbuka
                         if (!collapseElement.classList.contains('show')) {
                             new bootstrap.Collapse(collapseElement, { toggle: true });
                         }
                     }
                 } else {
-                    item.style.display = "none"; // Sembunyikan
+                    item.style.display = "none";
                 }
+            });
+        });
+
+        /* ==============================================
+           2. LOGIKA TRANSLATE / MULTI-BAHASA
+           ============================================== */
+
+        const translations = {
+            // --- Navbar ---
+            "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
+            "nav_product": { id: "Produk", en: "Products", jp: "製品" },
+            "nav_service": { id: "Servis", en: "Service", jp: "サービス" },
+            "nav_location": { id: "Dealer", en: "Dealer", jp: "店舗検索" },
+            "nav_news": { id: "Berita", en: "News", jp: "ニュース" },
+            "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
+            "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
+            "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
+
+            // --- Header & Search ---
+            "faq_title": { id: "PERTANYAAN UMUM (FAQ)", en: "FREQUENTLY ASKED QUESTIONS (FAQ)", jp: "よくある質問 (FAQ)" },
+            "faq_subtitle": { id: "Cari jawaban cepat seputar produk, servis, dan layanan kami.", en: "Find quick answers about our products, services, and support.", jp: "製品、サービス、サポートに関する迅速な回答を見つけてください。" },
+            "faq_search_placeholder": { id: "Cari pertanyaan Anda disini (cth: kredit, servis, garansi)...", en: "Search your questions here (e.g., credit, service, warranty)...", jp: "ここで質問を検索 (例: クレジット, サービス, 保証)..." },
+
+            // --- FAQ Items (Q&A) ---
+
+            // Q1
+            "faq_q1": { id: "Dimana lokasi dealer resmi Yamaha ini?", en: "Where is this authorized Yamaha dealer located?", jp: "このヤマハ正規販売店の場所はどこですか？" },
+            "faq_a1": {
+                id: "Dealer kami berlokasi di <strong>Jl. Raya Otomotif No. 99, Jakarta Selatan</strong>. Lokasi kami sangat strategis di pinggir jalan utama. Anda bisa melihat peta detail dan petunjuk arah di halaman <a href='kontak.html'>Kontak Kami</a>.",
+                en: "Our dealer is located at <strong>Jl. Raya Otomotif No. 99, South Jakarta</strong>. Our location is very strategic on the main road. You can see a detailed map and directions on the <a href='kontak.html'>Contact Us</a> page.",
+                jp: "当ディーラーは<strong>ジャカルタ南区ラヤ・オトモティフ通り99番地</strong>に位置しています。大通り沿いの非常に便利な場所にあります。詳細な地図と道順は<a href='kontak.html'>お問い合わせ</a>ページでご覧いただけます。"
+            },
+
+            // Q2
+            "faq_q2": { id: "Kapan jam operasional dealer dan bengkel?", en: "What are the operational hours for the dealer and workshop?", jp: "ディーラーとワークショップの営業時間はいつですか？" },
+            "faq_a2": {
+                id: "Kami buka setiap hari untuk melayani Anda:<ul class='mt-2'><li><strong>Senin - Jumat:</strong> 08.00 - 17.00 WIB</li><li><strong>Sabtu - Minggu:</strong> 08.00 - 15.00 WIB</li></ul><i>Catatan: Bengkel penerimaan terakhir 1 jam sebelum tutup.</i>",
+                en: "We are open every day to serve you:<ul class='mt-2'><li><strong>Monday - Friday:</strong> 08.00 - 17.00 WIB</li><li><strong>Saturday - Sunday:</strong> 08.00 - 15.00 WIB</li></ul><i>Note: Workshop last acceptance is 1 hour before closing.</i>",
+                jp: "毎日営業しております:<ul class='mt-2'><li><strong>月曜日 - 金曜日:</strong> 08.00 - 17.00 WIB</li><li><strong>土曜日 - 日曜日:</strong> 08.00 - 15.00 WIB</li></ul><i>注: ワークショップの最終受付は閉店1時間前です。</i>"
+            },
+
+            // Q3
+            "faq_q3": { id: "Apa saja syarat dokumen untuk pengajuan kredit motor?", en: "What are the document requirements for motorcycle credit application?", jp: "バイクのクレジット申請に必要な書類は何ですか？" },
+            "faq_a3": {
+                id: "Syarat pengajuan kredit sangat mudah. Anda cukup menyiapkan:<ol class='mt-2'><li>Fotokopi e-KTP (Suami & Istri jika sudah menikah)</li><li>Fotokopi Kartu Keluarga (KK)</li><li>Slip Gaji / Bukti Penghasilan / Rekening Tabungan</li><li>Rekening Listrik / PBB Rumah (Salah satu)</li></ol>Tim sales kami siap membantu proses penjemputan data ke rumah Anda.",
+                en: "Credit application requirements are very easy. You just need to prepare:<ol class='mt-2'><li>Copy of e-ID (Husband & Wife if married)</li><li>Copy of Family Card (KK)</li><li>Salary Slip / Proof of Income / Savings Account</li><li>Electricity Bill / House Tax (One of them)</li></ol>Our sales team is ready to help pick up the data at your home.",
+                jp: "クレジット申請の要件は非常に簡単です。以下のものを準備するだけです:<ol class='mt-2'><li>身分証明書のコピー（既婚の場合は夫婦）</li><li>家族カード（KK）のコピー</li><li>給与明細 / 収入証明書 / 預金通帳</li><li>電気料金 / 固定資産税（いずれか一つ）</li></ol>営業チームがご自宅までデータの収集に伺います。"
+            },
+
+            // Q4
+            "faq_q4": { id: "Apakah bisa membeli motor menggunakan KTP daerah (luar kota)?", en: "Can I buy a motorcycle using a regional ID (out of town)?", jp: "地方の身分証明書（市外）を使用してバイクを購入できますか？" },
+            "faq_a4": {
+                id: "<strong>Bisa.</strong> Kami melayani pembelian dengan KTP daerah asalkan Anda memiliki domisili (tempat tinggal) yang jelas di area jangkauan dealer kami. Mohon lampirkan Surat Keterangan Domisili dari RT/RW setempat jika diperlukan oleh pihak leasing.",
+                en: "<strong>Yes.</strong> We serve purchases with regional IDs provided you have a clear domicile (residence) within our dealer's coverage area. Please attach a Domicile Certificate from the local neighborhood association if required by the leasing company.",
+                jp: "<strong>可能です。</strong> 当ディーラーの対応エリア内に明確な居住地がある限り、地方の身分証明書での購入に対応しています。リース会社が必要とする場合は、地元の町内会からの居住証明書を添付してください。"
+            },
+
+            // Q5
+            "faq_q5": { id: "Berapa lama proses indent untuk NMAX Turbo atau Fazzio?", en: "How long is the indent process for NMAX Turbo or Fazzio?", jp: "NMAX TurboやFazzioの予約待ち時間はどのくらいですか？" },
+            "faq_a5": {
+                id: "Estimasi indent bervariasi tergantung tipe dan warna. Untuk <strong>NMAX \"TURBO\"</strong> saat ini estimasi 1-2 minggu. Untuk Fazzio dan unit lainnya sebagian besar <i>Ready Stock</i>. Silakan hubungi admin via WhatsApp untuk cek stok <i>real-time</i> hari ini.",
+                en: "Indent estimation varies depending on type and color. For <strong>NMAX \"TURBO\"</strong> currently estimated 1-2 weeks. For Fazzio and other units, most are <i>Ready Stock</i>. Please contact admin via WhatsApp to check <i>real-time</i> stock today.",
+                jp: "予約待ちはタイプや色によって異なります。<strong>NMAX \"TURBO\"</strong>の場合、現在の見積もりは1〜2週間です。Fazzioやその他のユニットについては、ほとんどが<i>在庫あり</i>です。本日の<i>リアルタイム</i>在庫を確認するには、WhatsAppで管理者にお問い合わせください。"
+            },
+
+            // Q6
+            "faq_q6": { id: "Apakah dealer menerima Tukar Tambah (Trade-In)?", en: "Does the dealer accept Trade-In?", jp: "ディーラーは下取りを受け付けていますか？" },
+            "faq_a6": {
+                id: "Ya, kami menerima program <strong>Tukar Tambah</strong>. Kami menerima motor lama Anda (semua merk dan tipe) dengan harga taksiran yang kompetitif. Nilai motor lama Anda bisa langsung dijadikan sebagai DP (Uang Muka) untuk motor Yamaha baru.",
+                en: "Yes, we accept the <strong>Trade-In</strong> program. We accept your old motorcycle (all brands and types) with competitive appraisal prices. The value of your old motorcycle can be directly used as a Down Payment for a new Yamaha motorcycle.",
+                jp: "はい、<strong>下取り</strong>プログラムを受け付けています。競争力のある査定価格で、古いバイク（すべてのブランドとタイプ）を受け入れます。古いバイクの価値は、新しいヤマハバイクの頭金として直接使用できます。"
+            },
+
+            // Q7
+            "faq_q7": { id: "Berapa lama masa garansi motor Yamaha?", en: "How long is the Yamaha motorcycle warranty period?", jp: "ヤマハバイクの保証期間はどのくらいですか？" },
+            "faq_a7": {
+                id: "Yamaha memberikan jaminan kualitas terbaik dengan garansi:<ul class='mt-2'><li><strong>Garansi Rangka:</strong> 5 Tahun (Untuk motor Matic Yamaha terbaru)</li><li><strong>Garansi Forged Piston & DiASil Cylinder:</strong> 5 Tahun</li><li><strong>Garansi Mesin:</strong> 3 Tahun</li><li><strong>Garansi Kelistrikan:</strong> 2 Tahun</li></ul><i>*Syarat & ketentuan berlaku, wajib servis rutin di bengkel resmi.</i>",
+                en: "Yamaha provides the best quality assurance with warranties:<ul class='mt-2'><li><strong>Frame Warranty:</strong> 5 Years (For latest Yamaha Matic bikes)</li><li><strong>Forged Piston & DiASil Cylinder Warranty:</strong> 5 Years</li><li><strong>Engine Warranty:</strong> 3 Years</li><li><strong>Electrical Warranty:</strong> 2 Years</li></ul><i>*Terms & conditions apply, mandatory regular service at authorized workshops.</i>",
+                jp: "ヤマハは以下の保証で最高の品質保証を提供します:<ul class='mt-2'><li><strong>フレーム保証:</strong> 5年 (最新のヤマハオートマチックバイク用)</li><li><strong>鍛造ピストン＆DiASilシリンダー保証:</strong> 5年</li><li><strong>エンジン保証:</strong> 3年</li><li><strong>電気系統保証:</strong> 2年</li></ul><i>*利用規約が適用されます。正規ワークショップでの定期点検が必須です。</i>"
+            },
+
+            // Q8
+            "faq_q8": { id: "Bagaimana cara Booking Service agar tidak antri?", en: "How to Booking Service to avoid queuing?", jp: "並ばないようにサービスを予約するにはどうすればよいですか？" },
+            "faq_a8": {
+                id: "Anda dapat melakukan Booking Service minimal H-1 melalui: 1. Aplikasi <strong>My Yamaha Motor</strong> (Download di PlayStore/AppStore). 2. Chat WhatsApp admin kami. Dengan booking, Anda mendapatkan jalur prioritas (pit khusus) dan estimasi waktu pengerjaan yang lebih jelas.",
+                en: "You can book service at least 1 day in advance via: 1. <strong>My Yamaha Motor</strong> App (Download on PlayStore/AppStore). 2. Chat our WhatsApp admin. With booking, you get a priority lane (special pit) and a clearer estimated work time.",
+                jp: "少なくとも1日前に以下の方法でサービスを予約できます: 1. <strong>My Yamaha Motor</strong> アプリ (PlayStore/AppStoreでダウンロード)。 2. WhatsApp管理者とチャット。予約すると、優先レーン（専用ピット）とより明確な作業見積もり時間が得られます。"
+            },
+
+            // Q9
+            "faq_q9": { id: "Apakah suku cadang yang dijual dijamin asli?", en: "Are the spare parts sold guaranteed genuine?", jp: "販売されているスペアパーツは純正品ですか？" },
+            "faq_a9": {
+                id: "Tentu saja. Sebagai Dealer Resmi, kami <strong>hanya menjual Yamaha Genuine Parts (YGP)</strong> dan oli Yamalube 100% Asli. Penggunaan suku cadang asli sangat disarankan untuk menjaga performa mesin dan agar garansi motor tidak hangus.",
+                en: "Absolutely. As an Authorized Dealer, we <strong>only sell Yamaha Genuine Parts (YGP)</strong> and 100% Original Yamalube oil. Using genuine parts is highly recommended to maintain engine performance and prevent voiding the motorcycle warranty.",
+                jp: "もちろんです。正規ディーラーとして、当社は<strong>ヤマハ純正部品 (YGP)</strong> と100%オリジナルのヤマルーブオイルのみを販売しています。エンジンの性能を維持し、バイクの保証が無効にならないように、純正部品の使用を強くお勧めします。"
+            },
+
+            // Q10
+            "faq_q10": { id: "Motor saya mogok di jalan, apakah ada layanan jemput?", en: "My bike broke down on the road, is there a pickup service?", jp: "道路でバイクが故障しました。ピックアップサービスはありますか？" },
+            "faq_a10": {
+                id: "Kami menyediakan layanan <strong>SKY (Service Kunjung Yamaha)</strong> untuk area sekitar dealer. Jika motor Anda mogok atau tidak sempat ke bengkel, mekanik kami bisa datang ke rumah atau lokasi Anda. Silakan hubungi nomor darurat kami untuk konfirmasi ketersediaan mekanik.",
+                en: "We provide <strong>SKY (Yamaha Visit Service)</strong> for areas around the dealer. If your bike breaks down or you don't have time to go to the workshop, our mechanics can come to your home or location. Please contact our emergency number to confirm mechanic availability.",
+                jp: "ディーラー周辺エリア向けに<strong>SKY（ヤマハ訪問サービス）</strong>を提供しています。バイクが故障した場合やワークショップに行く時間がない場合は、メカニックがご自宅や指定の場所に伺います。メカニックの空き状況を確認するために、緊急連絡先までお問い合わせください。"
+            },
+
+            // --- CTA & Footer ---
+            "cta_title": { id: "Masih Punya Pertanyaan Lain?", en: "Still Have Other Questions?", jp: "他に質問はありますか？" },
+            "cta_desc": { id: "Jika jawaban yang Anda cari tidak tersedia di atas, jangan ragu untuk menghubungi tim kami. Kami siap membantu menjawab kebutuhan informasi Anda dengan respon cepat.", en: "If the answer you are looking for is not available above, do not hesitate to contact our team. We are ready to help answer your information needs with a quick response.", jp: "お探しの回答が上記にない場合は、お気軽にチームまでお問い合わせください。迅速な対応で情報ニーズにお答えします。" },
+            "cta_btn": { id: "Chat WhatsApp Sekarang", en: "Chat WhatsApp Now", jp: "今すぐWhatsAppでチャット" },
+
+            "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
+            "footer_about_desc": {
+                id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
+                en: "Trusted official Yamaha dealer with 3S services (Sales, Service, Sparepart). We are committed to bringing the 'Revs Your Heart' experience to you.",
+                jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
+            },
+
+            // UPDATE: KEY BARU UNTUK FOOTER MENU UTAMA & DUKUNGAN
+            "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
+            "footer_menu_support": { id: "Dukungan", en: "Support", jp: "サポート" },
+
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
+
+            "svc_booking": { id: "Booking Service", en: "Booking Service", jp: "サービス予約" },
+            "svc_parts": { id: "Suku Cadang Asli", en: "Genuine Parts", jp: "純正部品" },
+            "svc_credit": { id: "Simulasi Kredit", en: "Credit Simulation", jp: "クレジットシミュレーション" },
+            "svc_tradein": { id: "Trade In", en: "Trade In", jp: "下取り" }
+        };
+
+        // Fungsi Change Language
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('selectedLang', lang);
+
+            const langDisplay = document.getElementById('currentLangDisplay');
+            if (lang === 'id') langDisplay.textContent = 'ID';
+            else if (lang === 'en') langDisplay.textContent = 'EN';
+            else if (lang === 'jp') langDisplay.textContent = 'JP';
+
+            if (lang === 'jp') {
+                document.body.classList.add('lang-jp');
+            } else {
+                document.body.classList.remove('lang-jp');
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[key][lang];
+                    } else if (element.tagName === 'OPTION') {
+                        element.text = translations[key][lang];
+                    } else {
+                        // MENGGUNAKAN INNERHTML AGAR TAG SEPERTI <strong> ATAU <ul> TETAP RENDER
+                        element.innerHTML = translations[key][lang];
+                    }
+                }
+            });
+        }
+
+        // Initialize Language
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
+            changeLanguage(savedLang);
+        });
+
+        /* ==============================================
+   LOGIKA BACK TO TOP
+   ============================================== */
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Event Listener saat Scroll
+        window.addEventListener('scroll', () => {
+            // Jika scroll lebih dari 300px, munculkan tombol
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Event Listener saat diklik
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah reload/jump kasar
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Efek scroll halus
             });
         });
     </script>
