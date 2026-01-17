@@ -690,7 +690,7 @@
 
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="product-gallery">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s600/yamaha-filano.png"
+                        <img src="img/motor/filano-white-pearl.webp"
                             alt="Grand Filano Hybrid" class="main-img" id="mainProductImage">
                     </div>
                 </div>
@@ -976,17 +976,45 @@
     <script>
         // --- DATA GAMBAR PRODUK BERDASARKAN WARNA (Filano) ---
         const productImages = {
-            'white': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s600/yamaha-filano.png',
-            'blue': 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202301161309531122S24083.png',
-            'red': 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202301161310151167H76479.png'
+            'white': 'img/motor/filano-white-pearl.webp',
+            'blue': 'img/motor/filano-dull-blue.webp',
+            'red': 'img/motor/filano-neo-red.webp'
         };
 
-        // --- DATA PRODUK UNTUK REKOMENDASI (Produk Lainnya) ---
+        // --- DATA PRODUK UNTUK REKOMENDASI ---
         const products = [
-            { id: 1, name: 'NMAX "TURBO"', category: 'maxi', price: 'Rp 32.850.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-nmax.png', link: 'nmax.html' },
-            { id: 5, name: 'Fazzio Hybrid', category: 'classy', price: 'Rp 23.250.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-fazzio.png', link: '#' },
-            { id: 2, name: 'Aerox 155 Connected', category: 'maxi', price: 'Rp 28.500.000', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqL8_nJ5qE3yC72i3gPjF8p_8wR9X8z3c6J9k2L5n7M4o1P0q2R9s8T3u6V5w8X9y2Z1a4B7c3D6E9F2G5H8I1J4K7L0M3N6O9P2Q5/s320/yamaha-aerox.png', link: '#' },
-            { id: 9, name: 'Jupiter Z1', category: 'moped', price: 'Rp 20.090.000', image: 'https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202410070940384102W22588.png', link: '#' }
+            {
+                id: 1,
+                name: 'NMAX "TURBO"',
+                category: 'maxi',
+                price: 'Rp 32.850.000',
+                image: 'img/motor/nmax-magma-blac.jpeg',
+                link: 'nmax.html' // <--- Tambahkan ini (pastikan file nmax.html sudah dibuat)
+            },
+            {
+                id: 3,
+                name: 'XMAX 250 Tech MAX',
+                category: 'maxi',
+                price: 'Rp 66.000.000',
+                image: 'img/motor/xmax-magma-black.webp',
+                link: 'xmax.html' // <--- Tambahkan ini
+            },
+            {
+                id: 4,
+                name: 'Grand Filano Hybrid',
+                category: 'classy',
+                price: 'Rp 27.500.000',
+                image: 'img/motor/filano-white-pearl.webp',
+                link: 'filano.html' // <--- Tambahkan ini
+            },
+            {
+                id: 6,
+                name: 'Yamaha R15 Connected',
+                category: 'sport',
+                price: 'Rp 39.875.000',
+                image: 'img/motor/r15-icon-blue.webp',
+                link: 'r15.html' // <--- Tambahkan ini
+            }
         ];
 
         // --- FUNGSI GANTI WARNA & GAMBAR ---
@@ -1010,25 +1038,26 @@
             products.forEach(product => {
                 const col = document.createElement('div');
                 col.className = 'col-6 col-md-3 mb-4';
+
+                // Perhatikan perubahan pada bagian href="${product.link}" di bawah ini:
                 col.innerHTML = `
-                    <div class="product-card">
-                        <div class="pc-img-box">
-                            <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/300x200?text=Yamaha'">
-                        </div>
-                        <div class="pc-content">
-                            <div><h3 class="pc-title">${product.name}</h3></div>
-                            <div>
-                                <span class="pc-price">${product.price}</span>
-                                <a href="${product.link}" class="pc-btn stretched-link" data-i18n="btn_detail">Detail</a>
-                            </div>
-                        </div>
+            <div class="product-card">
+                <div class="pc-img-box">
+                    <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/300x200?text=Yamaha'">
+                </div>
+                <div class="pc-content">
+                    <div><h3 class="pc-title">${product.name}</h3></div>
+                    <div>
+                        <span class="pc-price">${product.price}</span>
+                        
+                        <a href="${product.link}" class="pc-btn stretched-link" data-i18n="btn_detail">Detail</a>
+                        
                     </div>
-                `;
+                </div>
+            </div>
+        `;
                 container.appendChild(col);
             });
-            // Re-apply translation after rendering dynamic content
-            const savedLang = localStorage.getItem('selectedLang') || 'id';
-            changeLanguage(savedLang);
         }
 
         // --- TRANSLATION LOGIC ---
