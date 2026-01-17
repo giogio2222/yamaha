@@ -912,6 +912,115 @@
                 font-size: 18px;
             }
         }
+
+        /* =========================================
+       SECTION CTA (ADDED FROM FAQ)
+       ========================================= */
+        .cta-wrapper {
+            padding-bottom: 60px;
+            margin-top: 60px;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, var(--yamaha-blue-dark) 0%, var(--yamaha-blue-main) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 87, 184, 0.2);
+            color: white;
+            display: block;
+        }
+
+        /* Elemen dekoratif background */
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .cta-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            border: 20px solid rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .cta-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .cta-desc {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 0;
+            font-weight: 300;
+            color: white;
+        }
+
+        .btn-cta-wa {
+            background-color: white;
+            color: var(--yamaha-blue-dark);
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid white;
+            text-decoration: none;
+        }
+
+        .btn-cta-wa:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animation */
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustment */
+        @media (max-width: 991px) {
+            .cta-card {
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .cta-content {
+                margin-bottom: 25px;
+            }
+        }
     </style>
 </head>
 
@@ -1083,8 +1192,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/nmax-elixir-dark-silver.webp"
-                                    alt="NMAX Turbo" onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
+                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo"
+                                    onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">NMAX "TURBO"</h5>
@@ -1096,8 +1205,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/aerox-cybercity.webp"
-                                    alt="Aerox" onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
+                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox"
+                                    onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Aerox 155</h5>
@@ -1109,8 +1218,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-white-pearl.webp"
-                                    alt="Grand Filano"
+                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano"
                                     onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
                             </div>
                             <div class="card-body">
@@ -1123,8 +1231,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-dull-blue.webp"
-                                    alt="Fazzio" onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
+                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio"
+                                    onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Fazzio Hybrid</h5>
@@ -1136,10 +1244,64 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-maxi">
-                <div class="alert alert-primary text-center">Menampilkan koleksi MAXI Series...</div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo"
+                                    onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NMAX "TURBO"</h5>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 32.850.000</span>
+                                <a href="nmax.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox"
+                                    onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Aerox 155</h5>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 28.500.000</span>
+                                <a href="aerox.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="pills-classy">
-                <div class="alert alert-info text-center">Menampilkan koleksi Classy Yamaha...</div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano"
+                                    onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Grand Filano</h5>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 27.500.000</span>
+                                <a href="filano.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-card">
+                            <div class="product-img-wrapper">
+                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio"
+                                    onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Fazzio Hybrid</h5>
+                                <span class="price"><span data-i18n="price_start">Mulai</span> Rp 23.250.000</span>
+                                <a href="fazzio.html" class="btn-detail" data-i18n="btn_detail">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1267,6 +1429,25 @@
                         class="active"></button>
                     <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="1"></button>
                     <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-wrapper container">
+        <div class="cta-card fade-in-up" style="animation-delay: 0.2s;">
+            <div class="row align-items-center">
+                <div class="col-lg-8 cta-content">
+                    <h2 class="cta-title" data-i18n="cta_title">Masih Punya Pertanyaan Lain?</h2>
+                    <p class="cta-desc" data-i18n="cta_desc">
+                        Jika informasi yang Anda cari tidak tersedia, jangan ragu untuk menghubungi tim kami.
+                        Kami siap membantu menjawab kebutuhan informasi Anda dengan respon cepat.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="https://wa.me/6282257391460" target="_blank" class="btn btn-cta-wa">
+                        <i class="fab fa-whatsapp fa-lg"></i> <span data-i18n="cta_btn">Chat WhatsApp Sekarang</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1415,7 +1596,7 @@
             "news_header": { id: "BERITA TERBARU", en: "LATEST NEWS", jp: "最新ニュース" },
             "btn_read_more": { id: "BERITA SELENGKAPNYA", en: "READ MORE", jp: "続きを読む" },
 
-            // News Titles & Descs (Simulated)
+            // News Titles & Descs
             "news1_title": { id: "YAMAHA ROLLING CITY: LAYANAN SIAGA", en: "YAMAHA ROLLING CITY: EMERGENCY SERVICE", jp: "ヤマハ・ローリングシティ：緊急サービス" },
             "news1_date": { id: "Surabaya, 16 Januari 2026", en: "Surabaya, January 16, 2026", jp: "スラバヤ、2026年1月16日" },
             "news1_desc": {
@@ -1440,6 +1621,14 @@
                 jp: "オートバイユーザー必見！CVTエリアを清潔に保つ方法について、チーフメカニックからのヒントをご覧ください。"
             },
 
+            "cta_title": { id: "Masih Punya Pertanyaan Lain?", en: "Still Have Other Questions?", jp: "他に質問はありますか？" },
+            "cta_desc": {
+                id: "Jika informasi yang Anda cari tidak tersedia, jangan ragu untuk menghubungi tim kami. Kami siap membantu menjawab kebutuhan informasi Anda dengan respon cepat.",
+                en: "If the information you are looking for is not available, do not hesitate to contact our team. We are ready to help answer your information needs with a quick response.",
+                jp: "お探しの情報が見つからない場合は、お気軽にチームまでお問い合わせください。迅速な対応で情報ニーズにお答えします。"
+            },
+            "cta_btn": { id: "Chat WhatsApp Sekarang", en: "Chat WhatsApp Now", jp: "今すぐWhatsAppでチャット" },
+
             "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
             "footer_about_desc": {
                 id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
@@ -1447,62 +1636,44 @@
                 jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
             },
 
-            // --- NEW FOOTER KEYS ---
             "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
             "footer_menu_help": { id: "Bantuan", en: "Support", jp: "サポート" },
-            // -----------------------
-
-            "footer_products": { id: "Produk", en: "Products", jp: "製品" },
-            "footer_services": { id: "Layanan", en: "Services", jp: "サービス" },
-            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
-
-            "svc_booking": { id: "Booking Service", en: "Booking Service", jp: "サービス予約" },
-            "svc_parts": { id: "Suku Cadang Asli", en: "Genuine Parts", jp: "純正部品" },
-            "svc_credit": { id: "Simulasi Kredit", en: "Credit Simulation", jp: "クレジットシミュレーション" },
-            "svc_tradein": { id: "Trade In", en: "Trade In", jp: "下取り" }
+            "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" }
         };
 
         // 2. Fungsi untuk Mengubah Bahasa
         function changeLanguage(lang) {
-            // Set html lang attribute
             document.documentElement.lang = lang;
-
-            // Simpan ke Local Storage agar browser ingat
             localStorage.setItem('selectedLang', lang);
 
-            // Update Teks Dropdown
             const langDisplay = document.getElementById('currentLangDisplay');
             if (lang === 'id') langDisplay.textContent = 'ID';
             else if (lang === 'en') langDisplay.textContent = 'EN';
             else if (lang === 'jp') langDisplay.textContent = 'JP';
 
-            // Handle Font Jepang (Opsional agar lebih rapi)
             if (lang === 'jp') {
                 document.body.classList.add('lang-jp');
             } else {
                 document.body.classList.remove('lang-jp');
             }
 
-            // Loop semua elemen yang punya atribut 'data-i18n'
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[key] && translations[key][lang]) {
-                    // Cek apakah elemen input/select (placeholder atau text)
                     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                         element.placeholder = translations[key][lang];
                     } else if (element.tagName === 'OPTION') {
                         element.text = translations[key][lang];
                     } else {
-                        // Ganti HTML text biasa
                         element.textContent = translations[key][lang];
                     }
                 }
             });
         }
 
-        // 3. Jalankan saat halaman dimuat (Load saved language)
+        // 3. Jalankan saat halaman dimuat
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('selectedLang') || 'id'; // Default ID
+            const savedLang = localStorage.getItem('selectedLang') || 'id';
             changeLanguage(savedLang);
         });
 
@@ -1511,9 +1682,7 @@
            ============================================== */
         const backToTopBtn = document.getElementById('backToTop');
 
-        // Event Listener saat Scroll
         window.addEventListener('scroll', () => {
-            // Jika scroll lebih dari 300px, munculkan tombol
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('show');
             } else {
@@ -1521,45 +1690,107 @@
             }
         });
 
-        // Event Listener saat diklik
         backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Mencegah reload/jump kasar
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Efek scroll halus
+                behavior: 'smooth'
             });
         });
 
-
         /* ==============================================
-           LOGIKA SEARCH WIDGET (PENCARIAN MOTOR)
+           LOGIKA SEARCH WIDGET (UPDATED & FIXED)
            ============================================== */
         document.addEventListener('DOMContentLoaded', function () {
-            const searchBtn = document.getElementById('btnSearchWidget');
+            // Mengambil elemen dropdown berdasarkan atribut aria-label
+            const categorySelect = document.querySelector('select[aria-label="Kategori"]');
             const modelSelect = document.getElementById('modelSelect');
+            const searchBtn = document.getElementById('btnSearchWidget');
 
+            // DATA MOTOR: Disinkronkan dengan value di HTML (index.html) dan data produk (produk.html)
+            // Note: Di HTML Anda, kategori MAXI Yamaha menggunakan value="matic"
+            const vehicles = {
+                'matic': [ // Kunci 'matic' sesuai dengan <option value="matic"> pada HTML
+                    { val: 'nmax', txt: 'NMAX "TURBO"' },
+                    { val: 'aerox', txt: 'Aerox 155 Connected' },
+                    { val: 'xmax', txt: 'XMAX 250 Tech MAX' }
+                ],
+                'classy': [
+                    { val: 'filano', txt: 'Grand Filano Hybrid' },
+                    { val: 'fazzio', txt: 'Fazzio Hybrid' }
+                ],
+                'sport': [
+                    { val: 'r15', txt: 'Yamaha R15 Connected' },
+                    { val: 'xsr155', txt: 'Yamaha XSR 155' }
+                ],
+                'moped': [
+                    { val: 'vega', txt: 'Vega Force' },
+                    { val: 'jupiter', txt: 'Jupiter Z1' }
+                ]
+            };
+
+            // Mapping Link Halaman Detail
+            const modelLinks = {
+                'nmax': 'nmax.html',
+                'aerox': 'aerox.html',
+                'xmax': 'xmax.html',   // Ditambahkan sesuai permintaan
+                'filano': 'filano.html',
+                'fazzio': 'fazzio.html',
+                'r15': 'r15.html',
+                'xsr155': 'xsr155.html',
+                'vega': 'vega-force.html',
+                'jupiter': 'jupiter-z1.html'
+            };
+
+            // 1. Event Listener saat Kategori Berubah
+            if (categorySelect && modelSelect) {
+                categorySelect.addEventListener('change', function () {
+                    const selectedCat = this.value; // Akan bernilai 'matic', 'sport', dll.
+
+                    // Reset dropdown model ke default
+                    modelSelect.innerHTML = '<option selected data-i18n="select_model" value="">Pilih Model</option>';
+
+                    // Pastikan teks default ter-translate jika bahasa bukan ID
+                    const currentLang = localStorage.getItem('selectedLang') || 'id';
+                    if (translations["select_model"] && translations["select_model"][currentLang]) {
+                        modelSelect.options[0].text = translations["select_model"][currentLang];
+                    }
+
+                    // Isi dropdown model berdasarkan kategori yang dipilih
+                    if (vehicles[selectedCat]) {
+                        vehicles[selectedCat].forEach(model => {
+                            const option = document.createElement('option');
+                            option.value = model.val;
+                            option.textContent = model.txt;
+                            modelSelect.appendChild(option);
+                        });
+                    }
+                });
+            }
+
+            // 2. Event Listener Tombol Cari
             if (searchBtn && modelSelect) {
                 searchBtn.addEventListener('click', function () {
                     const selectedValue = modelSelect.value;
+                    const selectedCategory = categorySelect.value;
 
-                    // MAPPING HALAMAN: Sesuaikan nama file di kanan dengan file Anda
-                    const modelLinks = {
-                        'nmax': 'nmax.html',       // Ganti dengan file detail nmax
-                        'aerox': 'aerox.html',     // Ganti dengan file detail aerox
-                        'filano': 'filano.html',   // Ganti dengan file detail filano
-                        'fazzio': 'fazzio.html'    // Ganti dengan file detail fazzio
-                    };
+                    // Validasi Kategori
+                    if (selectedCategory === "Pilih Kategori" || !selectedCategory) {
+                        alert("Silakan pilih kategori terlebih dahulu.");
+                        return;
+                    }
 
+                    // Validasi Model & Redirect
                     if (selectedValue && modelLinks[selectedValue]) {
-                        // Redirect ke halaman detail
                         window.location.href = modelLinks[selectedValue];
                     } else {
-                        // Jika belum memilih model
                         alert("Silakan pilih model motor terlebih dahulu untuk melihat detail.");
                     }
                 });
             }
         });
+
+    </script>
 
     </script>
 </body>
