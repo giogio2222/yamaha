@@ -33,17 +33,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <link rel="preload" as="image" href="img/motor/nmax-elixir-dark-silver.webp">
+    <link rel="preload" as="image" href="img/motor/nmax-elixir-dark-silver.webp" fetchpriority="high">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
 
     <script type="application/ld+json">
     {
@@ -1111,7 +1115,8 @@
                         Dealer</span>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -1175,7 +1180,7 @@
                     </div>
                 </div>
                 <div class="carousel-item"
-                    style="background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1920&auto=format&fit=crop');">
+                    style="background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop');">
                     <div class="carousel-overlay">
                         <div class="container">
                             <div class="row">
@@ -1190,10 +1195,12 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+                aria-label="Previous Slide">
                 <span class="carousel-control-prev-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+                aria-label="Next Slide">
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
@@ -1208,7 +1215,7 @@
                     <form>
                         <div class="row g-3">
                             <div class="col-md-4">
-                                <select class="form-select form-select-lg" aria-label="Kategori">
+                                <select class="form-select form-select-lg" aria-label="Pilih Kategori Motor">
                                     <option selected data-i18n="select_category">Pilih Kategori</option>
                                     <option value="matic">MAXI Yamaha</option>
                                     <option value="sport">Sport</option>
@@ -1217,7 +1224,8 @@
                                 </select>
                             </div>
                             <div class="col-md-5">
-                                <select class="form-select form-select-lg" aria-label="Model" id="modelSelect">
+                                <select class="form-select form-select-lg" aria-label="Pilih Model Motor"
+                                    id="modelSelect">
                                     <option selected data-i18n="select_model" value="">Pilih Model</option>
                                     <option value="nmax">NMAX Turbo</option>
                                     <option value="aerox">Aerox 155 Connected</option>
@@ -1422,7 +1430,7 @@
                     <div class="carousel-item active">
                         <div class="news-slide-item">
                             <div class="news-slide-img">
-                                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=1000&auto=format&fit=crop"
+                                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=70&w=800&auto=format&fit=crop"
                                     alt="News 1" width="600" height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
@@ -1446,7 +1454,7 @@
                     <div class="carousel-item">
                         <div class="news-slide-item">
                             <div class="news-slide-img">
-                                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1000&auto=format&fit=crop"
+                                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=70&w=800&auto=format&fit=crop"
                                     alt="News 2" width="600" height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
@@ -1469,7 +1477,7 @@
                     <div class="carousel-item">
                         <div class="news-slide-item">
                             <div class="news-slide-img">
-                                <img src="https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=80&w=1000&auto=format&fit=crop"
+                                <img src="https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=70&w=800&auto=format&fit=crop"
                                     alt="News 3" width="600" height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
@@ -1492,19 +1500,21 @@
                 </div>
 
                 <button class="news-control-prev" type="button" data-bs-target="#newsCarouselSlider"
-                    data-bs-slide="prev">
+                    data-bs-slide="prev" aria-label="Previous News">
                     <i class="fas fa-arrow-left news-control-icon"></i>
                 </button>
                 <button class="news-control-next" type="button" data-bs-target="#newsCarouselSlider"
-                    data-bs-slide="next">
+                    data-bs-slide="next" aria-label="Next News">
                     <i class="fas fa-arrow-right news-control-icon"></i>
                 </button>
 
                 <div class="carousel-indicators-news">
-                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="0"
-                        class="active"></button>
-                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="0" class="active"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
             </div>
         </div>
@@ -1596,21 +1606,23 @@
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <script>
         // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.classList.contains('dropdown-toggle') || this.classList.contains('carousel-control-prev') || this.classList.contains('carousel-control-next') || this.hasAttribute('onclick')) return;
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.classList.contains('dropdown-toggle') || this.classList.contains('carousel-control-prev') || this.classList.contains('carousel-control-next') || this.hasAttribute('onclick')) return;
 
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId !== '#' && document.querySelector(targetId)) {
-                    document.querySelector(targetId).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#' && document.querySelector(targetId)) {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
         });
 
@@ -1774,7 +1786,7 @@
            LOGIKA SEARCH WIDGET
            ============================================== */
         document.addEventListener('DOMContentLoaded', function () {
-            const categorySelect = document.querySelector('select[aria-label="Kategori"]');
+            const categorySelect = document.querySelector('select[aria-label="Pilih Kategori Motor"]'); // Selector updated to match new aria-label
             const modelSelect = document.getElementById('modelSelect');
             const searchBtn = document.getElementById('btnSearchWidget');
 
