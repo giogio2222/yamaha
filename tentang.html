@@ -4,16 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tentang Kami - Dealer Resmi Yamaha Terpercaya">
+    <meta name="description"
+        content="Dealer Resmi Yamaha Terpercaya melayani Sales, Service, dan Sparepart (3S). Temukan motor impian Anda bersama kami sejak 2010.">
+    <meta name="keywords" content="Yamaha, Dealer Yamaha, Motor Yamaha, Service Yamaha, Sparepart Asli, NMAX, Aerox">
+    <meta name="author" content="Yamaha Authorized Dealer">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0057B8">
+
+    <link rel="canonical" href="https://www.namadomainanda.com/tentang.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.namadomainanda.com/tentang.html">
+    <meta property="og:title" content="Tentang Kami - Dealer Resmi Yamaha Terpercaya">
+    <meta property="og:description"
+        content="Dealer Resmi Yamaha 3S (Sales, Service, Sparepart) terbaik. Komitmen kami menghadirkan kepuasan berkendara standar Jepang.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=75&fm=webp&w=1200">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.namadomainanda.com/tentang.html">
+    <meta property="twitter:title" content="Tentang Kami - Dealer Resmi Yamaha Terpercaya">
+    <meta property="twitter:description" content="Dealer Resmi Yamaha 3S (Sales, Service, Sparepart) terbaik.">
+    <meta property="twitter:image"
+        content="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=75&fm=webp&w=1200">
+
     <title>Tentang Kami - Yamaha Motor Indonesia</title>
 
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Yamaha_Motor_Logo_2020.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Yamaha_Motor_Logo_2020.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Yamaha_Motor_Logo_2020.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <link rel="preload" as="image"
+        href="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=75&fm=webp&w=1920&fit=crop">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" media="print"
+        onload="this.media='all'">
 
     <style>
         /* --- COPY STYLE DARI INDEX.HTML (Base Style) --- */
@@ -256,10 +301,11 @@
 
         /* --- STYLES KHUSUS HALAMAN ABOUT --- */
 
-        /* 1. Page Banner Hero */
+        /* 1. Page Banner Hero - OPTIMIZED WITH WEBP */
         .about-hero {
             position: relative;
-            background: url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
+            /* Menggunakan WebP dan resolusi yang sudah dioptimasi */
+            background: url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=75&fm=webp&w=1920&fit=crop') no-repeat center center;
             background-size: cover;
             height: 400px;
             display: flex;
@@ -268,6 +314,8 @@
             text-align: center;
             color: white;
             margin-bottom: 60px;
+            background-color: var(--yamaha-blue-dark);
+            /* Fallback color */
         }
 
         .about-hero::before {
@@ -336,6 +384,8 @@
         .overview-img {
             border-radius: 20px;
             width: 100%;
+            height: auto;
+            /* Prevent distortion */
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
             position: relative;
             z-index: 2;
@@ -450,9 +500,7 @@
             opacity: 0.8;
         }
 
-        /* =========================================
-           6. SECTION CTA (UPDATED)
-           ========================================= */
+        /* 6. CTA Section */
         .cta-wrapper {
             padding-bottom: 60px;
             margin-top: 60px;
@@ -468,7 +516,6 @@
             color: white;
         }
 
-        /* Elemen dekoratif background */
         .cta-card::before {
             content: '';
             position: absolute;
@@ -528,7 +575,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Animation for CTA */
         .fade-in-up {
             animation: fadeInUp 0.5s ease forwards;
             opacity: 0;
@@ -577,9 +623,7 @@
             }
         }
 
-        /* ========================================================
-   FLOATING BUTTONS (WA & BACK TO TOP)
-   ======================================================== */
+        /* FLOATING BUTTONS */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -589,10 +633,8 @@
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            /* Jarak antar tombol */
         }
 
-        /* Tombol Umum */
         .btn-float {
             border-radius: 50%;
             color: white;
@@ -611,7 +653,6 @@
             transform: scale(1.1);
         }
 
-        /* Tombol WhatsApp */
         .btn-whatsapp {
             width: 60px;
             height: 60px;
@@ -623,7 +664,6 @@
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
 
-        /* Animasi Pulse untuk WA agar menarik perhatian */
         .btn-whatsapp::after {
             content: '';
             position: absolute;
@@ -647,27 +687,22 @@
             }
         }
 
-        /* Tombol Back to Top */
         .btn-back-to-top {
             width: 50px;
             height: 50px;
             background-color: var(--yamaha-blue-dark);
-            /* Mengikuti tema website */
             font-size: 20px;
             opacity: 0;
-            /* Tersembunyi default */
             visibility: hidden;
             transform: translateY(20px);
         }
 
-        /* Class untuk memunculkan tombol Back to Top */
         .btn-back-to-top.show {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
 
-        /* Responsif Mobile (Layar Kecil) */
         @media (max-width: 768px) {
             .floating-container {
                 bottom: 20px;
@@ -703,7 +738,8 @@
                         Dealer</span>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -777,8 +813,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="overview-img-wrapper animate__animated animate__fadeInRight">
-                        <img src="https://images.unsplash.com/photo-1560963689-0933ca3212c6?q=80&w=1000&auto=format&fit=crop"
-                            alt="Showroom Yamaha" class="overview-img">
+                        <img src="https://images.unsplash.com/photo-1560963689-0933ca3212c6?q=75&fm=webp&w=800"
+                            width="600" height="400" alt="Showroom Yamaha Dealer" class="overview-img" loading="lazy"
+                            decoding="async">
                         <div class="overview-shape"></div>
                     </div>
                 </div>
@@ -893,7 +930,8 @@
                     </p>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
-                    <a href="https://wa.me/6282257391460" target="_blank" class="btn btn-cta-wa">
+                    <a href="https://wa.me/6282257391460" target="_blank" class="btn btn-cta-wa"
+                        rel="noopener noreferrer">
                         <i class="fab fa-whatsapp fa-lg"></i> <span data-i18n="btn_cta_sales">Hubungi Sales</span>
                     </a>
                 </div>
@@ -911,10 +949,10 @@
                         Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
                     </p>
                     <div class="social-icons mt-4">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -958,24 +996,22 @@
     </footer>
 
     <div class="floating-container">
-        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top" aria-label="Back to top">
             <i class="fas fa-arrow-up"></i>
         </a>
 
         <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
-            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp" aria-label="Chat Whatsapp"
+            rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <script>
         // --- 1. SCRIPT LOGIKA TRANSLATE ---
-
-        // Kamus Data (Dictionary)
         const translations = {
-            // --- Navigation (Sama dengan index) ---
             "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
             "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
             "nav_product": { id: "Produk", en: "Products", jp: "製品" },
@@ -985,11 +1021,7 @@
             "nav_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
             "nav_contact_us": { id: "Kontak Kami", en: "Contact Us", jp: "お問い合わせ" },
             "nav_about_us": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
-
-            // --- Page Hero ---
             "about_hero_title": { id: "Tentang Kami", en: "About Us", jp: "私たちについて" },
-
-            // --- Who We Are Section ---
             "who_we_are_subtitle": { id: "SIAPA KAMI", en: "WHO WE ARE", jp: "会社概要" },
             "who_we_are_title": { id: "MENGHADIRKAN KEPUASAN BERKENDARA SEJAK 2010", en: "DELIVERING RIDING SATISFACTION SINCE 2010", jp: "2010年からライディングの喜びをお届けしています" },
             "who_we_are_lead": {
@@ -1003,8 +1035,6 @@
                 jp: "「Revs Your Heart」の精神のもと、私たちは単にバイクを販売するだけでなく、信頼できるモビリティソリューションも提供しています。ヤマハ認定整備士と最新のワークショップ施設により、日本の製造基準に従った最高のメンテナンスを保証します。"
             },
             "btn_contact": { id: "HUBUNGI KAMI", en: "CONTACT US", jp: "お問い合わせ" },
-
-            // --- Vision Mission Section ---
             "our_goal": { id: "TUJUAN KAMI", en: "OUR GOAL", jp: "私たちの目標" },
             "vision_mission_title": { id: "VISI & MISI PERUSAHAAN", en: "COMPANY VISION & MISSION", jp: "企業ビジョンとミッション" },
             "vision_title": { id: "VISI KAMI", en: "OUR VISION", jp: "ビジョン" },
@@ -1018,27 +1048,18 @@
             "mission_2": { id: "Menyediakan layanan purna jual (servis) dengan standar kualitas tertinggi Yamaha.", en: "Provide after-sales service with the highest Yamaha quality standards.", jp: "ヤマハの最高品質基準によるアフターサービスを提供すること。" },
             "mission_3": { id: "Menjamin ketersediaan suku cadang asli (Genuine Parts) yang lengkap.", en: "Ensure complete availability of Genuine Parts.", jp: "純正部品の完全な在庫を確保すること。" },
             "mission_4": { id: "Mengembangkan sumber daya manusia yang profesional dan berorientasi pada kepuasan pelanggan.", en: "Develop professional human resources oriented towards customer satisfaction.", jp: "顧客満足を志向するプロフェッショナルな人材を育成すること。" },
-
-            // --- Values Section ---
             "work_philosophy": { id: "FILOSOFI KERJA", en: "WORK PHILOSOPHY", jp: "経営理念" },
             "our_values": { id: "NILAI-NILAI KAMI", en: "OUR VALUES", jp: "私たちの価値観" },
-
             "val_integrity": { id: "INTEGRITAS", en: "INTEGRITY", jp: "誠実さ" },
             "val_integrity_desc": { id: "Mengutamakan kejujuran dan kepercayaan dalam setiap transaksi.", en: "Prioritizing honesty and trust in every transaction.", jp: "すべての取引において正直さと信頼を優先します。" },
-
             "val_prof": { id: "PROFESIONALISME", en: "PROFESSIONALISM", jp: "プロ意識" },
             "val_prof_desc": { id: "Tim ahli yang bekerja sesuai standar operasional prosedur (SOP) resmi.", en: "Expert team working according to official standard operating procedures (SOP).", jp: "公式の標準作業手順（SOP）に従って働く専門家チーム。" },
-
             "val_care": { id: "KEPEDULIAN", en: "CARING", jp: "思いやり" },
             "val_care_desc": { id: "Mendengarkan kebutuhan pelanggan dan memberikan solusi terbaik.", en: "Listening to customer needs and providing the best solutions.", jp: "顧客のニーズに耳を傾け、最適なソリューションを提供します。" },
-
             "val_innov": { id: "INOVASI", en: "INNOVATION", jp: "革新" },
             "val_innov_desc": { id: "Selalu beradaptasi dengan teknologi dan cara baru yang lebih efisien.", en: "Always adapting to new technologies and more efficient ways.", jp: "常に新しい技術とより効率的な方法に適応します。" },
-
             "val_quality": { id: "KUALITAS", en: "QUALITY", jp: "品質" },
             "val_quality_desc": { id: "Hanya memberikan produk dan layanan servis dengan kualitas nomor satu.", en: "Only providing number one quality products and services.", jp: "最高品質の製品とサービスのみを提供します。" },
-
-            // --- CTA Section ---
             "cta_title": { id: "Siap Memiliki Motor Impian?", en: "Ready to Own Your Dream Bike?", jp: "夢のバイクを手に入れる準備はできましたか？" },
             "cta_desc": {
                 id: "Kunjungi showroom kami atau konsultasikan kebutuhan Anda secara online sekarang juga. Dapatkan pelayanan terbaik dari tim profesional kami.",
@@ -1046,8 +1067,6 @@
                 jp: "ショールームにお越しいただくか、今すぐオンラインでご相談ください。プロフェッショナルチームによる最高のサービスを提供します。"
             },
             "btn_cta_sales": { id: "Hubungi Sales", en: "Contact Sales", jp: "営業担当に連絡" },
-
-            // --- Footer (Sama dengan index) ---
             "footer_about_title": { id: "Tentang Dealer", en: "About Dealer", jp: "ディーラーについて" },
             "footer_about_desc": {
                 id: "Dealer resmi Yamaha terpercaya dengan layanan 3S (Sales, Service, Sparepart). Kami berkomitmen menghadirkan pengalaman 'Semakin Di Depan' untuk Anda.",
@@ -1055,56 +1074,40 @@
                 jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
             },
             "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
-
-            // --- Footer Menus (UPDATED) ---
             "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
             "footer_menu_support": { id: "Bantuan", en: "Support", jp: "サポート" }
         };
 
         function changeLanguage(lang) {
-            // Set html lang attribute
             document.documentElement.lang = lang;
-
-            // Simpan ke Local Storage
             localStorage.setItem('selectedLang', lang);
 
-            // Update Teks Dropdown
             const langDisplay = document.getElementById('currentLangDisplay');
             if (lang === 'id') langDisplay.textContent = 'ID';
             else if (lang === 'en') langDisplay.textContent = 'EN';
             else if (lang === 'jp') langDisplay.textContent = 'JP';
 
-            // Handle Font Jepang
-            if (lang === 'jp') {
-                document.body.classList.add('lang-jp');
-            } else {
-                document.body.classList.remove('lang-jp');
-            }
+            if (lang === 'jp') document.body.classList.add('lang-jp');
+            else document.body.classList.remove('lang-jp');
 
-            // Loop semua elemen yang punya atribut 'data-i18n'
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[key] && translations[key][lang]) {
-                    // Cek apakah elemen input/select (placeholder atau text)
                     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                         element.placeholder = translations[key][lang];
                     } else if (element.tagName === 'OPTION') {
                         element.text = translations[key][lang];
                     } else {
-                        // Ganti HTML text biasa (innerHTML agar tag <br> terbaca)
                         element.innerHTML = translations[key][lang];
                     }
                 }
             });
         }
 
-        // --- 2. SCRIPT ANIMASI (Existing) ---
         document.addEventListener("DOMContentLoaded", function () {
-            // Load Saved Language
             const savedLang = localStorage.getItem('selectedLang') || 'id';
             changeLanguage(savedLang);
 
-            // Menambahkan animasi fade-in saat elemen masuk viewport
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -1121,25 +1124,17 @@
             }, observerOptions);
 
             document.querySelectorAll('.vm-card, .value-box, .overview-img-wrapper').forEach(el => {
-                el.style.opacity = "0"; // Awal hidden
+                el.style.opacity = "0";
                 el.classList.add('animate__fast');
-
                 el.addEventListener('animationstart', () => {
                     el.style.opacity = "1";
                 });
-
                 observer.observe(el);
             });
         });
 
-        /* ==============================================
-   LOGIKA BACK TO TOP
-   ============================================== */
         const backToTopBtn = document.getElementById('backToTop');
-
-        // Event Listener saat Scroll
         window.addEventListener('scroll', () => {
-            // Jika scroll lebih dari 300px, munculkan tombol
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('show');
             } else {
@@ -1147,12 +1142,11 @@
             }
         });
 
-        // Event Listener saat diklik
         backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Mencegah reload/jump kasar
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Efek scroll halus
+                behavior: 'smooth'
             });
         });
     </script>

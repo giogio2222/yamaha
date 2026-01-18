@@ -4,8 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dealer Resmi Motor Yamaha - Temukan Motor Impianmu Disini">
+    <meta name="description"
+        content="Dealer Resmi Motor Yamaha Indonesia. Dapatkan promo harga NMAX Turbo, Aerox, dan Grand Filano terbaru dengan layanan 3S terbaik.">
+    <meta name="keywords"
+        content="Yamaha, Motor Yamaha, NMAX Turbo, Aerox, Dealer Yamaha, Kredit Motor, Bengkel Resmi Yamaha">
+    <meta name="author" content="Yamaha Authorized Dealer">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0057B8">
+
+    <link rel="canonical" href="https://www.domainanda.com/" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.domainanda.com/">
+    <meta property="og:title" content="Yamaha Motor Indonesia - Semakin Di Depan">
+    <meta property="og:description"
+        content="Dealer Resmi Motor Yamaha - Temukan Motor Impianmu Disini. NMAX Turbo, Aerox, Fazzio tersedia.">
+    <meta property="og:image" content="img/motor/nmax-elixir-dark-silver.webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Yamaha Motor Indonesia - Semakin Di Depan">
+    <meta property="twitter:description" content="Dealer Resmi Motor Yamaha - Temukan Motor Impianmu Disini.">
+    <meta property="twitter:image" content="img/motor/nmax-elixir-dark-silver.webp">
+
     <title>Yamaha Motor Indonesia - Semakin Di Depan</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preload" as="image" href="img/motor/nmax-elixir-dark-silver.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -13,6 +44,38 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MotorcycleDealer",
+      "name": "Yamaha Authorized Dealer",
+      "image": "https://www.domainanda.com/img/motor/nmax-elixir-dark-silver.webp",
+      "telephone": "+6282257391460",
+      "url": "https://www.domainanda.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Otomotif No. 99",
+        "addressLocality": "Jakarta Selatan",
+        "addressRegion": "DKI Jakarta",
+        "addressCountry": "ID"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
 
     <style>
         :root {
@@ -70,6 +133,9 @@
             letter-spacing: -0.5px;
             display: flex;
             align-items: center;
+            width: 250px;
+            /* Explicit width to reduce layout shift */
+            height: 50px;
         }
 
         .navbar-brand i {
@@ -176,6 +242,8 @@
         .hero-wrapper {
             filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
             margin-bottom: -50px;
+            background-color: #eee;
+            /* Placeholder color for LCP */
         }
 
         .carousel-item {
@@ -244,6 +312,8 @@
             position: relative;
             z-index: 10;
             transform: translateY(-80px);
+            min-height: 200px;
+            /* Prevent layout shift */
         }
 
         .search-widget {
@@ -392,6 +462,8 @@
         .product-img-wrapper img {
             max-width: 100%;
             max-height: 100%;
+            width: auto;
+            height: auto;
             object-fit: contain;
             transition: transform 0.4s;
             filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1));
@@ -518,6 +590,8 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: #eee;
+            /* Placeholder */
         }
 
         .news-slide-img img {
@@ -1192,7 +1266,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo"
+                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo" width="300"
+                                    height="200" loading="lazy"
                                     onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
                             </div>
                             <div class="card-body">
@@ -1205,8 +1280,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox"
-                                    onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
+                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox" width="300" height="200"
+                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Aerox 155</h5>
@@ -1218,8 +1293,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano"
-                                    onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
+                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano" width="300" height="200"
+                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Grand Filano</h5>
@@ -1231,8 +1306,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio"
-                                    onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
+                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio" width="300" height="200"
+                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Fazzio Hybrid</h5>
@@ -1248,7 +1323,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo"
+                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo" width="300"
+                                    height="200" loading="lazy"
                                     onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
                             </div>
                             <div class="card-body">
@@ -1261,8 +1337,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox"
-                                    onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
+                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox" width="300" height="200"
+                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Aerox 155</h5>
@@ -1278,8 +1354,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano"
-                                    onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
+                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano" width="300" height="200"
+                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Grand Filano</h5>
@@ -1291,8 +1367,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio"
-                                    onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
+                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio" width="300" height="200"
+                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Fazzio Hybrid</h5>
@@ -1324,7 +1400,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="map-container">
-                        <iframe
+                        <iframe title="Lokasi Dealer Yamaha"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666427303107!2d106.82024977498993!3d-6.175392393811985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b15d%3A0x6da469cb2e09c0b6!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1705345021234!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
@@ -1347,7 +1423,7 @@
                         <div class="news-slide-item">
                             <div class="news-slide-img">
                                 <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=1000&auto=format&fit=crop"
-                                    alt="News 1">
+                                    alt="News 1" width="600" height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
                                 <h3 class="news-slide-title" data-i18n="news1_title">YAMAHA ROLLING CITY: LAYANAN SIAGA
@@ -1371,7 +1447,7 @@
                         <div class="news-slide-item">
                             <div class="news-slide-img">
                                 <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1000&auto=format&fit=crop"
-                                    alt="News 2">
+                                    alt="News 2" width="600" height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
                                 <h3 class="news-slide-title" data-i18n="news2_title">PROMO AWAL TAHUN: SPESIAL POTONGAN
@@ -1394,7 +1470,7 @@
                         <div class="news-slide-item">
                             <div class="news-slide-img">
                                 <img src="https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=80&w=1000&auto=format&fit=crop"
-                                    alt="News 3">
+                                    alt="News 3" width="600" height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
                                 <h3 class="news-slide-title" data-i18n="news3_title">TIPS MERAWAT CVT AGAR PERFORMA
@@ -1463,10 +1539,10 @@
                         Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
                     </p>
                     <div class="social-icons mt-4">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -1541,8 +1617,6 @@
         /* ==============================================
            LOGIKA TRANSLATE / MULTI-BAHASA
            ============================================== */
-
-        // 1. Kamus Data (Dictionary)
         const translations = {
             "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
             "nav_product": { id: "Produk", en: "Products", jp: "製品" },
@@ -1641,7 +1715,6 @@
             "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" }
         };
 
-        // 2. Fungsi untuk Mengubah Bahasa
         function changeLanguage(lang) {
             document.documentElement.lang = lang;
             localStorage.setItem('selectedLang', lang);
@@ -1671,7 +1744,6 @@
             });
         }
 
-        // 3. Jalankan saat halaman dimuat
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('selectedLang') || 'id';
             changeLanguage(savedLang);
@@ -1699,18 +1771,15 @@
         });
 
         /* ==============================================
-           LOGIKA SEARCH WIDGET (UPDATED & FIXED)
+           LOGIKA SEARCH WIDGET
            ============================================== */
         document.addEventListener('DOMContentLoaded', function () {
-            // Mengambil elemen dropdown berdasarkan atribut aria-label
             const categorySelect = document.querySelector('select[aria-label="Kategori"]');
             const modelSelect = document.getElementById('modelSelect');
             const searchBtn = document.getElementById('btnSearchWidget');
 
-            // DATA MOTOR: Disinkronkan dengan value di HTML (index.html) dan data produk (produk.html)
-            // Note: Di HTML Anda, kategori MAXI Yamaha menggunakan value="matic"
             const vehicles = {
-                'matic': [ // Kunci 'matic' sesuai dengan <option value="matic"> pada HTML
+                'matic': [
                     { val: 'nmax', txt: 'NMAX "TURBO"' },
                     { val: 'aerox', txt: 'Aerox 155 Connected' },
                     { val: 'xmax', txt: 'XMAX 250 Tech MAX' }
@@ -1729,11 +1798,10 @@
                 ]
             };
 
-            // Mapping Link Halaman Detail
             const modelLinks = {
                 'nmax': 'nmax.html',
                 'aerox': 'aerox.html',
-                'xmax': 'xmax.html',   // Ditambahkan sesuai permintaan
+                'xmax': 'xmax.html',
                 'filano': 'filano.html',
                 'fazzio': 'fazzio.html',
                 'r15': 'r15.html',
@@ -1742,21 +1810,14 @@
                 'jupiter': 'jupiter-z1.html'
             };
 
-            // 1. Event Listener saat Kategori Berubah
             if (categorySelect && modelSelect) {
                 categorySelect.addEventListener('change', function () {
-                    const selectedCat = this.value; // Akan bernilai 'matic', 'sport', dll.
-
-                    // Reset dropdown model ke default
+                    const selectedCat = this.value;
                     modelSelect.innerHTML = '<option selected data-i18n="select_model" value="">Pilih Model</option>';
-
-                    // Pastikan teks default ter-translate jika bahasa bukan ID
                     const currentLang = localStorage.getItem('selectedLang') || 'id';
                     if (translations["select_model"] && translations["select_model"][currentLang]) {
                         modelSelect.options[0].text = translations["select_model"][currentLang];
                     }
-
-                    // Isi dropdown model berdasarkan kategori yang dipilih
                     if (vehicles[selectedCat]) {
                         vehicles[selectedCat].forEach(model => {
                             const option = document.createElement('option');
@@ -1768,19 +1829,14 @@
                 });
             }
 
-            // 2. Event Listener Tombol Cari
             if (searchBtn && modelSelect) {
                 searchBtn.addEventListener('click', function () {
                     const selectedValue = modelSelect.value;
                     const selectedCategory = categorySelect.value;
-
-                    // Validasi Kategori
                     if (selectedCategory === "Pilih Kategori" || !selectedCategory) {
                         alert("Silakan pilih kategori terlebih dahulu.");
                         return;
                     }
-
-                    // Validasi Model & Redirect
                     if (selectedValue && modelLinks[selectedValue]) {
                         window.location.href = modelLinks[selectedValue];
                     } else {
@@ -1789,10 +1845,8 @@
                 });
             }
         });
-
     </script>
 
-    </script>
 </body>
 
 </html>

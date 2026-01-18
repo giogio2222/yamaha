@@ -4,15 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cari Dealer Resmi Yamaha Terdekat - Layanan 3S">
-    <title>Cari Dealer - Yamaha Motor Indonesia</title>
+
+    <title>Cari Dealer Resmi Yamaha - Layanan 3S & Sparepart Terdekat</title>
+    <meta name="description"
+        content="Temukan Dealer Resmi Yamaha terdekat di kota Anda. Layanan 3S (Sales, Service, Sparepart), promo DP ringan, dan konsultasi pembelian motor impian Anda.">
+    <meta name="keywords"
+        content="Dealer Yamaha, Bengkel Resmi Yamaha, Dealer Motor Terdekat, Yamaha 3S, Service Motor Yamaha, Beli Motor Yamaha">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Yamaha Authorized Dealer">
+    <link rel="canonical" href="https://www.domainanda.com/dealer.html">
+
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Cari Dealer Resmi Yamaha - Layanan 3S Terdekat">
+    <meta property="og:description"
+        content="Cari lokasi dealer dan bengkel resmi Yamaha terdekat. Dapatkan promo spesial dan layanan purna jual terbaik.">
+    <meta property="og:url" content="https://www.domainanda.com/dealer.html">
+    <meta property="og:image" content="https://www.domainanda.com/assets/img/og-dealer.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cari Dealer Resmi Yamaha Terdekat">
+    <meta name="twitter:description" content="Temukan jaringan dealer Yamaha 3S di kota Anda.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0057B8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Daftar Dealer Resmi Yamaha",
+      "description": "Daftar lengkap lokasi dealer resmi Yamaha layanan 3S di Indonesia.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "AutoDealer",
+            "name": "Yamaha Sumber Baru Rejeki",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Raya Darmo No. 12",
+              "addressLocality": "Surabaya",
+              "addressRegion": "Jawa Timur",
+              "postalCode": "60241",
+              "addressCountry": "ID"
+            },
+            "telephone": "+628225739140"
+          },
+          {
+            "@type": "AutoDealer",
+            "name": "Yamaha Deta Cempaka Putih",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Letjen Suprapto No. 65",
+              "addressLocality": "Jakarta Pusat",
+              "addressRegion": "DKI Jakarta",
+              "postalCode": "10520",
+              "addressCountry": "ID"
+            },
+            "telephone": "+628225739140"
+          }
+        ]
+      }
+    }
+    </script>
 
     <style>
         /* =========================================
@@ -35,6 +114,9 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            /* Performance: Improve rendering speed */
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* Font khusus bahasa Jepang */
@@ -58,6 +140,8 @@
             backdrop-filter: blur(10px);
             padding: 15px 0;
             transition: all 0.3s;
+            will-change: transform;
+            /* Performance Hint */
         }
 
         .navbar-brand {
@@ -140,8 +224,6 @@
             color: white;
             text-align: center;
             margin-bottom: 0;
-            /* Margin 0 karena search box akan menempel/overlap sedikit jika diinginkan, 
-               tapi di desain ini kita buat clean stack */
         }
 
         .page-header h1 {
@@ -158,7 +240,6 @@
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             margin-top: -30px;
-            /* Overlap effect */
             margin-bottom: 40px;
             position: relative;
             z-index: 10;
@@ -197,7 +278,7 @@
             box-shadow: 0 5px 15px rgba(236, 28, 36, 0.3);
         }
 
-        /* --- Dealer Card Style (Mirip Gambar Referensi) --- */
+        /* --- Dealer Card Style --- */
         .dealer-card {
             background: white;
             border: 1px solid #eee;
@@ -209,6 +290,9 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            /* Performance */
+            will-change: transform, box-shadow;
+            contain: content;
         }
 
         .dealer-card:hover {
@@ -242,7 +326,6 @@
             justify-content: space-between;
             align-items: flex-start;
             flex-grow: 1;
-            /* Agar tombol selalu di bawah */
             margin-bottom: 20px;
         }
 
@@ -259,7 +342,6 @@
             width: 35px;
             height: 35px;
             border-radius: 50% 50% 0 50%;
-            /* Bentuk pin unik */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -288,12 +370,11 @@
 
         .btn-hubungi:hover {
             background-color: #c41219;
-            /* Warna hover merah lebih gelap */
             color: white;
             box-shadow: 0 5px 15px rgba(236, 28, 36, 0.3);
         }
 
-        /* --- CTA Section (Dari Produk) --- */
+        /* --- CTA Section --- */
         .cta-wrapper {
             padding-top: 20px;
             padding-bottom: 60px;
@@ -307,6 +388,7 @@
             overflow: hidden;
             box-shadow: 0 15px 30px rgba(0, 87, 184, 0.2);
             color: white;
+            contain: content;
         }
 
         .cta-card::before {
@@ -457,8 +539,8 @@
         }
 
         /* ========================================================
-   FLOATING BUTTONS (WA & BACK TO TOP)
-   ======================================================== */
+           FLOATING BUTTONS
+           ======================================================== */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -468,10 +550,8 @@
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            /* Jarak antar tombol */
         }
 
-        /* Tombol Umum */
         .btn-float {
             border-radius: 50%;
             color: white;
@@ -490,7 +570,6 @@
             transform: scale(1.1);
         }
 
-        /* Tombol WhatsApp */
         .btn-whatsapp {
             width: 60px;
             height: 60px;
@@ -502,7 +581,6 @@
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
 
-        /* Animasi Pulse untuk WA agar menarik perhatian */
         .btn-whatsapp::after {
             content: '';
             position: absolute;
@@ -526,27 +604,22 @@
             }
         }
 
-        /* Tombol Back to Top */
         .btn-back-to-top {
             width: 50px;
             height: 50px;
             background-color: var(--yamaha-blue-dark);
-            /* Mengikuti tema website */
             font-size: 20px;
             opacity: 0;
-            /* Tersembunyi default */
             visibility: hidden;
             transform: translateY(20px);
         }
 
-        /* Class untuk memunculkan tombol Back to Top */
         .btn-back-to-top.show {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
 
-        /* Responsif Mobile (Layar Kecil) */
         @media (max-width: 768px) {
             .floating-container {
                 bottom: 20px;
@@ -581,7 +654,8 @@
                         data-i18n="dealer_auth">Authorized Dealer</span>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -638,20 +712,21 @@
         <div class="dealer-search-section">
             <div class="row g-3">
                 <div class="col-md-5">
-                    <label class="form-label small text-muted fw-bold" data-i18n="label_province">Pilih Provinsi</label>
-                    <select class="form-select form-select-dealer" id="provinceSelect">
+                    <label class="form-label small text-muted fw-bold" for="provinceSelect"
+                        data-i18n="label_province">Pilih Provinsi</label>
+                    <select class="form-select form-select-dealer" id="provinceSelect" aria-label="Pilih Provinsi">
                         <option value="all" selected data-i18n="select_province">Semua Provinsi</option>
                     </select>
                 </div>
                 <div class="col-md-5">
-                    <label class="form-label small text-muted fw-bold" data-i18n="label_city">Pilih Kota /
-                        Kabupaten</label>
-                    <select class="form-select form-select-dealer" id="citySelect" disabled>
+                    <label class="form-label small text-muted fw-bold" for="citySelect" data-i18n="label_city">Pilih
+                        Kota / Kabupaten</label>
+                    <select class="form-select form-select-dealer" id="citySelect" disabled aria-label="Pilih Kota">
                         <option value="all" selected data-i18n="select_city">Semua Kota</option>
                     </select>
                 </div>
                 <div class="col-md-2 d-flex align-items-end">
-                    <button class="btn btn-cari-dealer" id="btnFilter">
+                    <button class="btn btn-cari-dealer" id="btnFilter" aria-label="Cari Dealer">
                         <span data-i18n="btn_search">Cari</span> <i class="fas fa-arrow-right ms-2"></i>
                     </button>
                 </div>
@@ -679,7 +754,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
-                    <a href="https://wa.me/628225739140" target="_blank" class="btn btn-cta-wa">
+                    <a href="https://wa.me/628225739140" target="_blank" rel="noopener" class="btn btn-cta-wa">
                         <i class="fab fa-whatsapp fa-lg"></i> <span data-i18n="btn_cta">Hubungi via WhatsApp</span>
                     </a>
                 </div>
@@ -697,10 +772,10 @@
                         Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
                     </p>
                     <div class="social-icons mt-4">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -744,17 +819,18 @@
     </footer>
 
     <div class="floating-container">
-        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top" aria-label="Back to Top">
             <i class="fas fa-arrow-up"></i>
         </a>
 
         <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
-            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            target="_blank" rel="noopener" class="btn-float btn-whatsapp" title="Chat WhatsApp"
+            aria-label="Chat WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <script>
         // --- DATA DEALER (Dummy Data 9 Cards) ---
@@ -911,7 +987,7 @@
                                 </div>
                             </div>
                             <div class="mt-auto">
-                                <a href="https://wa.me/${dealer.phone}?text=Halo, saya ingin bertanya mengenai ketersediaan unit motor Yamaha di ${dealer.name}." target="_blank" class="btn-hubungi">
+                                <a href="https://wa.me/${dealer.phone}?text=Halo, saya ingin bertanya mengenai ketersediaan unit motor Yamaha di ${dealer.name}." target="_blank" rel="noopener" class="btn-hubungi" aria-label="Hubungi via WhatsApp">
                                     <span data-i18n="btn_contact_card">Hubungi Kami Sekarang</span> <i class="fas fa-phone-alt"></i>
                                 </a>
                             </div>
@@ -941,7 +1017,6 @@
 
         // --- TRANSLATION LOGIC (Extended) ---
         const translations = {
-            // ... (Copy from previous + Add new keys)
             "dealer_auth": { id: "Authorized Dealer", en: "Authorized Dealer", jp: "正規販売店" },
             "nav_home": { id: "Beranda", en: "Home", jp: "ホーム" },
             "nav_product": { id: "Produk", en: "Products", jp: "製品" },
@@ -985,11 +1060,8 @@
                 jp: "3S（販売、サービス、スペアパーツ）サービスを提供する信頼できるヤマハ正規販売店。私たちはあなたに感動をお届けすることをお約束します。"
             },
 
-            // --- NEW FOOTER KEYS ---
             "footer_menu_main": { id: "Menu Utama", en: "Main Menu", jp: "メインメニュー" },
             "footer_menu_help": { id: "Bantuan", en: "Support", jp: "サポート" },
-            // -----------------------
-
             "footer_products": { id: "Produk", en: "Products", jp: "製品" },
             "footer_services": { id: "Layanan", en: "Services", jp: "サービス" },
             "footer_contact": { id: "Hubungi Kami", en: "Contact Us", jp: "お問い合わせ" },
@@ -1014,7 +1086,6 @@
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[key] && translations[key][lang]) {
-                    // Cek elemen select option yang dinamis (first child)
                     if (element.tagName === 'OPTION') {
                         element.textContent = translations[key][lang];
                     } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
@@ -1041,13 +1112,11 @@
         });
 
         /* ==============================================
-   LOGIKA BACK TO TOP
-   ============================================== */
+           LOGIKA BACK TO TOP
+           ============================================== */
         const backToTopBtn = document.getElementById('backToTop');
 
-        // Event Listener saat Scroll
         window.addEventListener('scroll', () => {
-            // Jika scroll lebih dari 300px, munculkan tombol
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('show');
             } else {
@@ -1055,12 +1124,11 @@
             }
         });
 
-        // Event Listener saat diklik
         backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Mencegah reload/jump kasar
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Efek scroll halus
+                behavior: 'smooth'
             });
         });
 
