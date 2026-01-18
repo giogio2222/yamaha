@@ -37,6 +37,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
@@ -88,8 +90,17 @@
             --yamaha-blue-dark: #003594;
             --yamaha-red: #EC1C24;
             --yamaha-black: #1a1a1a;
-            --text-grey: #6c757d;
+            /* Accessibility: Darkened grey for better contrast ratio */
+            --text-grey: #5a5a5a;
             --bg-light: #f8faff;
+        }
+
+        /* Performance: CSS Content Visibility for off-screen content optimization */
+        .map-section,
+        .news-slider-section,
+        footer {
+            content-visibility: auto;
+            contain-intrinsic-size: 500px;
         }
 
         body {
@@ -99,7 +110,6 @@
             color: #333;
         }
 
-        /* Font khusus jika bahasa Jepang aktif */
         body.lang-jp {
             font-family: 'Noto Sans JP', sans-serif !important;
         }
@@ -138,7 +148,6 @@
             display: flex;
             align-items: center;
             width: 250px;
-            /* Explicit width to reduce layout shift */
             height: 50px;
         }
 
@@ -146,7 +155,6 @@
             color: var(--yamaha-red);
         }
 
-        /* Style Default Nav Link (Menu Atas) */
         .navbar-nav .nav-link {
             font-weight: 600;
             color: var(--yamaha-black) !important;
@@ -186,7 +194,6 @@
             color: var(--yamaha-blue-main) !important;
         }
 
-        /* --- MODERN DROPDOWN --- */
         .dropdown-menu {
             border: none;
             border-radius: 15px;
@@ -247,7 +254,6 @@
             filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
             margin-bottom: -50px;
             background-color: #eee;
-            /* Placeholder color for LCP */
         }
 
         .carousel-item {
@@ -317,7 +323,6 @@
             z-index: 10;
             transform: translateY(-80px);
             min-height: 200px;
-            /* Prevent layout shift */
         }
 
         .search-widget {
@@ -383,9 +388,7 @@
             border-radius: 10px;
         }
 
-        /* ========================================================
-           FIXED CATEGORY TABS (Nav Pills for Collection)
-           ======================================================== */
+        /* Tabs */
         .category-tabs {
             display: flex;
             justify-content: center;
@@ -419,7 +422,7 @@
             box-shadow: 0 8px 20px rgba(0, 87, 184, 0.25);
         }
 
-        /* --- Product Cards --- */
+        /* Product Cards */
         .product-card {
             border: none;
             border-radius: 20px;
@@ -516,9 +519,7 @@
             box-shadow: 0 5px 15px rgba(0, 87, 184, 0.3);
         }
 
-        /* ========================================================
-           MAP SECTION STYLE (NEW)
-           ======================================================== */
+        /* Map */
         .map-section {
             background-color: #f8faff;
             padding-bottom: 60px;
@@ -528,7 +529,6 @@
             position: relative;
             width: 100%;
             height: 450px;
-            /* Tinggi Map di Desktop */
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
@@ -544,11 +544,10 @@
         @media (max-width: 768px) {
             .map-container {
                 height: 300px;
-                /* Tinggi Map di Mobile */
             }
         }
 
-        /* --- News Section (Honda Style) --- */
+        /* News */
         .news-slider-section {
             padding: 80px 0;
             background: #fff;
@@ -595,7 +594,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             background-color: #eee;
-            /* Placeholder */
         }
 
         .news-slide-img img {
@@ -690,6 +688,12 @@
             cursor: pointer;
         }
 
+        /* Accessibility: Improved focus state for navigation */
+        .news-control-prev:focus,
+        .news-control-next:focus {
+            outline: 3px solid var(--yamaha-blue-main);
+        }
+
         .news-control-prev:hover,
         .news-control-next:hover {
             background-color: var(--yamaha-blue-main);
@@ -735,7 +739,7 @@
             transform: scale(1.2);
         }
 
-        /* --- Footer --- */
+        /* Footer */
         footer {
             background: linear-gradient(to right, #0e0e0e, #1a1a1a);
             color: white;
@@ -753,8 +757,9 @@
             margin-bottom: 25px;
         }
 
+        /* Accessibility: Increased contrast for footer links */
         footer a {
-            color: #bbb;
+            color: #d0d0d0;
             text-decoration: none;
             transition: all 0.3s;
         }
@@ -787,10 +792,10 @@
             margin-top: 50px;
             padding-top: 30px;
             text-align: center;
-            color: #666;
+            color: #888;
         }
 
-        /* --- Responsive Mobile --- */
+        /* Mobile Responsive */
         @media (max-width: 991px) {
             .navbar-collapse {
                 background: white;
@@ -825,7 +830,6 @@
                 padding: 20px;
             }
 
-            /* News Responsive */
             .news-slide-item {
                 padding: 0;
                 flex-direction: column;
@@ -870,7 +874,6 @@
             }
         }
 
-        /* Language Selector Styles */
         .lang-flag {
             font-size: 1.1em;
             margin-right: 5px;
@@ -880,9 +883,7 @@
             vertical-align: middle;
         }
 
-        /* ========================================================
-   FLOATING BUTTONS (WA & BACK TO TOP)
-   ======================================================== */
+        /* Floating Buttons */
         .floating-container {
             position: fixed;
             bottom: 30px;
@@ -892,10 +893,8 @@
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            /* Jarak antar tombol */
         }
 
-        /* Tombol Umum */
         .btn-float {
             border-radius: 50%;
             color: white;
@@ -914,7 +913,6 @@
             transform: scale(1.1);
         }
 
-        /* Tombol WhatsApp */
         .btn-whatsapp {
             width: 60px;
             height: 60px;
@@ -926,7 +924,6 @@
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
 
-        /* Animasi Pulse untuk WA agar menarik perhatian */
         .btn-whatsapp::after {
             content: '';
             position: absolute;
@@ -950,27 +947,22 @@
             }
         }
 
-        /* Tombol Back to Top */
         .btn-back-to-top {
             width: 50px;
             height: 50px;
             background-color: var(--yamaha-blue-dark);
-            /* Mengikuti tema website */
             font-size: 20px;
             opacity: 0;
-            /* Tersembunyi default */
             visibility: hidden;
             transform: translateY(20px);
         }
 
-        /* Class untuk memunculkan tombol Back to Top */
         .btn-back-to-top.show {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
 
-        /* Responsif Mobile (Layar Kecil) */
         @media (max-width: 768px) {
             .floating-container {
                 bottom: 20px;
@@ -991,9 +983,7 @@
             }
         }
 
-        /* =========================================
-       SECTION CTA (ADDED FROM FAQ)
-       ========================================= */
+        /* CTA */
         .cta-wrapper {
             padding-bottom: 60px;
             margin-top: 60px;
@@ -1010,7 +1000,6 @@
             display: block;
         }
 
-        /* Elemen dekoratif background */
         .cta-card::before {
             content: '';
             position: absolute;
@@ -1070,7 +1059,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Animation */
         .fade-in-up {
             animation: fadeInUp 0.5s ease forwards;
             opacity: 0;
@@ -1088,7 +1076,6 @@
             }
         }
 
-        /* Responsive adjustment */
         @media (max-width: 991px) {
             .cta-card {
                 text-align: center;
@@ -1196,11 +1183,11 @@
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
-                aria-label="Previous Slide">
+                aria-label="Slide Sebelumnya">
                 <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
-                aria-label="Next Slide">
+                aria-label="Slide Selanjutnya">
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
@@ -1234,7 +1221,8 @@
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <button type="button" class="btn btn-search" id="btnSearchWidget">
+                                <button type="button" class="btn btn-search" id="btnSearchWidget"
+                                    aria-label="Cari Motor">
                                     <span data-i18n="btn_search">CARI</span> <i class="fas fa-arrow-right ms-2"></i>
                                 </button>
                             </div>
@@ -1274,8 +1262,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo" width="300"
-                                    height="200" loading="lazy"
+                                <img src="img/motor/nmax-elixir-dark-silver.webp" alt="NMAX Turbo - Motor Matic Premium"
+                                    width="300" height="200" loading="lazy"
                                     onerror="this.src='https://placehold.co/300x200?text=NMAX+Turbo'">
                             </div>
                             <div class="card-body">
@@ -1288,8 +1276,9 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox" width="300" height="200"
-                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
+                                <img src="img/motor/aerox-cybercity.webp" alt="Aerox 155 Connected - Sport Scooter"
+                                    width="300" height="200" loading="lazy"
+                                    onerror="this.src='https://placehold.co/300x200?text=Aerox+155'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Aerox 155</h5>
@@ -1301,8 +1290,9 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano" width="300" height="200"
-                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
+                                <img src="img/motor/filano-white-pearl.webp" alt="Grand Filano - Classy Yamaha"
+                                    width="300" height="200" loading="lazy"
+                                    onerror="this.src='https://placehold.co/300x200?text=Grand+Filano'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Grand Filano</h5>
@@ -1314,8 +1304,9 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-card">
                             <div class="product-img-wrapper">
-                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio" width="300" height="200"
-                                    loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
+                                <img src="img/motor/filano-dull-blue.webp" alt="Fazzio Hybrid Connected" width="300"
+                                    height="200" loading="lazy"
+                                    onerror="this.src='https://placehold.co/300x200?text=Fazzio+Hybrid'">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Fazzio Hybrid</h5>
@@ -1390,8 +1381,8 @@
         </div>
 
         <div class="text-center mt-5">
-            <a href="produk.html" class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold"
-                style="border-width: 2px;">
+            <a href="produk.html" class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold" style="border-width: 2px;"
+                aria-label="Lihat Semua Produk Yamaha">
                 <span data-i18n="btn_view_all">LIHAT SEMUA PRODUK</span> <i class="fas fa-arrow-right ms-2"></i>
             </a>
         </div>
@@ -1408,7 +1399,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="map-container">
-                        <iframe title="Lokasi Dealer Yamaha"
+                        <iframe title="Lokasi Dealer Yamaha" aria-hidden="false"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666427303107!2d106.82024977498993!3d-6.175392393811985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b15d%3A0x6da469cb2e09c0b6!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1705345021234!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
@@ -1431,7 +1422,10 @@
                         <div class="news-slide-item">
                             <div class="news-slide-img">
                                 <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=70&w=800&auto=format&fit=crop"
-                                    alt="News 1" width="600" height="450" loading="lazy">
+                                    srcset="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=60&w=400&auto=format&fit=crop 400w, 
+                                             https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=70&w=800&auto=format&fit=crop 800w"
+                                    sizes="(max-width: 600px) 400px, 800px" alt="Yamaha Rolling City Event" width="600"
+                                    height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
                                 <h3 class="news-slide-title" data-i18n="news1_title">YAMAHA ROLLING CITY: LAYANAN SIAGA
@@ -1443,7 +1437,8 @@
                                     Emergency. Kami memastikan teknisi tersertifikasi siap memberikan layanan terbaik
                                     kapanpun Anda butuhkan di jalan raya.
                                 </p>
-                                <a href="#" class="btn-news-outline">
+                                <a href="#" class="btn-news-outline"
+                                    aria-label="Baca Selengkapnya tentang Rolling City">
                                     <span data-i18n="btn_read_more">BERITA SELENGKAPNYA</span> <i
                                         class="fas fa-arrow-right ms-2"></i>
                                 </a>
@@ -1455,7 +1450,10 @@
                         <div class="news-slide-item">
                             <div class="news-slide-img">
                                 <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=70&w=800&auto=format&fit=crop"
-                                    alt="News 2" width="600" height="450" loading="lazy">
+                                    srcset="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=60&w=400&auto=format&fit=crop 400w, 
+                                             https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=70&w=800&auto=format&fit=crop 800w"
+                                    sizes="(max-width: 600px) 400px, 800px" alt="Promo Awal Tahun Yamaha" width="600"
+                                    height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
                                 <h3 class="news-slide-title" data-i18n="news2_title">PROMO AWAL TAHUN: SPESIAL POTONGAN
@@ -1466,7 +1464,7 @@
                                     potongan angsuran hingga 3 bulan untuk setiap pembelian unit NMAX Turbo dan Aerox
                                     Connected secara kredit. Promo berlaku di seluruh dealer resmi bertanda khusus.
                                 </p>
-                                <a href="#" class="btn-news-outline">
+                                <a href="#" class="btn-news-outline" aria-label="Baca Selengkapnya tentang Promo">
                                     <span data-i18n="btn_read_more">BERITA SELENGKAPNYA</span> <i
                                         class="fas fa-arrow-right ms-2"></i>
                                 </a>
@@ -1478,7 +1476,10 @@
                         <div class="news-slide-item">
                             <div class="news-slide-img">
                                 <img src="https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=70&w=800&auto=format&fit=crop"
-                                    alt="News 3" width="600" height="450" loading="lazy">
+                                    srcset="https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=60&w=400&auto=format&fit=crop 400w, 
+                                             https://images.unsplash.com/photo-1623058864388-75c179c946c7?q=70&w=800&auto=format&fit=crop 800w"
+                                    sizes="(max-width: 600px) 400px, 800px" alt="Tips Merawat CVT Motor Matic"
+                                    width="600" height="450" loading="lazy">
                             </div>
                             <div class="news-slide-content">
                                 <h3 class="news-slide-title" data-i18n="news3_title">TIPS MERAWAT CVT AGAR PERFORMA
@@ -1489,7 +1490,7 @@
                                     bagaimana menjaga kebersihan area CVT agar tarikan motor tetap responsif dan bebas
                                     getar. Perawatan berkala adalah kunci keawetan komponen motor Anda.
                                 </p>
-                                <a href="#" class="btn-news-outline">
+                                <a href="#" class="btn-news-outline" aria-label="Baca Selengkapnya tentang Tips CVT">
                                     <span data-i18n="btn_read_more">BERITA SELENGKAPNYA</span> <i
                                         class="fas fa-arrow-right ms-2"></i>
                                 </a>
@@ -1500,21 +1501,21 @@
                 </div>
 
                 <button class="news-control-prev" type="button" data-bs-target="#newsCarouselSlider"
-                    data-bs-slide="prev" aria-label="Previous News">
+                    data-bs-slide="prev" aria-label="Berita Sebelumnya">
                     <i class="fas fa-arrow-left news-control-icon"></i>
                 </button>
                 <button class="news-control-next" type="button" data-bs-target="#newsCarouselSlider"
-                    data-bs-slide="next" aria-label="Next News">
+                    data-bs-slide="next" aria-label="Berita Selanjutnya">
                     <i class="fas fa-arrow-right news-control-icon"></i>
                 </button>
 
                 <div class="carousel-indicators-news">
                     <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="0" class="active"
-                        aria-label="Slide 1"></button>
+                        aria-label="Slide Berita 1"></button>
                     <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
+                        aria-label="Slide Berita 2"></button>
                     <button type="button" data-bs-target="#newsCarouselSlider" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                        aria-label="Slide Berita 3"></button>
                 </div>
             </div>
         </div>
@@ -1531,7 +1532,8 @@
                     </p>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
-                    <a href="https://wa.me/6282257391460" target="_blank" class="btn btn-cta-wa">
+                    <a href="https://wa.me/6282257391460" target="_blank" class="btn btn-cta-wa"
+                        aria-label="Hubungi Kami via WhatsApp">
                         <i class="fab fa-whatsapp fa-lg"></i> <span data-i18n="cta_btn">Chat WhatsApp Sekarang</span>
                     </a>
                 </div>
@@ -1549,10 +1551,10 @@
                         Kami berkomitmen menghadirkan pengalaman "Semakin Di Depan" untuk Anda.
                     </p>
                     <div class="social-icons mt-4">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Kunjungi Facebook Kami"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Kunjungi Instagram Kami"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Kunjungi Youtube Kami"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Kunjungi TikTok Kami"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -1596,12 +1598,12 @@
     </footer>
 
     <div class="floating-container">
-        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top">
+        <a href="#" id="backToTop" class="btn-float btn-back-to-top" title="Back to Top" aria-label="Kembali ke atas">
             <i class="fas fa-arrow-up"></i>
         </a>
 
         <a href="https://wa.me/6282257391460?text=Halo%20Admin,%20saya%20tertarik%20dengan%20produk%20Yamaha."
-            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp">
+            target="_blank" class="btn-float btn-whatsapp" title="Chat WhatsApp" aria-label="Chat via WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
